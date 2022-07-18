@@ -1,0 +1,71 @@
+# =============================================================================
+#   Gruvbox Material Dark colour scheme
+# ===========================[ https://github.com/sainnhe/gruvbox-material ]===
+#
+# Palette:
+# -----------------------------------------------------------------------------
+#    dark0_hard         Black         #1d2021
+#    dark0_medium       Black         #282828
+#    dark0_soft         Black         #32302f
+# ------------------------------------------------------------------------------
+#    dark1              DarkGrey      #3c3836
+#    dark2              DarkGrey      #504945
+#    dark3              DarkGrey      #665c54
+#    dark4              DarkGrey      #7c6f64
+# ------------------------------------------------------------------------------
+#    grey               Grey          #928374
+#    lightgrey          LightGrey     #a89984
+#    light              White         #dfbf8e
+#    light_alt          White         #dfbf8e
+#    red                Red           #ea6962
+#    orange             DarkYellow    #e78a4e
+#    yellow             Yellow        #e3a84e
+#    green              Green         #a9b665
+#    aqua               Cyan          #89b482
+#    blue               Blue          #7daea3
+#    purple             Magenta       #d3869b
+# ------------------------------------------------------------------------------
+#    darkgreen_hard     DarkGreen     #32361a
+#    darkred_hard       DarkRed       #3c1f1e
+#    darkblue_hard      DarkBlue      #0d3138
+#    darkgreen_medium   DarkGreen     #34381b
+#    darkred_medium     DarkRed       #402120
+#    darkblue_medium    DarkBlue      #0e363e
+#    darkgreen_soft     DarkGreen     #3d4220
+#    darkred_soft       DarkRed       #472322
+#    darkblue_soft      DarkBlue      #0f3a42
+# =============================================================================
+
+
+set default-bg                  "#1d2021"
+set default-fg                  "#928374"
+
+set completion-bg               "#1d2021"
+set completion-fg               "#928374"
+set completion-group-bg         "#282828"
+set completion-group-fg         "#dfbf8e"
+set completion-highlight-bg     "#a9b665"
+set completion-highlight-fg     "#1d2021"
+
+set highlight-color             "#a9b665"
+set highlight-active-color      "#e3a84e"
+
+set index-bg                    "#282828"
+set index-fg                    "#dfbf8e"
+set index-active-bg             "#a9b665"
+set index-active-fg             "#1d2021"
+set inputbar-bg                 "#32302f"
+set inputbar-fg                 "#dfbf8e"
+
+set notification-bg             "#89b482"
+set notification-fg             "#1d2021"
+set notification-error-bg       "#ea6962"
+set notification-error-fg       "#1d2021"
+set notification-warning-bg     "#e3a84e"
+set notification-warning-fg     "#1d2021"
+
+set recolor-lightcolor          "#282828"
+set recolor-darkcolor           "#dfbf8e"
+
+set statusbar-bg                "#32302f"
+set statusbar-fg                "#dfbf8e"

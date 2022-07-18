@@ -1,0 +1,61 @@
+# =============================================================================
+#   Solarized Dark colour scheme
+# ==================================[ https://ethanschoonover.com/solarized/ ]=
+#
+# Palette:
+# --------------------------------------------------------- Background Tones ---
+#    #002b36  Base 03
+#    #073642  Base 02
+# ------------------------------------------------------------ Content Tones ---
+#    #586e75  Base 01
+#    #657b83  Base 00
+#    #657b83  Base  0
+#    #93a1a1  Base  1
+# --------------------------------------------------------- Background Tones ---
+#    #eee8d5  Base  2
+#    #fdf6e3  Base  3
+# ------------------------------------------------------------- Accent Tones ---
+#    #b58900   Yellow
+#    #cb4b16   Orange
+#    #dc322f      Red
+#    #d33682  Magenta
+#    #6c71c4   Violet
+#    #268bd2     Blue
+#    #2aa198     Cyan
+#    #859900    Green
+# =============================================================================
+
+
+set default-bg                  "#002b36"
+set default-fg                  "#93a1a1"
+
+set completion-bg               "#073642"
+set completion-fg               "#93a1a1"
+set completion-group-bg         "#002b36"
+set completion-group-fg         "#839496"
+set completion-highlight-bg     "#586e75"
+set completion-highlight-fg     "#eee8d5"
+
+set highlight-color             "#657b83"
+set highlight-active-color      "#b58900"
+
+set index-bg                    "#002b36"
+set index-fg                    "#93a1a1"
+set index-active-bg             "#586e75"
+set index-active-fg             "#eee8d5"
+
+set inputbar-bg                 "#586e75"
+set inputbar-fg                 "#eee8d5"
+
+set notification-error-bg       "#dc322f"
+set notification-error-fg       "#fdf6e3"
+set notification-warning-bg     "#b58900"
+set notification-warning-fg     "#002b36"
+set notification-bg             "#268bd2"
+set notification-fg             "#fdf6e3"
+
+set recolor-lightcolor          "#073642"
+set recolor-darkcolor           "#93a1a1"
+
+set statusbar-bg                "#002b36"
+set statusbar-fg                "#93a1a1"

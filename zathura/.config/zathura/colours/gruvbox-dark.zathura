@@ -1,0 +1,89 @@
+# =============================================================================
+#   Gruvbox Dark colour scheme
+# ====================================[ https://github.com/morhetz/gruvbox ]===
+#
+# -----------------------------------------------------------------------------
+# PALETTE
+# -----------------------------------------------------------------------------
+#
+#    ┏━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+#    ┃ GRUVCOLR       ┃ HEX     ┃ RELATV ALIAS      ┃ TERMCOLOR    ┃
+#    ┡━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+#    │ dark0_hard     │ #1d2021 │ [      ] [      ] │ 234 [h0][  ] │
+#    │ dark0          │ #282828 │ [bg0   ] [fg0   ] │ 235 [ 0][  ] │
+#    │ dark0_soft     │ #32302f │ [      ] [      ] │ 236 [s0][  ] │
+#    │ dark1          │ #3c3836 │ [bg1   ] [fg1   ] │ 237 [  ][15] │
+#    │ dark2          │ #504945 │ [bg2   ] [fg2   ] │ 239 [  ][  ] │
+#    │ dark3          │ #665c54 │ [bg3   ] [fg3   ] │ 241 [  ][  ] │
+#    │ dark4          │ #7c6f64 │ [bg4   ] [fg4   ] │ 243 [  ][ 7] │
+#    ├────────────────┼─────────┼───────────────────┼──────────────┤
+#    │ gray_245       │ #928374 │ [gray  ] [      ] │ 245 [ 8][  ] │
+#    │ gray_244       │ #928374 │ [      ] [gray  ] │ 244 [  ][ 8] │
+#    │ light0_hard    │ #f9f5d7 │ [      ] [      ] │ 230 [  ][h0] │
+#    │ light0         │ #fbf1c7 │ [fg0   ] [bg0   ] │ 229 [  ][ 0] │
+#    │ light0_soft    │ #f2e5bc │ [      ] [      ] │ 228 [  ][s0] │
+#    │ light1         │ #ebdbb2 │ [fg1   ] [bg1   ] │ 223 [15][  ] │
+#    │ light2         │ #d5c4a1 │ [fg2   ] [bg2   ] │ 250 [  ][  ] │
+#    │ light3         │ #bdae93 │ [fg3   ] [bg3   ] │ 248 [  ][  ] │
+#    │ light4         │ #a89984 │ [fg4   ] [bg4   ] │ 246 [ 7][  ] │
+#    ├────────────────┼─────────┼───────────────────┼──────────────┤
+#    │ bright_red     │ #fb4934 │ [red   ] [      ] │ 167 [ 9][  ] │
+#    │ bright_green   │ #b8bb26 │ [green ] [      ] │ 142 [10][  ] │
+#    │ bright_yellow  │ #fabd2f │ [yellow] [      ] │ 214 [11][  ] │
+#    │ bright_blue    │ #83a598 │ [blue  ] [      ] │ 109 [12][  ] │
+#    │ bright_purple  │ #d3869b │ [purple] [      ] │ 175 [13][  ] │
+#    │ bright_aqua    │ #8ec07c │ [aqua  ] [      ] │ 108 [14][  ] │
+#    │ bright_orange  │ #fe8019 │ [orange] [      ] │ 208 [  ][  ] │
+#    ├────────────────┼─────────┼───────────────────┼──────────────┤
+#    │ neutral_red    │ #cc241d │ [      ] [      ] │ 124 [ 1][ 1] │
+#    │ neutral_green  │ #98971a │ [      ] [      ] │ 106 [ 2][ 2] │
+#    │ neutral_yellow │ #d79921 │ [      ] [      ] │ 172 [ 3][ 3] │
+#    │ neutral_blue   │ #458588 │ [      ] [      ] │  66 [ 4][ 4] │
+#    │ neutral_purple │ #b16286 │ [      ] [      ] │ 132 [ 5][ 5] │
+#    │ neutral_aqua   │ #689d6a │ [      ] [      ] │  72 [ 6][ 6] │
+#    │ neutral_orange │ #d65d0e │ [      ] [      ] │ 166 [  ][  ] │
+#    ├────────────────┼─────────┼───────────────────┼──────────────┤
+#    │ faded_red      │ #9d0006 │ [      ] [red   ] │  88 [  ][ 9] │
+#    │ faded_green    │ #79740e │ [      ] [green ] │ 100 [  ][10] │
+#    │ faded_yellow   │ #b57614 │ [      ] [yellow] │ 136 [  ][11] │
+#    │ faded_blue     │ #076678 │ [      ] [blue  ] │  24 [  ][12] │
+#    │ faded_purple   │ #8f3f71 │ [      ] [purple] │  96 [  ][13] │
+#    │ faded_aqua     │ #427b58 │ [      ] [aqua  ] │  66 [  ][14] │
+#    │ faded_orange   │ #af3a03 │ [      ] [orange] │ 130 [  ][  ] │
+#    └────────────────┴─────────┴───────────────────┴──────────────┘
+# =============================================================================
+
+
+set default-bg                  "#1d2021"
+set default-fg                  "#928374"
+
+set completion-bg               "#1d2021"
+set completion-fg               "#928374"
+set completion-group-bg         "#282828"
+set completion-group-fg         "#fbf1c7"
+set completion-highlight-bg     "#98971a"
+set completion-highlight-fg     "#282828"
+
+set highlight-color             "#79740e"
+set highlight-active-color      "#fabd2f"
+
+set index-bg                    "#282828"
+set index-fg                    "#928374"
+set index-active-bg             "#98971a"
+set index-active-fg             "#282828"
+
+set inputbar-bg                 "#3c3836"
+set inputbar-fg                 "#fbf1c7"
+
+set notification-bg             "#458588"
+set notification-fg             "#fbf1c7"
+set notification-error-bg       "#cc241d"
+set notification-error-fg       "#fbf1c7"
+set notification-warning-bg     "#d79921"
+set notification-warning-fg     "#282828"
+
+set recolor-lightcolor          "#282828"
+set recolor-darkcolor           "#fbf1c7"
+
+set statusbar-bg                "#3c3836"
+set statusbar-fg                "#fbf1c7"
