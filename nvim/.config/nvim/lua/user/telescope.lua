@@ -18,6 +18,7 @@ telescope.setup {
        "--line-number",
        "--column",
        "--smart-case",
+       "--trim"
     },
     prompt_prefix = icons.ui.Telescope .. " ",
     selection_caret = " ",
