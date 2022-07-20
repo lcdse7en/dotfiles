@@ -15,6 +15,8 @@ local bookmarks = {
   "https://m.weibo.cn/u/1965284462",
   "http://kkhanju.top/",
   "https://www.kpopn.com/category/news",
+  "https://github.com/ecosse3/dotfiles",
+  "https://github.com/LukeSmithxyz/voidrice/tree/master/.config",
   -- "https://github.com/neovim/neovim",
   -- "https://neovim.discourse.group/",
 }

@@ -138,3 +138,8 @@ keymap("n", "<m-/>", "<cmd>lua require('Comment.api').toggle_current_linewise()<
 )
 keymap("x", "<m-/>", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', silent
 )
+
+-- Fzf
+keymap("n", "<C-f>", ":FZF<cr>", silent)
+keymap("n", "<C-a>", ":Rg<cr>", silent)
+

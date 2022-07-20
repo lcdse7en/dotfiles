@@ -161,4 +161,19 @@ M.command_history = function()
     }))
 end
 
+M.live_grep = function(opts)
+  opts = opts or {}
+  local cwd = vim.fn.getcwd()
+  builtin.live_grep (
+    require('telescope.themes').get_dropdown({
+      color_devicons   = true,
+      winblend         = 4,
+      sorting_strategy = "ascending",
+      layout_strategy = "bottom_pane",
+      prompt_prefix = ">> ",
+      prompt_title = "Live_Grep",
+      search_dirs = { cwd },
+    }))
+end
+
 return M

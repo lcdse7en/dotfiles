@@ -146,6 +146,8 @@ return require('packer').startup({
       config = "require('plugins.browse')"
     }
 
+  use { "junegunn/fzf.vim" }
+
     if packer_bootstrap then
       require('packer').sync()
     end
