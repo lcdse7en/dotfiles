@@ -138,8 +138,13 @@ return require('packer').startup({
     use { "kevinhwang91/nvim-hlslens", config = "require('plugins.nvim-hlslens')" }
     use { "gcmt/wildfire.vim" }
     use { "windwp/nvim-ts-autotag" }
-    -- use { "b3nj5m1n/kommentary", config = "require('plugins.kommentary')"}
-    use { "terrortylor/nvim-comment", config = "require('plugins.nvim-comment')" }
+    use {
+      "lalitmee/browse.nvim",
+      requires = {
+        "nvim-telescope/telescope.nvim"
+      },
+      config = "require('plugins.browse')"
+    }
 
     if packer_bootstrap then
       require('packer').sync()

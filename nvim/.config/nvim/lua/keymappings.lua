@@ -133,3 +133,8 @@ keymap("n", "S", ":w<cr>", silent)
 -- Markdown Preview
 keymap("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", silent)
 
+-- Comment
+keymap("n", "<m-/>", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", silent
+)
+keymap("x", "<m-/>", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', silent
+)

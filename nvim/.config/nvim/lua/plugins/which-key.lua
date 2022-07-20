@@ -225,7 +225,7 @@ local normal_mode_mappings = {
     g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Find Text" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
     p = { "<cmd>NvimTreeToggle<cr>", "Toggle Filetree" },
-    b = { "<cmd>Telescope file_browser<cr>", "File browser" },
+    b = { "<cmd>BrowseBookmarks<cr>", "BrowseBookmarks" },
     l = { "<cmd>Lf<cr>", "Open LF" },
   },
 
