@@ -26,7 +26,9 @@ require('telescope').setup {
       '--with-filename',
       '--line-number',
       '--column',
-      '--smart-case'
+      '--smart-case',
+      '--no-ignore',
+      '--hidden',
     },
     layout_config     = {
       horizontal = {
@@ -170,9 +172,13 @@ M.live_grep = function(opts)
       winblend         = 4,
       sorting_strategy = "ascending",
       layout_strategy = "bottom_pane",
-      prompt_prefix = ">> ",
+      layout_config = {
+        prompt_position = 'bottom',
+      },
+      -- prompt_prefix = ">> ",
       prompt_title = "Live_Grep",
       search_dirs = { cwd },
+
     }))
 end
 
