@@ -12,6 +12,9 @@ local bookmarks = {
   "https://github.com/christianchiarulli",
   "https://aur.archlinux.org/packages/",
   "https://github.com/lcdse7en",
+  "https://m.weibo.cn/u/1965284462",
+  "http://kkhanju.top/",
+  "https://www.kpopn.com/category/news",
   -- "https://github.com/neovim/neovim",
   -- "https://neovim.discourse.group/",
 }
