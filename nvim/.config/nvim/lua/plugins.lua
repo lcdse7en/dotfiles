@@ -137,6 +137,7 @@ return require('packer').startup({
     use { "edluffy/specs.nvim", config = "require('plugins.specs')" }
     use { "kevinhwang91/nvim-hlslens", config = "require('plugins.nvim-hlslens')" }
     use { "gcmt/wildfire.vim" }
+    use { "windwp/nvim-ts-autotag" }
 
     if packer_bootstrap then
       require('packer').sync()

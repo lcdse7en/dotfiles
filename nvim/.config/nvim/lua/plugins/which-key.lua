@@ -217,6 +217,28 @@ local normal_mode_mappings = {
     m = { 'toggle' },
     t = { 'tableize' },
   },
+
+  f = {
+    name = "Files",
+    c = { '<cmd>Telescope colorscheme<CR>',                              'color schemes' },
+    f = { '<cmd>lua require("plugins.telescope").edit_neovim()<CR>',     'dotfiles' },
+    g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Find Text" },
+    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    p = { "<cmd>NvimTreeToggle<cr>", "Toggle Filetree" },
+    b = { "<cmd>Telescope file_browser<cr>", "File browser" },
+    l = { "<cmd>Lf<cr>", "Open LF" },
+  },
+
+  m = {
+    name = "Terminal",
+    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
+    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "IPython" },
+    f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+    h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
+    v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  },
 }
 
 local visual_mode_mappings = {
