@@ -8,7 +8,7 @@ end
 
 lsp_installer.setup {
   -- A list of servers to automatically install if they're not already installed
-  ensure_installed = { "bashls", "cssls", "eslint", "graphql", "html", "jsonls", "sumneko_lua", "tailwindcss", "tsserver", "vetur", "vuels" },
+  ensure_installed = { "pyright", "bashls", "cssls", "eslint", "graphql", "html", "jsonls", "sumneko_lua", "tailwindcss", "tsserver", "vetur", "vuels" },
   -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed
   automatic_installation = true,
 
@@ -84,6 +84,10 @@ lspconfig.vuels.setup {
   filetypes = require('lsp.servers.vuels').filetypes,
   handlers = handlers,
   init_options = require('lsp.servers.vuels').init_options,
+  on_attach = on_attach,
+}
+
+lspconfig.pyright.setup{
   on_attach = on_attach,
 }
 
