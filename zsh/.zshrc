@@ -120,6 +120,7 @@ alias "redis-cli"='redis-cli(){ cd ~/redis-6.0.8/src;./redis-cli;};redis-cli'
 alias m="neomutt"
 alias "fd"='fd(){ cd $(find ~/ -type d | fzf);ra;};fd'
 alias "fe"='fe(){ nvim $(find ~/ -type f | fzf);};fe'
+alias "lf"='lfub'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -138,6 +139,7 @@ _fzf_compgen_dir() {
 }
 
 
+export PATH=$PATH:/usr/bin/ueberzug
 
 export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
 export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
