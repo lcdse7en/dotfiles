@@ -102,11 +102,15 @@ lspconfig.vuels.setup {
 }
 
 lspconfig.pyright.setup{
+  handlers = handlers,
   on_attach = on_attach,
+  settings = require('lsp.servers.pyright').settings,
 }
 
 lspconfig.ltex.setup{
+  handlers = handlers,
   on_attach = on_attach,
+  settings = require('lsp.servers.ltex').settings,
 }
 
 for _, server in ipairs { "bashls", "cssls", "graphql", "html", "volar" } do

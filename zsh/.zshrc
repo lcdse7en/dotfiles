@@ -138,15 +138,7 @@ _fzf_compgen_dir() {
 }
 
 
-# lg()
-# {
-#     export LAZYGIT_NEW_DIR_FILE=~/.config/lazygit/config.yml
-#
-#     lazygit "$@"
-#
-#     if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
-#             cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
-#             rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
-#     fi
-# }
 
+export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
+export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
+export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info

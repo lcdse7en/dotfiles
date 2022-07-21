@@ -153,6 +153,11 @@ return require('packer').startup({
       config = "require('plugins.browse')"
     }
     use { "junegunn/fzf.vim" }
+    use { "valentjn/ltex-ls" }
+    -- use { "SirVer/ultisnips"}
+    -- use { "MarcWeber/vim-addon-mw-utils" }
+    -- use { "tomtom/tlib_vim" }
+    -- use { "honza/vim-snippets" }
 
     if packer_bootstrap then
       require('packer').sync()
