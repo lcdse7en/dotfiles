@@ -18,7 +18,15 @@ return require('packer').startup({
     use { 'nathom/filetype.nvim' }
     use { 'nvim-lua/plenary.nvim' }
     use { 'kyazdani42/nvim-web-devicons' }
-    use { 'goolord/alpha-nvim', config = "require('plugins.alpha')" }
+    -- use { 'goolord/alpha-nvim', config = "require('plugins.alpha')" }
+    use {
+
+      'goolord/alpha-nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' },
+      config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+      end
+    }
 
     -- Themes
     use { 'folke/tokyonight.nvim' }
@@ -145,7 +153,7 @@ return require('packer').startup({
       },
       config = "require('plugins.browse')"
     }
-  use { "junegunn/fzf.vim" }
+    use { "junegunn/fzf.vim" }
 
     if packer_bootstrap then
       require('packer').sync()
