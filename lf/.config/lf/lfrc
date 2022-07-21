@@ -1,5 +1,7 @@
 # Basic vars
-set shellopts '-eu'
+set shell zsh
+set drawbox
+set shellopts '-euy'
 set ifs "\n"
 set scrolloff 10
 set icons
@@ -90,6 +92,7 @@ cmd bulk-rename ${{
     lf -remote "send $id unselect"
 }}
 
+cmd aj %lf -remote "send $id cd '$(autojump $1)'"
 # zoxide is a smarter cd command that helps you jump to any directory in just a few keystrokes
 cmd z %{{
     result="$(zoxide query --exclude "${PWD}" -- "$1")"
@@ -291,7 +294,7 @@ map <c-o> jump-prev # default is [
 map <c-r> jump-next # default is ]
 map <c-s> :fzf_search
 map <c-g> push $lazygit<enter>
-/* map <enter> shell */
+# map <enter> shell
 map S shell $SHELL
 map o push :openwith<space>
 #map o &mimeopen $f
@@ -316,7 +319,8 @@ map yp $printf "%s" "$fx" | xclip -selection clipboard
 map yn $basename -a -- $fx | head -c-1 | xclip -i -selection clipboard
 map ye yank-basename-without-extension 
 # jump to file
-map zz push :z<space>
+#map zz push :z<space>
+map z push :aj<space>
 
 # Dragon mapping
 map dr dragon
