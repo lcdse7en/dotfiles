@@ -291,7 +291,8 @@ map <c-o> jump-prev # default is [
 map <c-r> jump-next # default is ]
 map <c-s> :fzf_search
 map <c-g> push $lazygit<enter>
-map <enter> shell
+/* map <enter> shell */
+map S shell $SHELL
 map o push :openwith<space>
 #map o &mimeopen $f
 #map O $mimeopen --ask $f

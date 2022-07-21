@@ -4,5 +4,7 @@ map gD cd ~/Documents
 map gd cd ~/Downloads
 map gfd cd ~/dotfiles/
 map gfn cd ~/dotfiles/nvim/.config/nvim/
+map gfr cd ~/dotfiles/ranger/.config/ranger/
+map gfg ~/github_upload/
 map gfl cd ~/dotfiles/lf/.config/lf/
 

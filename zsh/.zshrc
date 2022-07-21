@@ -140,6 +140,8 @@ _fzf_compgen_dir() {
 
 
 export PATH=$PATH:/usr/bin/ueberzug
+export PATH=$PATH:/usr/local/bin
+
 
 export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
 export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man

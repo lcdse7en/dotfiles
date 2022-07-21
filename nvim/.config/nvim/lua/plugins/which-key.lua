@@ -226,7 +226,8 @@ local normal_mode_mappings = {
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
     p = { "<cmd>NvimTreeToggle<cr>", "Toggle Filetree" },
     b = { "<cmd>BrowseBookmarks<cr>", "BrowseBookmarks" },
-    l = { "<cmd>Lf<cr>", "Open LF" },
+    -- l = { "<cmd>Lf<cr>", "Open LF" },
+    l = { "<cmd>ToggleTerm direction=float<cr>lf<cr>", "Open LF" },
   },
 
   m = {
