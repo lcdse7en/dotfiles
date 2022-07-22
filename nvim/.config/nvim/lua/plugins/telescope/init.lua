@@ -30,20 +30,43 @@ require('telescope').setup {
       '--no-ignore',
       '--hidden',
     },
-    layout_config     = {
-      horizontal = {
-        preview_cutoff = 120,
-      },
-      prompt_position = "top",
+    -- layout_config     = {
+    --   horizontal = {
+    --     preview_cutoff = 120,
+    --   },
+    --   prompt_position = "top",
+    -- },
+     layout_config = {
+         horizontal = {
+            prompt_position = "top",
+            preview_width = 0.55,
+            results_width = 0.8,
+         },
+         vertical = {
+            mirror = false,
+         },
+         width = 0.87,
+         height = 0.80,
+         preview_cutoff = 120,
     },
-    file_sorter       = require('telescope.sorters').get_fzy_sorter,
+    -- file_sorter       = require('telescope.sorters').get_fzy_sorter,
+    file_sorter       = require('telescope.sorters').get_fuzzy_file,
+    file_ignore_patterns = { "node_modules" },
     -- prompt_prefix     = ' 🔍 ',
-    prompt_prefix     = "  ",
+    -- prompt_prefix     = "  ",
+    prompt_prefix = "   ",
     selection_caret   = " ",
+    selection_strategy = "reset",
     entry_prefix      = " ",
-    scroll_strategy   = "limit",
+    -- scroll_strategy   = "limit",
+    scroll_strategy   = "cycle",
     path_display      = { "absolute" },
+    winblend = 4,
+    border = {},
+    borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
     color_devicons    = true,
+    use_less = true,
+    set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
 
     git_icons = git_icons,
 
@@ -76,8 +99,21 @@ require('telescope').setup {
       override_file_sorter = true,
       case_mode = "smart_case",
     },
+    media_files = {
+         filetypes = { "png", "webp", "jpg", "jpeg" },
+         find_cmd = "rg", -- find command (defaults to `fd`)
+    },
   }
 }
+
+
+local extensions = { "themes", "terms", "fzf" }
+local packer_repos = [["extensions", "telescope-fzf-native.nvim"]]
+
+if vim.fn.executable "ueberzug" == 1 then
+   table.insert(extensions, "media_files")
+   packer_repos = packer_repos .. ', "telescope-media-files.nvim"'
+end
 
 -- Implement delta as previewer for diffs
 
@@ -172,10 +208,20 @@ M.live_grep = function(opts)
       winblend         = 4,
       sorting_strategy = "ascending",
       layout_strategy = "bottom_pane",
+      -- layout_strategy = "flex",
       layout_config = {
-        prompt_position = 'bottom',
-      },
-      -- prompt_prefix = ">> ",
+         horizontal = {
+            prompt_position = "top",
+            preview_width = 0.55,
+            results_width = 0.8,
+         },
+         vertical = {
+            mirror = false,
+         },
+         width = 0.87,
+         height = 0.80,
+         preview_cutoff = 120,
+    },
       prompt_title = "Live_Grep",
       search_dirs = { cwd },
 
