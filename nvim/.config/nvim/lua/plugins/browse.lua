@@ -9,6 +9,7 @@ browse.setup {
 
 local bookmarks = {
   "https://github.com/rockerBOO/awesome-neovim",
+  "https://github.com/Allaman/nvim",
   "https://github.com/christianchiarulli",
   "https://aur.archlinux.org/packages/",
   "https://github.com/lcdse7en",
