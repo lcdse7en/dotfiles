@@ -154,9 +154,14 @@ return require('packer').startup({
     }
     use { "junegunn/fzf.vim" }
     use { "karb94/neoscroll.nvim" }
--- Snippet engine and snippet template
-    -- use({"SirVer/ultisnips", event = 'InsertEnter'})
-    -- use({ "honza/vim-snippets", after = 'ultisnips'})
+    use {
+    "jose-elias-alvarez/null-ls.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim"
+      },
+    }
+
+
 
     if packer_bootstrap then
       require('packer').sync()
