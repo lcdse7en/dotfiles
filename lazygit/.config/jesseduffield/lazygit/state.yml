@@ -1,11 +1,13 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/se7en/dotfiles
+- /home/se7en/github_upload/chrome_extensions
+- /home/se7en/github_upload/archlinux
+- /home/se7en/github_upload/picom
 - /home/se7en
 - /home/se7en/github_upload/texlive
 - /home/se7en/github_upload/lf
 - /home/se7en/github_upload/wallpapers
-- /home/se7en/github_upload/archlinux
 - /home/se7en/github_upload/test
 - /home/se7en/github_upload/zshrc
 - /home/se7en/github_upload/lazygit

@@ -153,7 +153,10 @@ return require('packer').startup({
       config = "require('plugins.browse')"
     }
     use { "junegunn/fzf.vim" }
-    use { "valentjn/ltex-ls" }
+    use { "karb94/neoscroll.nvim" }
+-- Snippet engine and snippet template
+    -- use({"SirVer/ultisnips", event = 'InsertEnter'})
+    -- use({ "honza/vim-snippets", after = 'ultisnips'})
 
     if packer_bootstrap then
       require('packer').sync()

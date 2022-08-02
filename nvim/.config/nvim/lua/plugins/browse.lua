@@ -17,6 +17,8 @@ local bookmarks = {
   "https://www.kpopn.com/category/news",
   "https://github.com/ecosse3/dotfiles",
   "https://github.com/LukeSmithxyz/voidrice/tree/master/.config",
+  "https://github.com/glepnir",
+  "https://www.extfans.com/",
   -- "https://github.com/neovim/neovim",
   -- "https://neovim.discourse.group/",
 }

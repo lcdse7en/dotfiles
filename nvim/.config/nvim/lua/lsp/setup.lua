@@ -10,7 +10,7 @@ lsp_installer.setup {
   -- A list of servers to automatically install if they're not already installed
   ensure_installed = {
     "pyright",
-    "ltex",
+    -- "ltex",
     "bashls",
     "cssls",
     "eslint",
@@ -107,11 +107,11 @@ lspconfig.pyright.setup{
   settings = require('lsp.servers.pyright').settings,
 }
 
-lspconfig.ltex.setup{
-  handlers = handlers,
-  on_attach = on_attach,
-  settings = require('lsp.servers.ltex').settings,
-}
+-- lspconfig.ltex.setup{
+--   handlers = handlers,
+--   on_attach = on_attach,
+--   settings = require('lsp.servers.ltex').settings,
+-- }
 
 for _, server in ipairs { "bashls", "cssls", "graphql", "html", "volar" } do
   lspconfig[server].setup {

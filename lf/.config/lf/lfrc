@@ -1,10 +1,11 @@
 # Basic vars
 set shell zsh
-set drawbox
+# set drawbox
 set shellopts '-euy'
 set ifs "\n"
 set scrolloff 10
 set icons
+set info "size"
 set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set cleaner '~/.config/lf/cleaner'
@@ -264,6 +265,14 @@ cmd yank-basename-without-extension ${{
       xclip -i -selection clipboard
 }}
 
+# Touch
+cmd touch ${{
+  printf "File name: "
+  read ans
+  #$EDITOR $ans
+  touch $ans
+}}
+
 #########################################################################################
 
 # Bindings
@@ -294,8 +303,8 @@ map <c-o> jump-prev # default is [
 map <c-r> jump-next # default is ]
 map <c-s> :fzf_search
 map <c-g> push $lazygit<enter>
-# map <enter> shell
-map S shell $SHELL
+map <enter> shell-wait
+map S shell
 map o push :openwith<space>
 #map o &mimeopen $f
 #map O $mimeopen --ask $f
@@ -308,6 +317,8 @@ map b $setbg $f
 map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
+# map T push %touch<space>
+map T touch
 # show 1 pannel or 2 pannel
 map w %lf -remote "send $id set ratios 1:2"
 map W %lf -remote "send $id set ratios 1:2:3"
@@ -333,6 +344,7 @@ map dl dlfile
 # map dd trash
 map tc clear_trash
 map tr restore_trash
+map Qg !clear; glow -p $fx 
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
