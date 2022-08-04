@@ -1,33 +1,95 @@
-local nls = require("null-ls")
+local null_ls = require("null-ls")
+
+-- register any number of sources simultaneously
+local sources = {
+  null_ls.builtins.formatting.prettier.with({
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "vue",
+      "css",
+      "scss",
+      "less",
+      "html",
+      "json",
+      "jsonc",
+      "yaml",
+      "markdown",
+      "graphql",
+      "handlebars",
+    },
+  }),
+  -- null_ls.builtins.formatting.jq,
+  -- xml
+  null_ls.builtins.formatting.xmllint,
+  -- toml
+  null_ls.builtins.formatting.taplo,
+  -- sh
+  null_ls.builtins.code_actions.shellcheck,
+  null_ls.builtins.diagnostics.shellcheck,
+  null_ls.builtins.formatting.shellharden,
+  -- lua
+  null_ls.builtins.formatting.stylua,
+  -- word
+  null_ls.builtins.diagnostics.write_good.with({
+    method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+  }),
+  -- md
+  null_ls.builtins.diagnostics.markdownlint.with({
+    method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+  }),
+  -- null_ls.builtins.code_actions.gitsigns,
+  -- sql
+  null_ls.builtins.formatting.sql_formatter.with({
+    filetypes = {
+      "sql",
+      "mysql",
+    },
+  }),
+  -- null_ls.builtins.formatting.google_java_format,
+  -- null_ls.builtins.diagnostics.semgrep,
+  null_ls.builtins.formatting.rustfmt,
+  -- null_ls.builtins.diagnostics.semgrep.with({
+  -- 	method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+  -- 	extra_args = { "--config", "p/java" },
+  -- }),
+  null_ls.builtins.formatting.gofmt,
+}
+
+local lsp_formatting = function(bufnr)
+  vim.lsp.buf.format({
+    filter = function(client)
+      -- apply whatever logic you want (in this example, we'll only use null-ls)
+      return client.name == "null-ls"
+    end,
+    bufnr = bufnr,
+  })
+end
+
+-- if you want to set up formatting on save, you can use this as a callback
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-nls.setup({
-  sources = {
-    nls.builtins.formatting.stylua.with({ extra_args = { "--indent-type", "Spaces", "--indent-width", "2" } }),
-    nls.builtins.diagnostics.eslint,
-    nls.builtins.formatting.prettier.with({
-      extra_args = { "--single-quote", "false" },
-    }),
-    nls.builtins.formatting.terraform_fmt,
-    nls.builtins.formatting.black,
-    nls.builtins.formatting.goimports,
-    nls.builtins.formatting.gofumpt,
-    nls.builtins.formatting.latexindent.with({
-      extra_args = { "-g", "/dev/null" }, -- https://github.com/cmhughes/latexindent.pl/releases/tag/V3.9.3
-    }),
-    nls.builtins.code_actions.shellcheck,
-    nls.builtins.diagnostics.vale,
-  },
+
+-- add to your shared on_attach callback
+local on_attach = function(client, bufnr)
+  if client.supports_method("textDocument/formatting") then
+    vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = augroup,
+      buffer = bufnr,
+      callback = function()
+        lsp_formatting(bufnr)
+      end,
+    })
+  end
+end
+
+null_ls.setup({
+  sources = sources,
   on_attach = function(client, bufnr)
-    if client.supports_method("textDocument/formatting") then
-      vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        group = augroup,
-        buffer = bufnr,
-        callback = function()
-          vim.lsp.buf.format({ bufnr = bufnr })
-        end,
-      })
-    end
-    require("functions").custom_lsp_attach(client, bufnr)
+    require("kide.core.keybindings").maplsp(client, bufnr)
+    -- on_attach(client, bufnr)
   end,
+  -- debug = true,
 })

@@ -155,10 +155,11 @@ return require('packer').startup({
     use { "junegunn/fzf.vim" }
     use { "karb94/neoscroll.nvim" }
     use {
-    "jose-elias-alvarez/null-ls.nvim",
-    requires = {
-      "nvim-lua/plenary.nvim"
-      },
+      "jose-elias-alvarez/null-ls.nvim",
+      requires = {
+        "nvim-lua/plenary.nvim"
+        },
+      -- config = "require('plugins.null-ls')"
     }
     use {
       "simrat39/symbols-outline.nvim",
