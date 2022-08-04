@@ -160,6 +160,12 @@ return require('packer').startup({
       "nvim-lua/plenary.nvim"
       },
     }
+    use {
+      "simrat39/symbols-outline.nvim",
+      cmd = { "SymbolsOutline" },
+      config = "require('plugins.symbols)"
+    }
+
 
 
 

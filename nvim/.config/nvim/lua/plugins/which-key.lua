@@ -228,7 +228,8 @@ local normal_mode_mappings = {
     b = { "<cmd>BrowseBookmarks<cr>", "BrowseBookmarks" },
     -- l = { "<cmd>lfup<cr>", "Open LF" },
     l = { "<cmd>ToggleTerm direction=float<cr>lf<cr>", "Open LF" },
-    s = { "<cmd>w<cr>", "Save Buffer" },
+    -- s = { "<cmd>w<cr>", "Save Buffer" },
+    s = { "<cmd>SymbolsOutline<cr>", "Toggle SymbolsOutline" },
   },
 
   m = {
