@@ -179,7 +179,6 @@ return require('packer').startup({
      "hrsh7th/cmp-emoji",
      after = "nvim-cmp"
     }
-    use { "" }
     -- Snippet engine and snippet template
     -- use({"SirVer/ultisnips", event = 'InsertEnter'})
     -- use({ "honza/vim-snippets", after = 'ultisnips'})
