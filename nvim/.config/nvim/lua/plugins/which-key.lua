@@ -98,13 +98,15 @@ local normal_mode_mappings = {
   ["v"] = { '<C-W>v',                                    'split right' },
   ["V"] = { '<C-W>s',                                    'split below' },
   ["q"] = { 'quicklist' },
+  -- ["F6"] = { '<cmd>vsplit<cr><cmd>terminal xelatex %<cr>', 'xelatex' },
+  -- ["F7"] = { '<cmd>vsplit<cr><cmd>terminal xelatex -shell-escape%<cr>', 'xelatex -shell-escape' },
 
   ["/"] = {
     name = "Ecovim",
     ["/"] = { '<cmd>Alpha<CR>',                                 'open dashboard' },
     c = { '<cmd>e $MYVIMRC<CR>',                                    'open config' },
     i = { '<cmd>PackerInstall<CR>',                             'install plugins' },
-    u = { '<cmd>PackerSync<CR>',                                'update plugins' },
+    u = { '<cmd>PackerSync<CR>',                                'PackerSync' },
     s = {
       name = "Session",
       c = { '<cmd>SessionManager load_session<CR>',             'choose session' },
@@ -224,12 +226,12 @@ local normal_mode_mappings = {
     f = { '<cmd>lua require("plugins.telescope").edit_neovim()<CR>',     'dotfiles' },
     g = { "<cmd>lua require('plugins.telescope').live_grep()<cr>",       "Find Text" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-    p = { "<cmd>NvimTreeToggle<cr>", "Toggle Filetree" },
+    -- p = { "<cmd>NvimTreeToggle<cr>", "Toggle Filetree" },
     b = { "<cmd>BrowseBookmarks<cr>", "BrowseBookmarks" },
     -- l = { "<cmd>lfup<cr>", "Open LF" },
     l = { "<cmd>ToggleTerm direction=float<cr>lf<cr>", "Open LF" },
     -- s = { "<cmd>w<cr>", "Save Buffer" },
-    s = { "<cmd>SymbolsOutline<cr>", "Toggle SymbolsOutline" },
+    o = { "<cmd>SymbolsOutline<cr>", "Toggle SymbolsOutline" },
   },
 
   m = {
@@ -241,6 +243,11 @@ local normal_mode_mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  },
+  n = {
+    name = "Nvimtree",
+    t = { ":NvimTreeToggle<cr>", "Toggle NvimTree" },
+    f = { ":NvimTreeFocus<cr>", "Focus on NvimTree" },
   },
 }
 

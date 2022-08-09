@@ -73,7 +73,9 @@ return require('packer').startup({
     use { 'onsails/lspkind-nvim' }
     use { 'folke/lsp-trouble.nvim', config = "require('plugins.trouble')" }
     use { 'nvim-lua/popup.nvim' }
-    use { 'ChristianChiarulli/nvim-gps', branch = 'text_hl', config = "require('plugins.gps')", after = 'nvim-treesitter' }
+    -- use { 'ChristianChiarulli/nvim-gps', branch = 'text_hl', config = "require('plugins.gps')", after = 'nvim-treesitter' }
+    use {'SmiteshP/nvim-gps', config = "require('plugins.gps')", after = 'nvim-treesitter'}
+    use {'jose-elias-alvarez/nvim-lsp-ts-utils', after = {'nvim-treesitter'}}
     use { 'jose-elias-alvarez/typescript.nvim' }
 
     -- General
@@ -113,7 +115,13 @@ return require('packer').startup({
     use { 'p00f/nvim-ts-rainbow', after = { 'nvim-treesitter' } }
     use { 'lukas-reineke/indent-blankline.nvim', config = "require('plugins.indent')" }
     use { 'NvChad/nvim-colorizer.lua', config = "require('plugins.colorizer')" }
-    use { 'L3MON4D3/LuaSnip', requires = { 'rafamadriz/friendly-snippets' }, after = 'cmp_luasnip' }
+    use {
+      'L3MON4D3/LuaSnip',
+      requires = {
+        'rafamadriz/friendly-snippets',
+      },
+      after = 'cmp_luasnip',
+    }
 
     -- Git
     use { 'lewis6991/gitsigns.nvim',
@@ -140,7 +148,8 @@ return require('packer').startup({
 
 
     -- Add
-    use { "Pocco81/AutoSave.nvim", config = "require('plugins.autosave')" }
+    -- use { "Pocco81/AutoSave.nvim", config = "require('plugins.autosave')" }
+    -- use { "907th/vim-auto-save", event = "InsertEnter" }
     use { "edluffy/specs.nvim", config = "require('plugins.specs')" }
     use { "kevinhwang91/nvim-hlslens", config = "require('plugins.nvim-hlslens')" }
     use { "gcmt/wildfire.vim" }
@@ -166,6 +175,15 @@ return require('packer').startup({
       cmd = { "SymbolsOutline" },
       config = "require('plugins.symbols)"
     }
+    use {
+     "hrsh7th/cmp-emoji",
+     after = "nvim-cmp"
+    }
+    use { "" }
+    -- Snippet engine and snippet template
+    -- use({"SirVer/ultisnips", event = 'InsertEnter'})
+    -- use({ "honza/vim-snippets", after = 'ultisnips'})
+
 
 
 
