@@ -148,8 +148,7 @@ return require('packer').startup({
 
 
     -- Add
-    -- use { "Pocco81/AutoSave.nvim", config = "require('plugins.autosave')" }
-    -- use { "907th/vim-auto-save", event = "InsertEnter" }
+    use { "Pocco81/AutoSave.nvim", config = "require('plugins.autosave')" }
     use { "edluffy/specs.nvim", config = "require('plugins.specs')" }
     use { "kevinhwang91/nvim-hlslens", config = "require('plugins.nvim-hlslens')" }
     use { "gcmt/wildfire.vim" }
@@ -176,8 +175,8 @@ return require('packer').startup({
       config = "require('plugins.symbols)"
     }
     use {
-     "hrsh7th/cmp-emoji",
-     after = "nvim-cmp"
+      "hrsh7th/cmp-emoji",
+      after = "nvim-cmp"
     }
     -- Snippet engine and snippet template
     -- use({"SirVer/ultisnips", event = 'InsertEnter'})

@@ -143,3 +143,5 @@ keymap("x", "<m-/>", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vi
 keymap("n", "<C-f>", ":FZF<cr>", silent)
 keymap("n", "<C-a>", ":Rg<cr>", silent)
 
+-- Autosave
+keymap("n", "<leader>as", ":ASToggle<CR>", {})
