@@ -9,17 +9,18 @@ browse.setup {
 
 local bookmarks = {
   "https://github.com/rockerBOO/awesome-neovim",
+  "https://github.com/ecosse3/dotfiles",
   "https://github.com/Allaman/nvim",
   "https://github.com/christianchiarulli",
+  "https://github.com/LukeSmithxyz/voidrice/tree/master/.config",
   "https://aur.archlinux.org/packages/",
   "https://github.com/lcdse7en",
   "https://m.weibo.cn/u/1965284462",
   "http://kkhanju.top/",
   "https://www.kpopn.com/category/news",
-  "https://github.com/ecosse3/dotfiles",
-  "https://github.com/LukeSmithxyz/voidrice/tree/master/.config",
-  "https://github.com/glepnir",
   "https://www.extfans.com/",
+  "https://github.com/topics/nvim-config"
+  -- "https://github.com/glepnir",
   -- "https://github.com/neovim/neovim",
   -- "https://neovim.discourse.group/",
 }

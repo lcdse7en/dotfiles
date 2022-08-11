@@ -167,7 +167,7 @@ return require('packer').startup({
       requires = {
         "nvim-lua/plenary.nvim"
         },
-      -- config = "require('plugins.null-ls')"
+      config = "require('plugins.null-ls')"
     }
     use {
       "simrat39/symbols-outline.nvim",

@@ -7,7 +7,7 @@ require("toggleterm").setup{
       return vim.o.columns * 0.4
     end
   end,
-  open_mapping = [[<F12>]],
+  open_mapping = [[<F4>]],
   hide_numbers = true, -- hide the number column in toggleterm buffers
   highlights = {
     -- highlights which map to a highlight group name and a table of it's values
