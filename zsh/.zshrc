@@ -123,6 +123,8 @@ alias m="neomutt"
 alias "fd"='fd(){ cd $(find ~/ -type d | fzf);ra;};fd'
 alias "fe"='fe(){ nvim $(find ~/ -type f | fzf);};fe'
 alias "lf"='lfub'
+alias "patch"="sudo patch -p1 <"
+alias "clean"="sudo make clean install"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
