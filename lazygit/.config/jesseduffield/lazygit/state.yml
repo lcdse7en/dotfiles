@@ -1,8 +1,15 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/se7en/dotfiles
+- /home/se7en/scripts
+- /home/se7en/.local/src/dwm
+- /home/se7en/.local/src/dwmblocks
+- /home/se7en/ll
+- /home/se7en/test
 - /home/se7en
 - /home/se7en/dwm
+- /home/se7en/github_upload/lazygit
+- /home/se7en/lazygit
 - /home/se7en/.dwm
 - /home/se7en/github_upload/chrome_extensions
 - /home/se7en/github_upload/archlinux
@@ -12,5 +19,4 @@ recentrepos:
 - /home/se7en/github_upload/wallpapers
 - /home/se7en/github_upload/test
 - /home/se7en/github_upload/zshrc
-- /home/se7en/github_upload/lazygit
 - /home/se7en/.config/ranger

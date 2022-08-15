@@ -93,8 +93,8 @@ plugins=(
 )
 
 export EDITOR="nvim"
-
-
+export TERMINAL="alacritty"
+export BROWSER="google-chrome-stable"
 source $ZSH/oh-my-zsh.sh
 
 
@@ -112,6 +112,8 @@ alias c="clear"
 alias s="neofetch"
 alias e="exit"
 alias vim="nvim"
+alias pac="sudo pacman"
+alias sz="source ~/.zshrc"
 alias lg="lazygit"
 alias f="fanyi"
 alias zshrc="nvim ~/.zshrc"
@@ -125,11 +127,17 @@ alias "fe"='fe(){ nvim $(find ~/ -type f | fzf);};fe'
 alias "lf"='lfub'
 alias "patch"="sudo patch -p1 <"
 alias "clean"="sudo make clean install"
+alias "gc"="git clone"
+alias "name"="git config --global user.name"
+alias "email"="git config --global user.email"
+alias "origin"="git remote add origin"
+alias "b"="bash ~/scripts/dwmblocks-start.sh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 
 export FZF_DEFAULT_COMMAND='fd --hidden --follow -E ".git" -E "node_modules" . /home /etc'
 export FZF_COMPLETION_TRIGGER='\'
@@ -145,11 +153,16 @@ _fzf_compgen_dir() {
 
 export PATH=$PATH:/usr/bin/ueberzug
 export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/share/
+export PATH=$PATH:~/.local/bin/
+export PATH=$PATH:~/.local/src/
+export PATH=$PATH:~/.local/bin/statusbar/
 
+export PATH=$PATH:~/scripts/
 
 export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
 export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
 export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info
-
+export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

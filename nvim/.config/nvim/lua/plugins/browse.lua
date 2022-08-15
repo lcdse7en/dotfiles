@@ -14,6 +14,7 @@ local bookmarks = {
   "https://github.com/christianchiarulli",
   "https://github.com/theniceboy",
   "https://github.com/LukeSmithxyz/voidrice/tree/master/.config",
+  "https://github.com/andreqls",
   "https://aur.archlinux.org/packages/",
   "https://suckless.org/",
   "https://github.com/lcdse7en",
