@@ -26,32 +26,33 @@ set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
 # cmds/functions
+# cmds/functions
 cmd open ${{
-    case $(file --mime-type "$(readlink -f $f)" -b) in
-	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
-	image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
-        text/*|application/json|inode/x-empty) $EDITOR $fx;;
-	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
-	image/svg+xml) display -- $f ;;
-	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" |
-		setsid -f sxiv -aio 2>/dev/null | while read -r file; do
-			[ -z "$file" ] && continue
-			lf -remote "send select \"$file\""
-			lf -remote "send toggle"
-		done &
-		;;
-	audio/*) mpv --audio-display=no $f ;;
-	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-	application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
-	application/pgp-encrypted) $EDITOR $fx ;;
-	application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text) setsid -f lowriter $fx >/dev/null 2>&1 ;;
-	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/octet-stream|application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template) setsid -f localc $fx >/dev/null 2>&1 ;;
-	application/vnd.openxmlformats-officedocument.presentationml.presentation|application/vnd.oasis.opendocument.presentation-template|application/vnd.oasis.opendocument.presentation|application/vnd.ms-powerpoint) setsid -f loimpress $fx >/dev/null 2>&1 ;;
-	application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template) setsid -f lodraw $fx >/dev/null 2>&1 ;;
-	application/vnd.oasis.opendocument.formula) setsid -f lomath $fx >/dev/null 2>&1 ;;
-	application/vnd.oasis.opendocument.database) setsid -f lobase $fx >/dev/null 2>&1 ;;
-        *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
-    esac
+  case $(file --mime-type "$(readlink -f $f)" -b) in
+      application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
+      image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
+      text/*|application/json|inode/x-empty) $EDITOR $fx;;
+      image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
+      image/svg+xml) display -- $f ;;
+      image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" |
+        setsid -f sxiv -aio 2>/dev/null | while read -r file; do
+          [ -z "$file" ] && continue
+          lf -remote "send select \"$file\""
+          lf -remote "send toggle"
+        done &
+        ;;
+      audio/*) mpv --audio-display=no $f ;;
+      video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+      application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+      application/pgp-encrypted) $EDITOR $fx ;;
+      application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text) setsid -f lowriter $fx >/dev/null 2>&1 ;;
+      application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/octet-stream|application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template) setsid -f localc $fx >/dev/null 2>&1 ;;
+      application/vnd.openxmlformats-officedocument.presentationml.presentation|application/vnd.oasis.opendocument.presentation-template|application/vnd.oasis.opendocument.presentation|application/vnd.ms-powerpoint) setsid -f loimpress $fx >/dev/null 2>&1 ;;
+      application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template) setsid -f lodraw $fx >/dev/null 2>&1 ;;
+      application/vnd.oasis.opendocument.formula) setsid -f lomath $fx >/dev/null 2>&1 ;;
+      application/vnd.oasis.opendocument.database) setsid -f lobase $fx >/dev/null 2>&1 ;;
+            *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+  esac
 }}
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
@@ -105,6 +106,7 @@ cmd copyto ${{
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
 }}
 
+cmd openwith %"$@" "$fx"
 cmd setbg "$1"
 cmd bulkrename $vidir
 
@@ -114,7 +116,6 @@ map J $lf -remote "send $id cd $(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//'
 map gh
 map gg top
 map D delete
-map E extract
 map C copyto
 map M moveto
 map <c-n> push :mkdir<space>
@@ -122,8 +123,8 @@ map <c-r> reload
 map . set hidden!
 map <enter> shell
 map x $$f
-map X !$f
-map o &mimeopen $f
+#map X !$f
+#map o &mimeopen $f
 map O $mimeopen --ask $f
 
 map A rename # at the very end
@@ -131,7 +132,7 @@ map c push A<c-u> # new rename
 map I push A<c-a> # at the very beginning
 map i push A<a-b><a-b><a-f> # before extension
 map a push A<a-b> # after extension
-map B bulkrename
+map cw bulkrename
 map b $setbg $f
 
 map <c-e> down
@@ -154,9 +155,10 @@ map ye yank-basename-without-extension
 map w %lf -remote "send $id set ratios 1:2"
 map W %lf -remote "send $id set ratios 1:2:3"
 
+map o push :openwith<space>
 map C push :zip<space>
+map X extract
 map <c-g> push $lazygit<enter>
-map C push :zip<space>
 map M push :mkdir<space>
 map T touch
 map z push :aj<space>
