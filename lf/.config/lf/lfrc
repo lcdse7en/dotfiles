@@ -161,6 +161,7 @@ map M push :mkdir<space>
 map T touch
 map z push :aj<space>
 map Qg !clear; glow -p $fx 
+map b $setbg $f
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
