@@ -93,7 +93,7 @@ plugins=(
 )
 
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="st"
 export BROWSER="google-chrome-stable"
 source $ZSH/oh-my-zsh.sh
 
