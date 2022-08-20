@@ -103,8 +103,9 @@ return require('packer').startup({
     use { 'antoinemadec/FixCursorHold.nvim' } -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
     use { 'rcarriga/nvim-notify' }
     use { 'vuki656/package-info.nvim', event = "BufEnter package.json", config = "require('plugins.package-info')" }
-    use { 'iamcco/markdown-preview.nvim', run = "cd app && npm install",
-      setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" } }
+    use { 'iamcco/markdown-preview.nvim',
+          run = "cd app && npm install",
+          setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" } }
     use { 'declancm/cinnamon.nvim', config = "require('plugins.cinnamon')" }
     use { 'airblade/vim-rooter', setup = function() vim.g.rooter_patterns = EcoVim.plugins.rooter.patterns end }
     use { 'Shatur/neovim-session-manager', config = "require('plugins.session-manager')" }
@@ -171,7 +172,7 @@ return require('packer').startup({
     use {
       "simrat39/symbols-outline.nvim",
       cmd = { "SymbolsOutline" },
-      config = "require('plugins.symbols)"
+      config = "require('plugins.symbols')"
     }
     use {
       "hrsh7th/cmp-emoji",
