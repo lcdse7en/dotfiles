@@ -108,9 +108,29 @@ cmd copyto ${{
 
 cmd openwith %"$@" "$fx"
 cmd setbg "$1"
-# cmd bulkrename $vidir
-cmd bulkrename ${{
-  printf '%s\n' $fx | vidir -
+
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" >"$old"
+    printf '%s\n' "$fs" >"$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
 }}
 
 cmd mkfile ${{
@@ -182,7 +202,7 @@ map M push :mkdir<space>
 map T mkfile
 map z push :aj<space>
 map Qg !clear; glow -p $fx 
-map U bulkrename
+map U bulk-rename
 map = chmod
 
 # Source Bookmarks
