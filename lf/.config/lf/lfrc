@@ -108,8 +108,28 @@ cmd copyto ${{
 
 cmd openwith %"$@" "$fx"
 cmd setbg "$1"
-cmd bulkrename $vidir
+# cmd bulkrename $vidir
+cmd bulkrename ${{
+  printf '%s\n' $fx | vidir -
+}}
 
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  touch $ans
+}}
+
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
 
 # Bindings
 map <c-f> $lf -remote "send $id select \"$(fzf)\""
@@ -159,10 +179,11 @@ map C push :zip<space>
 map X extract
 map <c-g> push $lazygit<enter>
 map M push :mkdir<space>
-map T touch
+map T mkfile
 map z push :aj<space>
 map Qg !clear; glow -p $fx 
-map B bulkrename
+map U bulkrename
+map = chmod
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
