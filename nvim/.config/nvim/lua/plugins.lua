@@ -29,6 +29,7 @@ return require('packer').startup({
 
     -- Themes
     use { 'folke/tokyonight.nvim' }
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', config = "require('plugins.treesitter')" }
@@ -50,9 +51,16 @@ return require('packer').startup({
     use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
     use { 'nvim-pack/nvim-spectre' }
     use { 'kyazdani42/nvim-tree.lua', config = "require('plugins.tree')" }
+    use { 'gbprod/stay-in-place.nvim',
+      config = function()
+        require('stay-in-place').setup({})
+      end
+    }
 
     -- LSP Base
-    use { 'williamboman/nvim-lsp-installer' }
+    -- use { 'williamboman/nvim-lsp-installer' }
+    use { 'williamboman/mason.nvim' }
+    use { 'williamboman/mason-lspconfig.nvim' }
     use { 'neovim/nvim-lspconfig' }
 
     -- LSP Cmp
@@ -77,6 +85,7 @@ return require('packer').startup({
     use {'SmiteshP/nvim-gps', config = "require('plugins.gps')", after = 'nvim-treesitter'}
     use {'jose-elias-alvarez/nvim-lsp-ts-utils', after = {'nvim-treesitter'}}
     use { 'jose-elias-alvarez/typescript.nvim' }
+    use { 'axelvc/template-string.nvim', config = function() require('template-string').setup() end }
 
     -- General
     use { 'AndrewRadev/switch.vim' }
@@ -109,6 +118,8 @@ return require('packer').startup({
     use { 'airblade/vim-rooter', setup = function() vim.g.rooter_patterns = EcoVim.plugins.rooter.patterns end }
     use { 'Shatur/neovim-session-manager', config = "require('plugins.session-manager')" }
     use { 'kylechui/nvim-surround', config = function() require("nvim-surround").setup({}) end }
+    use { 'sunjon/shade.nvim', config = function() require("shade").setup(); require("shade").toggle(); end }
+    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async', config = "require('plugins.nvim-ufo')" }
 
     -- Snippets & Language & Syntax
     use { 'windwp/nvim-autopairs', after = { 'nvim-treesitter', 'nvim-cmp' }, config = "require('plugins.autopairs')" }
@@ -170,6 +181,8 @@ return require('packer').startup({
     }
     use { "simrat39/symbols-outline.nvim", cmd = { "SymbolsOutline" }, config = "require('plugins.symbols')" }
     use { "hrsh7th/cmp-emoji", after = "nvim-cmp" }
+    use { "xiyaowong/nvim-transparent", config = "require('plugins.transparent')" }
+
 
 
 
