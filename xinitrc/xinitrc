@@ -77,7 +77,7 @@ flameshot &
 
 # exec slstatus &
 
-# exec dwm
+exec dwm
 
 
 exec dbus-launch dwm
