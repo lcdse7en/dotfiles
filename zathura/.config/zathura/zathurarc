@@ -19,6 +19,9 @@ map K zoom in
 map J zoom out
 map i recolor
 map p print
+map bl feedkeys ":blist<Tab>"
+map bm feedkeys ":bmark "
+map bd feedkeys ":bdelete "
 set recolor                  true
 set guioptions               "shv"
 set page-padding                3
