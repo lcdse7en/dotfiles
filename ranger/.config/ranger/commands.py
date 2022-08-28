@@ -20,7 +20,6 @@ class toggleVCS(Command):
 class mkcd(Command):
     """
     :mkcd <dirname>
-
     Creates a directory with the name <dirname> and enters it.
     """
     def execute(self):
@@ -53,11 +52,8 @@ class mkcd(Command):
 class fzf_select(Command):
     """
     :fzf_select
-
     Find a file using fzf.
-
     With a prefix argument select only directories.
-
     See: https://github.com/junegunn/fzf
     """
     def execute(self):

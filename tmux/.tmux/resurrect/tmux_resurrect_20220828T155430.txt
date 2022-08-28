@@ -1,0 +1,6 @@
+pane	server	0	1	:*	1	se7en-pc	:/home/se7en	0	python3	:python3 -m http.server -d /home/se7en
+pane	server	0	1	:*	2	se7en-pc	:/home/se7en	1	sh	:/bin/sh /usr/bin/lfub
+pane	server	1	0	:-	1	se7en@se7en-pc:~	:/home/se7en	1	zsh	:
+window	server	0	:sh	1	:*	60d0,231x59,0,0{109x59,0,0,0,121x59,110,0,1}	:
+window	server	1	:zsh	0	:-	d1e5,231x59,0,0,8	:
+state	server	

@@ -1,0 +1,6 @@
+pane	dev	0	1	:*	0	se7en-pc	:/home/se7en	1	zsh	:/bin/sh /home/se7en/scripts//sb-mpdup
+pane	server	0	1	:*	0	se7en-pc	:/home/se7en	0	python3	:python3 -m http.server -d /home/se7en
+pane	server	0	1	:*	1	se7en-pc	:/home/se7en	1	zsh	:
+window	dev	0	:zsh	1	:*	d1dd,231x59,0,0,0	:
+window	server	0	:zsh	1	:*	0f4d,231x59,0,0{115x59,0,0,3,115x59,116,0,4}	:
+state	server	

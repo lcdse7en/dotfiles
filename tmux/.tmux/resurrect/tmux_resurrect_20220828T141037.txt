@@ -1,0 +1,6 @@
+pane	dev	0	1	:*	0	se7en-pc	:/home/se7en	1	zsh	:/bin/sh /home/se7en/scripts//sb-mpdup
+pane	server	0	1	:*	0	se7en-pc	:/home/se7en	0	zsh	:
+pane	server	0	1	:*	1	se7en-pc	:/home/se7en	1	sh	:/bin/sh /usr/bin/lfub
+window	dev	0	:zsh	1	:*	d1dd,231x59,0,0,0	:
+window	server	0	:sh	1	:*	0f4a,231x59,0,0{115x59,0,0,1,115x59,116,0,2}	:
+state	server	dev

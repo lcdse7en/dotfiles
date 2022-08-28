@@ -35,6 +35,7 @@ sg      g       # SETGID
 ex             # EXEC
 fi             # FILE
 
+
 # file extensions (vim-devicons)
 *.styl          
 *.sass          
@@ -97,7 +98,7 @@ fi             # FILE
 *.nix           
 *.lua           
 *.java          
-*.sh            
+*.sh            
 *.fish          
 *.bash          
 *.zsh           
@@ -140,7 +141,7 @@ fi             # FILE
 *.eex           
 *.leex          
 *.heex          
-*.vim           
+*.vim           
 *.ai            
 *.psd           
 *.psb           
@@ -157,6 +158,10 @@ fi             # FILE
 *.rproj         鉶
 *.sol           ﲹ
 *.pem           
+*.xls           
+*.xlsx          
+*.doc           
+*.docx          
 
 # file names (vim-devicons) (case-insensitive not supported in lf)
 *gruntfile.coffee       
@@ -237,8 +242,8 @@ fi             # FILE
 Vagrantfile             
 
 # archives or compressed (extensions from dircolors defaults)
-*.tar   
-*.tgz   
+*.tar   
+*.tgz   
 *.arc   
 *.arj   
 *.taz   
@@ -249,8 +254,8 @@ Vagrantfile             
 *.tlz   
 *.txz   
 *.tzo   
-*.t7z   
-*.zip   
+*.t7z   
+*.zip   
 *.z     
 *.dz    
 *.gz    
@@ -260,7 +265,7 @@ Vagrantfile             
 *.xz    
 *.zst   
 *.tzst  
-*.bz2   
+*.bz2   
 *.bz    
 *.tbz   
 *.tbz2  
@@ -271,12 +276,12 @@ Vagrantfile             
 *.war   
 *.ear   
 *.sar   
-*.rar   
+*.rar   
 *.alz   
 *.ace   
 *.zoo   
 *.cpio  
-*.7z    
+*.7z    
 *.rz    
 *.cab   
 *.wim   
@@ -305,14 +310,14 @@ Vagrantfile             
 *.mng   
 *.pcx   
 *.mov   
-*.mpg   
+*.mpg   
 *.mpeg  
 *.m2v   
-*.mkv   
+*.mkv   
 *.webm  
 *.ogm   
-*.mp4   
-*.m4v   
+*.mp4   
+*.m4v   
 *.mp4v  
 *.vob   
 *.qt    
@@ -320,11 +325,11 @@ Vagrantfile             
 *.wmv   
 *.asf   
 *.rm    
-*.rmvb  
+*.rmvb  
 *.flc   
-*.avi   
+*.avi   
 *.fli   
-*.flv   
+*.flv   
 *.gl    
 *.dl    
 *.xcf   
@@ -338,20 +343,21 @@ Vagrantfile             
 # audio formats (extensions from dircolors defaults)
 *.aac   
 *.au    
-*.flac  
+*.flac  
 *.m4a   
 *.mid   
 *.midi  
 *.mka   
-*.mp3   
+*.mp3   
 *.mpc   
-*.ogg   
+*.ogg   
 *.ra    
-*.wav   
+*.wav   
 *.oga   
 *.opus  
 *.spx   
 *.xspf  
 
+
 # other formats
-*.pdf   
+*.pdf   
