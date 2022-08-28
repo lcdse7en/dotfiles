@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -17,12 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-
-# ZSH_THEME="robbyrussell"
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -83,6 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
 	zsh-syntax-highlighting
@@ -132,7 +126,20 @@ alias "name"="git config --global user.name"
 alias "email"="git config --global user.email"
 alias "origin"="git remote add origin"
 alias "b"="bash ~/scripts/dwmblocks-start.sh"
+alias "tmux"="tmux -u"
+alias "tls"="tmux ls"
+alias "tcs"="tmux new -s"
+alias "tka"="tmux ls | cut -d: -f 1 | xargs -n1 tmux kill-session -t"
+alias "ts"="tmux source ~/.tmux.conf"
+alias "at"="tmux at"
 
+funciton tmuxopen() {
+  tmux attach -t $1
+}
+
+funciton tmuxkill() {
+  tmux kill-session -t $1
+}
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -153,8 +160,10 @@ _fzf_compgen_dir() {
 
 export PATH=$PATH:/usr/bin/ueberzug
 export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/bin/
 export PATH=$PATH:/usr/local/share/
 export PATH=$PATH:~/.local/bin/
+export PATH=$PATH:~/.local/share/applications/
 export PATH=$PATH:~/.local/src/
 export PATH=$PATH:~/.local/bin/statusbar/
 
