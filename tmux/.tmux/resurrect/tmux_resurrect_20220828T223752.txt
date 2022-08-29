@@ -1,0 +1,4 @@
+pane	server	1	1	:*	1	ranger	:/home/se7en/github_upload/Music/korea/blackpink/2019-2020\ Tokyo Dome	1	python	:python3 -m http.server -d /home/se7en
+/usr/bin/python -O /usr/bin/ranger
+window	server	1	:python	1	:*	d17d,102x59,0,0,0	:
+state	server	

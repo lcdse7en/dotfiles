@@ -8,6 +8,7 @@ map gfr cd ~/dotfiles/ranger/.config/ranger/
 map gfp cd ~/dotfiles/Pictures/Pictures/
 map gft cd ~/dotfiles/tmux/
 map gfg cd ~/github_upload/
+map gfi cd ~/github_upload/account/
 map gfl cd ~/dotfiles/lf/.config/lf/
 map gfx cd /etc/X11/xinit/
 map g/ cd /
