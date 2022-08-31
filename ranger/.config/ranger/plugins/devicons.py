@@ -120,7 +120,7 @@ file_node_extensions = {
     'mustache' : '',
     'o'        : '',
     'ogg'      : '',
-    'pdf'      : '',
+    'pdf'      : '',
     'php'      : '',
     'pl'       : '',
     'pm'       : '',
@@ -172,6 +172,8 @@ file_node_extensions = {
     'yaml'     : '',
     'yml'      : '',
     'zip'      : '',
+    'tex'      : 'ﭨ',
+    'vue'      : '﵂',
 }
 
 dir_node_exact_matches = {

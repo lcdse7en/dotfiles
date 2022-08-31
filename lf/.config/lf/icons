@@ -290,23 +290,23 @@ Vagrantfile             
 *.esd   
 
 # image formats (extensions from dircolors defaults)
-*.jpg   
-*.jpeg  
+*.jpg   
+*.jpeg  
 *.mjpg  
 *.mjpeg 
-*.gif   
+*.gif   
 *.bmp   
 *.pbm   
 *.pgm   
-*.ppm   
+*.ppm   
 *.tga   
 *.xbm   
 *.xpm   
 *.tif   
 *.tiff  
-*.png   
-*.svg   
-*.svgz  
+*.png   
+*.svg   
+*.svgz  
 *.mng   
 *.pcx   
 *.mov   
@@ -360,4 +360,4 @@ Vagrantfile             
 
 
 # other formats
-*.pdf   
+*.pdf   
