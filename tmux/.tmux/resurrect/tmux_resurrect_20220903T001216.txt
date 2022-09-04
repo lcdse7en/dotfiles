@@ -1,0 +1,4 @@
+pane	server	1	1	:*	1	lfub	:/home/se7en	1	sh	:/bin/sh /usr/bin/lfub
+pane	server	1	1	:*	2	python3 -m http.server -d /home/se7en	:/home/se7en	0	python3	:python3 -m http.server -d /home/se7en
+window	server	1	:sh	1	:*	2606,231x59,0,0{135x59,0,0,1,95x59,136,0,0}	:
+state	server	

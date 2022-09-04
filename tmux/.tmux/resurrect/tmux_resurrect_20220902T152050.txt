@@ -1,0 +1,4 @@
+pane	server	1	1	:*	1	se7en@se7en-pc:~	:/home/se7en	1	zsh	:
+pane	server	1	1	:*	2	python3 -m http.server -d /home/se7en	:/home/se7en	0	python3	:python3 -m http.server -d /home/se7en
+window	server	1	:zsh	1	:*	bf07,224x56,0,0{108x56,0,0,1,115x56,109,0,0}	:
+state	server	
