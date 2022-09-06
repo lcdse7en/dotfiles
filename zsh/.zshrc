@@ -104,6 +104,7 @@ bindkey ',' autosuggest-accept
 alias ra='ranger'
 alias c="clear"
 alias s="neofetch"
+alias p="sudo pacman -S"
 alias e="exit"
 alias vim="nvim"
 alias pac="sudo pacman"

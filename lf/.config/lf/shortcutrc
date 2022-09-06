@@ -4,6 +4,7 @@ map gD cd ~/Documents
 map gd cd ~/Downloads
 map gfd cd ~/dotfiles/
 map gfn cd ~/dotfiles/nvim/.config/nvim/
+map gfe cd ~/dotfiles/emacs/.emacs.d/
 map gfr cd ~/dotfiles/ranger/.config/ranger/
 map gfp cd ~/dotfiles/Pictures/Pictures/
 map gft cd ~/dotfiles/tmux/
