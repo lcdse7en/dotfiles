@@ -82,3 +82,17 @@ add
 odd
   adj. 古怪的；奇数的；剩余的；临时的；
   n. 奇特的事物；怪人；[高尔夫球]多于对方的一次击球；
+day-2022-09-09:
+interface
+  n. 界面；<计>接口；交界面；
+  v. （使通过界面或接口）接合，连接；[计算机]使联系；
+  vi. 相互作用（或影响）；交流，交谈；
+
+antialiasing
+  
+subpixiel
+  
+hinting
+  vt. 暗示（hint的现在分词形式）；
+scaling factor
+  
