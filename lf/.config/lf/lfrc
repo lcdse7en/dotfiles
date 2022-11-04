@@ -58,6 +58,7 @@ cmd open ${{
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 
 # extrat files
+# sudo pacman -S atool
 cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
