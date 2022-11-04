@@ -1,0 +1,247 @@
+{
+  "usepackage": {
+    "prefix": "use",
+    "body": ["\\usepackage{${1:PackageName}}", "${2}"]
+  },
+
+  "tkz-euclide draw and label points": {
+    "prefix": "pts",
+    "body": [
+      "\\tkzDrawPoints($1)",
+      "\\tkzLabelPoints[${2|above,below|} ${3|left,right|}]($1)"
+    ],
+    "description": "绘制并标注点"
+  },
+
+  "Custum section": {
+    "prefix": "sec",
+    "body": [
+      "\\section{${1:Section Name} \\textcolor{green}{\\faIcon{github}} \\textcolor{blue}{\\faIcon{code}} \\faIcon{university} \\textcolor{cyan}{\\faIcon{google-plus}} \\faIcon{at}}"
+    ],
+    "description": "自定义节标题"
+  },
+
+  "Custom includegraphics": {
+    "prefix": "includegs",
+    "body": ["\\includegraphics[width=\\textwidth]{${1:images path}}"],
+    "description": "自定义插图"
+  },
+
+  "documentclass": {
+    "prefix": "doc",
+    "body": [
+      "\\documentclass[letterpaper, 10pt]{article}",
+      "\\usepackage[margin=0.45in]{geometry}",
+      "\\usepackage[dvipsnames]{xcolor}",
+      "\\usepackage[colorlinks=true,urlcolor=Blue]{hyperref}",
+      "\\usepackage{graphicx}",
+      "\\usepackage{tabularray}",
+      "\\usepackage[slantfont, boldfont]{xeCJK}",
+      "\\usepackage{titling}",
+      "\\usepackage{titlesec}",
+      "\\usepackage{metalogo}",
+      "\\usepackage{chngcntr}",
+      "\\usepackage{fontawesome5}",
+      "\\usepackage{newclude}",
+      "\\usepackage{minted}",
+      "\\usepackage{tabularray}",
+      "\\usepackage[customcolors, shade]{hf-tikz}",
+      "\\usepackage{tkz-euclide}",
+      "",
+      "\\setmainfont{Noto Sans CJK SC}",
+      "\\setCJKmainfont{Noto Sans CJK SC}",
+      "\\setCJKsansfont{Noto Sans CJK SC}",
+      "\\setCJKmonofont{Noto Sans CJK SC}",
+      "",
+      "\\usemintedstyle{xcode}",
+      "",
+      "\\let\\oldhref\\href",
+      "\\renewcommand{\\href}[3][blue]{\\oldhref{#2}{\\color{#1}{#3}}}",
+      "",
+      "% --------------------------------------------------------",
+      "% ------------------ Link images begin -------------------",
+      "% --------------------------------------------------------",
+      "\\newcommand{\\pdf}{\\includegraphics[height=.85em]{png/pdf.png}}",
+      "\\newcommand{\\gh}{\\includegraphics[height=.85em]{png/gh.png}}",
+      "\\newcommand{\\www}{\\includegraphics[height=.85em]{png/www.png}}",
+      "\\newcommand{\\email}{\\includegraphics[height=.85em]{png/email.png}}",
+      "\\newcommand{\\gitee}{\\includegraphics[height=.85em]{png/gitee.png}}",
+      "% --------------------------------------------------------",
+      "% ------------------ Link images end -------------------",
+      "% --------------------------------------------------------",
+      "",
+      "% --------------------------------------------------------",
+      "% -------------- Custom title command begin --------------",
+      "% --------------------------------------------------------",
+      "\\renewcommand{\\maketitle}{",
+      "\t\\hspace{.25\\textwidth}",
+      "\t\\begin{minipage}[t]{.5\\textwidth}",
+      "\t\t\\par{\\centering{\\Huge \\texttt{\\theauthor}}\\par}",
+      "\t\\end{minipage}",
+      "\t\\begin{minipage}[t]{.25\\textwidth}",
+      "\t\t{\\footnotesize\\hfill{}\\color{gray}",
+      "\t\t\\hfill{}Download this document:",
+      "",
+      "\t\t\\hfill{}\\href[gray]{https://github.com/lcdse7en/latex-package}{documents.pdf \\pdf}",
+      "",
+      "\t\t\\hfill{}(Last updated \\thedate.)",
+      "\t\t}",
+      "\t\\end{minipage}",
+      "}",
+      "% --------------------------------------------------------",
+      "% -------------- Custom title command end --------------",
+      "% --------------------------------------------------------",
+      "",
+      "\\titleformat{\\section}{\\Large\\bf\\raggedright}{}{1em}{}[{\\titlerule[2pt]}]",
+      "",
+      "% --------------------------------------------------------",
+      "% ----------- setting Table environment begin ------------",
+      "% --------------------------------------------------------",
+      "\\definecolor{mygrey}{RGB}{128,128,128}",
+      "\\definecolor{myteal}{RGB}{0,128,128}",
+      "\\definecolor{mypink}{RGB}{250,218,221}",
+      "",
+      "\\NewTblrEnviron{mytblr}",
+      "\\SetTblrOuter[mytblr]{long}",
+      "\\SetTblrInner[mytblr]{",
+      "\twidth = 0.99\\linewidth,",
+      "\trowhead = 1,",
+      "\tverb,",
+      "\trow{odd} = {bg=mypink},",
+      "\trow{1} = {bg=myteal, fg=white},",
+      "}",
+      "\\SetTblrStyle{caption-tag}{red2}",
+      "\\SetTblrStyle{firstfoot}{fg=blue2}",
+      "\\SetTblrStyle{firsthead}{font=\\bfseries}",
+      "",
+      "\\UseTblrLibrary{counter}",
+      "\\newcounter{mycnta}",
+      "\\newcommand{\\mycnta}{\\stepcounter{mycnta}\\arabic{mycnta}}",
+      "\\counterwithin{mycnta}{page}",
+      "\\renewcommand\\themycnta{\\arabic{mycnta}}",
+      "",
+      "\\NewTableCommand\\myhline{\\hline[0.2em,black]}",
+      "% --------------------------------------------------------",
+      "% ----------- setting Table environment end --------------",
+      "% --------------------------------------------------------",
+      "",
+      "\\author{LcdSe7en}",
+      "\\date{\\today}",
+      "",
+      "\\begin{document}",
+      "\\maketitle",
+      "${1:Beginning}",
+      "\\end{document}"
+    ],
+    "description": "自定义documentclass环境"
+  },
+
+  "Custom begin environment": {
+    "prefix": "beg",
+    "body": ["\\begin{$1}", "", "\\end{$1}"],
+    "description": "自定义begin环境"
+  },
+  "Custom Basic Info": {
+    "prefix": "basic",
+    "body": [
+      "\\begin{minipage}[t]{.5\\linewidth}",
+      "\\begin{tabular}{rp{.75\\linewidth}}",
+      "\t\\baselineskip=20pt",
+      "\t\\email{} :   & \\href{2353442022@qq.com}{2353442022@qq.com} \\\\\\",
+      "\t\\www{}   :   & \\href{https://fontswesome.com/v5/search}{https://fontswesome.com/v5/search}",
+      "\\end{tabular}",
+      "\\end{minipage}",
+      "\\begin{minipage}[t]{.5\\linewidth}",
+      "\\begin{tabular}{rl}",
+      "\t\\gh{}    :   & \\href{https://github.com/lcdse7en}{https://github.com/lcdse7en} \\\\\\",
+      "\t\\gitee{} :   & \\href{https://gitee.com/se7enlcd}{https://gitee.com/se7enlcd}",
+      "\\end{tabular}",
+      "\\end{minipage}"
+    ],
+    "description": "自定义作者基本信息"
+  },
+
+  "Custom table environment": {
+    "prefix": "mytb",
+    "body": [
+      "\\begin{mytblr}[",
+      "\t\tcaption = {caption Name},",
+      "\t]{",
+      "\t\tcolspec = {|l|X[2.8]|X[2.8]|X[2.8]|X[2.8]|},",
+      "\t\t}",
+      "\t\t\\myhline",
+      "\t\t\\SetRow{c} ID & column1  & column2  & column3  & column4 \\\\\\",
+      "\t\t\\myhline",
+      "\t\t\\mycnta & ${1:text1} & text2 & test3 & test 4 \\\\\\",
+      "\t\t",
+      "\t\t\\myhline",
+      "\\end{mytblr}"
+    ],
+    "description": "自定义table环境"
+  },
+
+  "Custom minipage environment": {
+    "prefix": "mini",
+    "body": [
+      "\\begin{minipage}{0.49\\textwidth}",
+      "\\centering",
+      "\t${1:input text}",
+      "\\end{minipage}"
+    ],
+    "description": "自定义minipage环境"
+  },
+
+  "Custom figure": {
+    "prefix": "fig",
+    "body": [
+      "\\begin{figure}[hbt!]",
+      "\\centering",
+      "\\begin{minipage}{0.49\\textwidth}",
+      "\t\\centering",
+      "\t\\includegraphics[width=\\textwidth]{${1:Path}}",
+      "\t\\caption{}",
+      "\\end{minipage}",
+      "\\begin{minipage}{0.49\\textwidth}",
+      "\t\\centering",
+      "\t\\includegraphics[width=\\textwidth]{${2:Path}}",
+      "\t\\caption{}",
+      "\\end{minipage}",
+      "\\end{figure}"
+    ],
+    "description": "自定义图片环境"
+  },
+
+  "Custom minted environment": {
+    "prefix": "minted",
+    "body": [
+      "\\begin{minted}[",
+      "\tencoding=utf8,",
+      "\tlinenos,",
+      "\tgobble=2,",
+      "\tmathescape,",
+      "\tnumbersep=5pt,",
+      "\tframe=single,",
+      "\tframesep=2mm,",
+      "\tbaselinestretch=1.2,",
+      "\tfontsize=\\normalsize, % huge, LARGE, large, normalsize, small, footnotesize, scriptsize",
+      "\thighlightcolor=cyan!50,",
+      "\thighlightlines={${3:1,3}},",
+      "\tbreaklines]{${1:tex}}",
+      "\t${2:code}",
+      "\\end{minted}"
+    ],
+    "description": "自定义minted环境"
+  },
+
+  "fontawesome5 color": {
+    "prefix": "cicon",
+    "body": ["\\textcolor{red}{\\faIcon{${1:tint}}}"],
+    "description": "Color fontawesome5 Icons"
+  },
+
+  "fontawesome5": {
+    "prefix": "icon",
+    "body": ["\\faIcon{${1:tint}}"],
+    "description": "fontawesome5 Icons"
+  }
+}

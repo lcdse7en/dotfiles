@@ -160,6 +160,7 @@ _fzf_compgen_dir() {
 
 
 export PATH=$PATH:/usr/bin/ueberzug
+export PATH=$PATH:/usr/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/bin/
 export PATH=$PATH:/usr/local/share/
