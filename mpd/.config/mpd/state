@@ -1,7 +1,8 @@
 sw_volume: 100
 audio_device_state:1:ALSA
-state: stop
+state: play
 current: 0
+time: 97.178000
 random: 0
 repeat: 1
 single: 0
@@ -10,5 +11,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:korea/Taibian (타이비언)&Dia (디아) - 배영하는 물고기 (仰泳的鱼) [mqms2].mp3
+0:chinese/Leehong Wang/王力宏 - 你不知道的事.flac
 playlist_end
