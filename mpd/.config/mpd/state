@@ -1,8 +1,7 @@
 sw_volume: 100
 audio_device_state:1:ALSA
-state: play
-current: 9
-time: 119.967000
+state: stop
+current: 0
 random: 0
 repeat: 1
 single: 0
@@ -11,14 +10,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:korea/Tablo (타블로)&太阳 (태양) - Tomorrow (明天) (Live) [mqms2].mp3
-1:korea/After School (애프터 스쿨) - 밤 하늘에 (在夜空下) [mqms].mp3
-2:korea/金在中 (김재중)&Flowsik (플로우식) - Kiss B [mqms2].mp3
-3:korea/Ann One - 기억만이라도 (就算只有记忆) (Bonus Track) [mqms2].mp3
-4:chinese/Lil Future - 经济舱 [mqms2].mp3
-5:korea/Taibian (타이비언)&Dia (디아) - 배영하는 물고기 (仰泳的鱼) [mqms2].mp3
-6:english/Akon - Freedom (2008) Flac/01 - Right Now (Na Na Na).flac
-7:english/Eminem/Recovery (2010)/06. Eminem - Going Through Changes.flac
-8:english/Eminem/Recovery (2010)/09. Eminem - No Love feat. Lil Wayne.flac
-9:english/Eminem/Recovery (2010)/15. Eminem - Love the Way You Lie feat. Rihanna.flac
+0:korea/Taibian (타이비언)&Dia (디아) - 배영하는 물고기 (仰泳的鱼) [mqms2].mp3
 playlist_end
