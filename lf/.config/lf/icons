@@ -353,6 +353,7 @@ Vagrantfile             
 *.ogg   
 *.ra    
 *.wav   
+*.ape   
 *.oga   
 *.opus  
 *.spx   
