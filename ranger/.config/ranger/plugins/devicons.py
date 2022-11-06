@@ -161,6 +161,7 @@ file_node_extensions = {
     'vim'      : '',
     'vimrc'    : '',
     'wav'      : '',
+    'ape'      : '',
     'webm'     : '',
     'xbps'     : '',
     'xhtml'    : '',
