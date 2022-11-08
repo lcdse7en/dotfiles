@@ -106,3 +106,9 @@ day-2022-11-06:
   
 镜像源
   
+day-2022-11-08:
+looped directory detected
+  
+
+支持
+  
