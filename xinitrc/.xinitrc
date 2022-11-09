@@ -54,11 +54,7 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
-fcitx &
+fcitx5 &
 
 mpd &
 mpc &
@@ -71,17 +67,7 @@ nitrogen --restore &
 # picom
 picom -CGb &
 
-
 flameshot &
 
-
-# exec slstatus &
-
 exec dwm
-
-
-exec dbus-launch dwm
-
-
-
 

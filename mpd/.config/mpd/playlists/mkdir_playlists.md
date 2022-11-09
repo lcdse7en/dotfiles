@@ -1,1 +1,2 @@
+cd mpd
 mkdir playlists
