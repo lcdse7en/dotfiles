@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
 state: play
-current: 1
-time: 128.612000
+current: 6
+time: 120.058000
 random: 0
 repeat: 1
 single: 0
@@ -17,4 +17,11 @@ playlist_begin
 2:chinese/Jay Chou/周杰伦-明明就.ape
 3:chinese/Jay Chou/等你下课.flac
 4:chinese/Leehong Wang/王力宏 - 你不知道的事.flac
+5:english/Eminem/Recovery (2010)/Eminem - No Love feat. Lil Wayne.flac
+6:english/Eminem/Recovery (2010)/Eminem - So Bad.flac
+7:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
+8:korea/kard/01 Into You.mp3
+9:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+10:korea/kard/03 Push & Pull.mp3
+11:korea/kard/06 Trust Me (BM & Somin ver.).mp3
 playlist_end
