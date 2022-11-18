@@ -1,0 +1,10 @@
+pane	12	1	1	:*	1	se7en-pc	:/home/se7en	1	zsh	:
+pane	13	1	1	:*	1	se7en-pc	:/home/se7en	1	zsh	:
+pane	16	1	1	:*	1	se7en-pc	:/home/se7en	1	zsh	:
+pane	9	1	1	:*	1	se7en-pc	:/home/se7en	1	zsh	:
+pane	9	1	1	:*	2	se7en-pc	:/home/se7en	0	zsh	:
+window	12	1	:zsh	1	:*	69b1,143x59,0,0,31	:
+window	13	1	:zsh	1	:*	69b2,143x59,0,0,32	:
+window	16	1	:zsh	1	:*	e9b5,143x59,0,0,45	off
+window	9	1	:se7en	1	:*	0b46,143x59,0,0{71x59,0,0,24,71x59,72,0,29}	off
+state	16	13

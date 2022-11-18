@@ -1,0 +1,4 @@
+pane	dev	1	1	:*	1	se7en-pc	:/home/se7en	0	zsh	:
+pane	dev	1	1	:*	2	se7en-pc	:/home/se7en	1	zsh	:
+window	dev	1	:zsh	1	:*	6782,143x59,0,0[143x29,0,0,13,143x29,0,30,14]	:
+state	dev	

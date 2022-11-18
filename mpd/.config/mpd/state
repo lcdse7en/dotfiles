@@ -3,7 +3,7 @@ audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
 state: play
 current: 2
-time: 32.460000
+time: 120.035000
 random: 0
 repeat: 1
 single: 0
@@ -24,4 +24,8 @@ playlist_begin
 9:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
 10:korea/kard/03 Push & Pull.mp3
 11:korea/kard/06 Trust Me (BM & Somin ver.).mp3
+12:english/Eminem/Recovery (2010)/Eminem - Cold Wind Blows.flac
+13:english/Eminem/Recovery (2010)/Eminem - Seduction.flac
+14:english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac
+15:chinese/Jay Chou/周杰伦-我是如此相信.flac
 playlist_end

@@ -1,0 +1,4 @@
+pane	se7en	1	1	:*	1	se7en-pc	:/home/se7en	0	zsh	:
+pane	se7en	1	1	:*	2	se7en-pc	:/home/se7en	1	python3	:python3 -m http.server -d /home/se7en
+window	se7en	1	:zsh	1	:*	a8e6,143x59,0,0{71x59,0,0,0,71x59,72,0,1}	off
+state	se7en	
