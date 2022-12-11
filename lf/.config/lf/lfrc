@@ -21,6 +21,10 @@ set ifs "\n"
 set scrolloff 10
 set icons
 set info 'size'
+set incsearch
+set smartcase
+set ignorecase
+# set drawbox
 set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set cleaner '~/.config/lf/cleaner'
