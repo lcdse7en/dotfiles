@@ -115,6 +115,15 @@ cmd delete ${{
 	[ $ans = "y" ] && rm -rf -- $fx
 }}
 
+cmd trash ${{
+  set -f
+  printf "Trash $fx ? [y/N]"
+  read ans
+  if [[ $ans == "y" ]]; then
+    trash-put $fx
+  fi
+}}
+
 cmd moveto ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
@@ -234,7 +243,8 @@ map R push :tar<space>
 map X extract
 map <c-g> push $lazygit<enter>
 map M push :mkdir<space>
-map T mkfile
+map t mkfile
+map T trash
 map z push :aj<space>
 map Qg !clear; glow -p $fx 
 map U bulk-rename

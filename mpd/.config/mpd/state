@@ -1,13 +1,161 @@
 sw_volume: 100
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
-state: stop
+state: play
+current: 0
+time: 119.989000
 random: 0
 repeat: 1
-single: 0
+single: 1
 consume: 1
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+0:chinese/林忆莲/林忆莲-至少还有你.ape
+1:chinese/陶喆/陶喆-爱我还是他.ape
+2:chinese/非主流/下半生(粤语 DJ).mp3
+3:chinese/非主流/经济舱.mp3
+4:english/Adele/Adele-Set Fire To The Rain.flac
+5:english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac
+6:english/Akon - Freedom (2008) Flac/Beautiful ft. Colby O'Donis and Kardinal Offishall.flac
+7:english/Akon - Freedom (2008) Flac/Keep You Much Longer.flac
+8:english/Akon - Freedom (2008) Flac/Troublemaker ft. Sweet Rush.flac
+9:english/Akon - Freedom (2008) Flac/We Don't Care.flac
+10:english/Akon - Freedom (2008) Flac/I'm So Paid ft. Lil Wayne and Young Jeezy.flac
+11:english/Akon - Freedom (2008) Flac/Holla Holla ft. T-Pain.flac
+12:english/Akon - Freedom (2008) Flac/Against The Grain ft Ray Lavender.flac
+13:english/Akon - Freedom (2008) Flac/Be With You.flac
+14:english/Akon - Freedom (2008) Flac/Sunny Day ft. Wyclef.flac
+15:english/Akon - Freedom (2008) Flac/Birthmark.flac
+16:english/Akon - Freedom (2008) Flac/Over The Edge.flac
+17:english/Akon - Freedom (2008) Flac/Freedom.flac
+18:english/Eminem/Recovery (2010)/Eminem - Cold Wind Blows.flac
+19:english/Eminem/Recovery (2010)/Eminem - Talkin' 2 Myself feat. Kobe.flac
+20:english/Eminem/Recovery (2010)/Eminem - On Fire.flac
+21:english/Eminem/Recovery (2010)/Eminem - Won't Back Down feat. P!nk.flac
+22:english/Eminem/Recovery (2010)/Eminem - W.T.P..flac
+23:english/Eminem/Recovery (2010)/Eminem - Going Through Changes.flac
+24:english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac
+25:english/Eminem/Recovery (2010)/Eminem - Seduction.flac
+26:english/Eminem/Recovery (2010)/Eminem - No Love feat. Lil Wayne.flac
+27:english/Eminem/Recovery (2010)/Eminem - Space Bound.flac
+28:english/Eminem/Recovery (2010)/Eminem - Cinderella Man.flac
+29:english/Eminem/Recovery (2010)/Eminem - 25 to Life.flac
+30:english/Eminem/Recovery (2010)/Eminem - So Bad.flac
+31:english/Eminem/Recovery (2010)/Eminem - Almost Famous.flac
+32:english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac
+33:english/Eminem/Recovery (2010)/Eminem - You're Never Over.flac
+34:english/Eminem/Recovery (2010)/Eminem - [untitled].flac
+35:english/Linkin Park/Given Up.flac
+36:english/Linkin Park/Leave Out All The Rest.flac
+37:english/Linkin Park/Bleed It Out.flac
+38:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
+39:english/Taylor Swift/04.- Love Story.flac
+40:korea/Tablo (타블로)&太阳 (태양) - Tomorrow (明天) (Live) [mqms2].mp3
+41:korea/Ann One - 기억만이라도 (就算只有记忆) (Bonus Track) [mqms2].mp3
+42:korea/After School (애프터 스쿨) - 밤 하늘에 (在夜空下) [mqms].mp3
+43:korea/金在中 (김재중)&Flowsik (플로우식) - Kiss B [mqms2].mp3
+44:korea/Taibian (타이비언)&Dia (디아) - 배영하는 물고기 (仰泳的鱼) [mqms2].mp3
+45:korea/河佑镇 (H-유진)&淑熙 (숙희) - 쓰레기 (垃圾) [mqms2].mp3
+46:korea/朴默焕 (박묵환) - 그것만은 (只属于我) [mqms].mp3
+47:korea/Boa/Only One - BoA (宝儿).mp3
+48:korea/Brave Girls/Brave Girls (브레이브걸스) - 툭하면 (动辄) (Remix) [mqms2].mp3
+49:korea/Gummy/친구라도 될 걸 그랬어.mp3
+50:korea/kard/01 Into You.mp3
+51:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+52:korea/kard/03 Push & Pull.mp3
+53:korea/kard/04 지니까.mp3
+54:korea/kard/05 You In Me.mp3
+55:korea/kard/06 Trust Me (BM & Somin ver.).mp3
+56:korea/kard/07 Into You (Inst.).mp3
+57:korea/kard/08 You In Me (Inst.).mp3
+58:korea/kard/09 Trust Me.mp3
+59:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/01 Into You.mp3
+60:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/02 Trust Me (J.seph & Jiwoo ver.).mp3
+61:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/03 Push & Pull.mp3
+62:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/04 지니까.mp3
+63:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/05 You In Me.mp3
+64:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/06 Trust Me (BM & Somin ver.).mp3
+65:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/07 Into You (Inst.).mp3
+66:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/08 You In Me (Inst.).mp3
+67:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/09 Trust Me.mp3
+68:korea/이정현/李贞贤 - 疯.wav
+69:chinese/Dave Wang/不浪漫罪名.mp3
+70:chinese/G.E.M/G.E.M.邓紫棋-来自天堂的魔鬼.mp3
+71:chinese/Jay Chou/黑色幽默.flac
+72:chinese/Jay Chou/周杰伦-明明就.ape
+73:chinese/Jay Chou/周杰伦-我是如此相信.flac
+74:chinese/Jay Chou/等你下课.flac
+75:chinese/Leehong Wang/王力宏 - 你不知道的事.flac
+76:chinese/Leon/黎明-全日爱.ape
+77:chinese/林忆莲/林忆莲-至少还有你.ape
+78:chinese/陶喆/陶喆-爱我还是他.ape
+79:chinese/非主流/下半生(粤语 DJ).mp3
+80:chinese/非主流/经济舱.mp3
+81:english/Adele/Adele-Set Fire To The Rain.flac
+82:english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac
+83:english/Akon - Freedom (2008) Flac/Beautiful ft. Colby O'Donis and Kardinal Offishall.flac
+84:english/Akon - Freedom (2008) Flac/Keep You Much Longer.flac
+85:english/Akon - Freedom (2008) Flac/Troublemaker ft. Sweet Rush.flac
+86:english/Akon - Freedom (2008) Flac/We Don't Care.flac
+87:english/Akon - Freedom (2008) Flac/I'm So Paid ft. Lil Wayne and Young Jeezy.flac
+88:english/Akon - Freedom (2008) Flac/Holla Holla ft. T-Pain.flac
+89:english/Akon - Freedom (2008) Flac/Against The Grain ft Ray Lavender.flac
+90:english/Akon - Freedom (2008) Flac/Be With You.flac
+91:english/Akon - Freedom (2008) Flac/Sunny Day ft. Wyclef.flac
+92:english/Akon - Freedom (2008) Flac/Birthmark.flac
+93:english/Akon - Freedom (2008) Flac/Over The Edge.flac
+94:english/Akon - Freedom (2008) Flac/Freedom.flac
+95:english/Eminem/Recovery (2010)/Eminem - Cold Wind Blows.flac
+96:english/Eminem/Recovery (2010)/Eminem - Talkin' 2 Myself feat. Kobe.flac
+97:english/Eminem/Recovery (2010)/Eminem - On Fire.flac
+98:english/Eminem/Recovery (2010)/Eminem - Won't Back Down feat. P!nk.flac
+99:english/Eminem/Recovery (2010)/Eminem - W.T.P..flac
+100:english/Eminem/Recovery (2010)/Eminem - Going Through Changes.flac
+101:english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac
+102:english/Eminem/Recovery (2010)/Eminem - Seduction.flac
+103:english/Eminem/Recovery (2010)/Eminem - No Love feat. Lil Wayne.flac
+104:english/Eminem/Recovery (2010)/Eminem - Space Bound.flac
+105:english/Eminem/Recovery (2010)/Eminem - Cinderella Man.flac
+106:english/Eminem/Recovery (2010)/Eminem - 25 to Life.flac
+107:english/Eminem/Recovery (2010)/Eminem - So Bad.flac
+108:english/Eminem/Recovery (2010)/Eminem - Almost Famous.flac
+109:english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac
+110:english/Eminem/Recovery (2010)/Eminem - You're Never Over.flac
+111:english/Eminem/Recovery (2010)/Eminem - [untitled].flac
+112:english/Linkin Park/Given Up.flac
+113:english/Linkin Park/Leave Out All The Rest.flac
+114:english/Linkin Park/Bleed It Out.flac
+115:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
+116:english/Taylor Swift/04.- Love Story.flac
+117:korea/Tablo (타블로)&太阳 (태양) - Tomorrow (明天) (Live) [mqms2].mp3
+118:korea/Ann One - 기억만이라도 (就算只有记忆) (Bonus Track) [mqms2].mp3
+119:korea/After School (애프터 스쿨) - 밤 하늘에 (在夜空下) [mqms].mp3
+120:korea/金在中 (김재중)&Flowsik (플로우식) - Kiss B [mqms2].mp3
+121:korea/Taibian (타이비언)&Dia (디아) - 배영하는 물고기 (仰泳的鱼) [mqms2].mp3
+122:korea/河佑镇 (H-유진)&淑熙 (숙희) - 쓰레기 (垃圾) [mqms2].mp3
+123:korea/朴默焕 (박묵환) - 그것만은 (只属于我) [mqms].mp3
+124:korea/Boa/Only One - BoA (宝儿).mp3
+125:korea/Brave Girls/Brave Girls (브레이브걸스) - 툭하면 (动辄) (Remix) [mqms2].mp3
+126:korea/Gummy/친구라도 될 걸 그랬어.mp3
+127:korea/kard/01 Into You.mp3
+128:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+129:korea/kard/03 Push & Pull.mp3
+130:korea/kard/04 지니까.mp3
+131:korea/kard/05 You In Me.mp3
+132:korea/kard/06 Trust Me (BM & Somin ver.).mp3
+133:korea/kard/07 Into You (Inst.).mp3
+134:korea/kard/08 You In Me (Inst.).mp3
+135:korea/kard/09 Trust Me.mp3
+136:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/01 Into You.mp3
+137:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/02 Trust Me (J.seph & Jiwoo ver.).mp3
+138:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/03 Push & Pull.mp3
+139:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/04 지니까.mp3
+140:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/05 You In Me.mp3
+141:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/06 Trust Me (BM & Somin ver.).mp3
+142:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/07 Into You (Inst.).mp3
+143:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/08 You In Me (Inst.).mp3
+144:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/09 Trust Me.mp3
+145:korea/이정현/李贞贤 - 疯.wav
 playlist_end
