@@ -20,6 +20,7 @@ set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
 set icons
+set info 'size'
 set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set cleaner '~/.config/lf/cleaner'
@@ -67,7 +68,28 @@ cmd extract ${{
 	read ans
 	[ $ans = "y" ] && aunpack $fx
 }}
+# cmd extract ${{
+#   set -f
+#   case $f in
+#     *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+#     *.tar.gz|*.tgz) tar xzvf $f;;
+#     *.tar.xz|*.txz) tar xJvf $f;;
+#     *.tar) tar xvf $f;;
+#     *.zip) unzip $f;;
+#     *.rar) unrar x $f;;
+#     *.7z) 7z x $f;;
+#     *) echo "Unsupported format";;
+#   esac
+# }}
 
+# compress current file or selected files with tar
+cmd tar ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    tar czf $1.tar.gz $1
+    rm -rf $1
+}}
 # compress current file or selected files with zip
 cmd zip ${{
     set -f
@@ -201,6 +223,7 @@ map W %lf -remote "send $id set ratios 1:2:3"
 
 map o push :openwith<space>
 map C push :zip<space>
+map R push :tar<space>
 map X extract
 map <c-g> push $lazygit<enter>
 map M push :mkdir<space>

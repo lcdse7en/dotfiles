@@ -1,31 +1,13 @@
 sw_volume: 100
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
-state: play
-current: 3
-time: 120.279000
+state: stop
 random: 0
 repeat: 1
 single: 0
-consume: 0
+consume: 1
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:english/Adele/Adele-Set Fire To The Rain.flac
-1:chinese/Jay Chou/黑色幽默.flac
-2:chinese/Jay Chou/周杰伦-明明就.ape
-3:chinese/Jay Chou/等你下课.flac
-4:chinese/Leehong Wang/王力宏 - 你不知道的事.flac
-5:english/Eminem/Recovery (2010)/Eminem - No Love feat. Lil Wayne.flac
-6:english/Eminem/Recovery (2010)/Eminem - So Bad.flac
-7:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
-8:korea/kard/01 Into You.mp3
-9:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
-10:korea/kard/03 Push & Pull.mp3
-11:korea/kard/06 Trust Me (BM & Somin ver.).mp3
-12:english/Eminem/Recovery (2010)/Eminem - Cold Wind Blows.flac
-13:english/Eminem/Recovery (2010)/Eminem - Seduction.flac
-14:english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac
-15:chinese/Jay Chou/周杰伦-我是如此相信.flac
 playlist_end

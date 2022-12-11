@@ -1,0 +1,4 @@
+pane	se7en	1	1	:*	1	se7en-pc	:/home/se7en	1	sh	:/bin/sh /usr/local/bin/lfub
+pane	se7en	1	1	:*	2	se7en-pc	:/home/se7en	0	python3	:python3 -m http.server -d /home/se7en
+window	se7en	1	:dev	1	:*	25a8,117x59,0,0{58x59,0,0,0,58x59,59,0,1}	off
+state	se7en	

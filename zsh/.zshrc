@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -78,12 +78,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	autojump
-	sudo
-	command-not-found
+    git
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    autojump
+    sudo
+    command-not-found
 )
 
 export EDITOR="nvim"
@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-        exec startx
+    exec startx
 fi
 
 
@@ -135,11 +135,11 @@ alias "ts"="tmux source ~/.tmux.conf"
 alias "at"="tmux at"
 
 funciton tmuxopen() {
-  tmux attach -t $1
+    tmux attach -t $1
 }
 
 funciton tmuxkill() {
-  tmux kill-session -t $1
+    tmux kill-session -t $1
 }
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -151,11 +151,11 @@ export FZF_DEFAULT_COMMAND='fd --hidden --follow -E ".git" -E "node_modules" . /
 export FZF_COMPLETION_TRIGGER='\'
 
 _fzf_compgen_path() {
-  fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
+    fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
 }
 
 _fzf_compgen_dir() {
-  fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
+    fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
 }
 
 
