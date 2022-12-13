@@ -168,6 +168,7 @@ export PATH=$PATH:~/.local/bin/
 export PATH=$PATH:~/.local/share/applications/
 export PATH=$PATH:~/.local/src/
 export PATH=$PATH:~/.local/bin/statusbar/
+export PATH=$PATH:~/.local/share/applications/
 
 export PATH=$PATH:~/scripts/
 

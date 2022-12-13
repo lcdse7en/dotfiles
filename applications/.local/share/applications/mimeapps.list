@@ -10,6 +10,7 @@ x-scheme-handler/mailto=mail.desktop;
 text/plain=text.desktop;
 application/postscript=pdf.desktop;
 application/pdf=pdf.desktop;
+image/jpg=img.desktop;
 image/png=img.desktop;
 image/jpeg=img.desktop;
 image/gif=img.desktop;
