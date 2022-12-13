@@ -247,8 +247,9 @@ map t mkfile
 map T trash
 map z push :aj<space>
 map Qg !clear; glow -p $fx 
-map U bulk-rename
+map B bulk-rename
 map = chmod
+map b $setbg $f
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
