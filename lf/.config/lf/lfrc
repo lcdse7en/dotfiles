@@ -249,7 +249,7 @@ map z push :aj<space>
 map Qg !clear; glow -p $fx 
 map B bulk-rename
 map = chmod
-map b $setbg $f
+# map b $setbg $f  # ~/.local/bin/setbg
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
