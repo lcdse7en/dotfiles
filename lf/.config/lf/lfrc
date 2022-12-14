@@ -19,6 +19,9 @@
 set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
+set shell zsh
+# set hidden true
+set shellopts '-eu'
 set icons
 set info 'size'
 set incsearch
@@ -122,6 +125,10 @@ cmd trash ${{
   if [[ $ans == "y" ]]; then
     trash-put $fx
   fi
+}}
+cmd trash_clear %trash-empty
+cmd trash_restore ${{
+  trash-restore
 }}
 
 cmd moveto ${{
@@ -243,8 +250,10 @@ map R push :tar<space>
 map X extract
 map <c-g> push $lazygit<enter>
 map M push :mkdir<space>
-map t mkfile
-map T trash
+map T mkfile
+map d trash
+map gc trash_clear
+map gr trash_restore
 map z push :aj<space>
 map Qg !clear; glow -p $fx 
 map B bulk-rename

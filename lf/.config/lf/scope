@@ -9,6 +9,10 @@ image() {
     fi
 }
 
+ifub() {
+    [ -n "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && command -V ueberzug >/dev/null 2>&1
+}
+
 batorcat() {
     file="$1"
     shift
