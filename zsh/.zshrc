@@ -133,6 +133,12 @@ alias "tcs"="tmux new -s"
 alias "tka"="tmux ls | cut -d: -f 1 | xargs -n1 tmux kill-session -t"
 alias "ts"="tmux source ~/.tmux.conf"
 alias "at"="tmux at"
+alias "ls"="logo-ls"
+alias "la"="logo-ls -A"
+alias "ll"="logo-ls -al"
+alias "lsg"="logo-ls -D"
+alias "lag"="logo-ls -AD"
+alias "llg"="logo-ls -alD"
 
 funciton tmuxopen() {
     tmux attach -t $1
