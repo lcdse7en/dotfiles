@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+slock -m "Locked at $(date "+%a %d, %H:%M:%S") $(printf "\nEnter password to unlock:\n$(fortune)")"
+
