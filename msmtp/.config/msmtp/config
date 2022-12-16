@@ -1,0 +1,12 @@
+account 2353442022@qq.com
+host smtp.qq.com
+port 465
+from 2353442022@qq.com
+user 2353442022@qq.com
+passwordeval "pass 2353442022@qq.com"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/se7en/.cache/msmtp/msmtp.log
+tls_starttls off
+
