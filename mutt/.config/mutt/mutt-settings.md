@@ -48,7 +48,7 @@ mv -Y # 手动同步邮件
 sudo pacman -S cronie
 sudo systemctl enable cronie
 sudo systemctl start cronie
-mw -t 1 # 每1分钟刷新一次邮件
+mw -t 10 # 每10分钟刷新一次邮件
 crontab -l
 ```
 
