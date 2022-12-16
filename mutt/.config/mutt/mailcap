@@ -1,4 +1,4 @@
-text/plain; $EDITOR %s ;
+text/*; $EDITOR %s ;
 text/html; $HOME/.config/mutt/openfile %s ; nametemplate=%s.html
 text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -dump -width=1024 %s; nametemplate=%s.html; copiousoutput;
 image/*; sxiv %s ;
