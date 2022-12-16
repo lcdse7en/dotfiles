@@ -1,0 +1,10 @@
+[user]
+  email = 2353442022@qq.com
+  name = lcdse7en
+[core]
+  pager = delta
+[delta]
+  syntax-theme = Nord
+  features = line-numbers
+[interactive]
+  diffFilter = delta --color-only
