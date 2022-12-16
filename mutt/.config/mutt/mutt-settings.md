@@ -74,6 +74,7 @@ nvim ~/.pam-gnupg
 
 #### abook
 ```sh
+yay -S abook
 # ~/.config/mutt/accounts/2353442022@qq.com.muttrc
 set display_filter="mutt_to_abook"
 ```

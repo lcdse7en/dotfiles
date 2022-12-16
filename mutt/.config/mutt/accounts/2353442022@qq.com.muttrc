@@ -14,7 +14,7 @@ set spoolfile = +INBOX
 set postponed = +Drafts
 set trash = "+Deleted Messages"
 set record = "+Sent Messages"
-set display_filter = "mutt_to_abook"
+# set display_filter = "mutt_to_abook"
 
 macro index o "<shell-escape>mw -y 2353442022@qq.com<enter>" "run mbsync to sync 2353442022@qq.com"
 macro index \eg "<enter-command>unset wait_key<enter><shell-escape>gpg --list-secret-keys; printf 'Enter email ID of user to publish: '; read eID; printf 'Enter fingerprint of GPG key to publish: '; read eFGPT; /usr/local/libexec/gpg-wks-client --create \$eFGPT \$eID | msmtp --read-envelope-from --read-recipients -a 2353442022@qq.com<enter>"  "publish GPG key to WKS provider"
