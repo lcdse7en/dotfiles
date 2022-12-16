@@ -104,7 +104,7 @@ bindkey ',' autosuggest-accept
 alias ra='ranger'
 alias c="clear"
 alias s="neofetch"
-alias p="sudo pacman -S"
+alias pc="sudo pacman -S"
 alias e="exit"
 alias vim="nvim"
 alias pac="sudo pacman"
@@ -139,6 +139,9 @@ alias "ll"="logo-ls -al"
 alias "lsg"="logo-ls -D"
 alias "lag"="logo-ls -AD"
 alias "llg"="logo-ls -alD"
+alias "rcf"="rsync -r -v -u"
+alias "rcx"="rsync --bwlimit=30000 --progress --append-verify"
+alias "rcb"="rsync -r -v --archive"
 
 funciton tmuxopen() {
     tmux attach -t $1
