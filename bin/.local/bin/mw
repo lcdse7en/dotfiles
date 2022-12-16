@@ -253,12 +253,12 @@ gpg_path=$GPG" > "$NOTMUCH_CONFIG" ;}
 
 togglecron() { cron="$(mktemp)"
 	crontab -l > "$cron"
-	if grep -q chkMailbox "$cron"; then
-		echo "Removing automatic chkMailbox..."
-		sed -ibu /chkMailbox/d "$cron"; rm -f "$cron"bu
+	if grep -q mailsync "$cron"; then
+		echo "Removing automatic mailsync..."
+		sed -ibu /mailsync/d "$cron"; rm -f "$cron"bu
 	else
-		echo "Adding automatic chkMailbox every ${cronmin:-10} minutes..."
-		echo "*/${cronmin-10} * * * * $prefix/chkMailbox" >> "$cron"
+		echo "Adding automatic mailsync every ${cronmin:-10} minutes..."
+		echo "*/${cronmin-10} * * * * $prefix/mailsync" >> "$cron"
 	fi &&
 	crontab "$cron"; rm -f "$cron" ;}
 
