@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/se7en/dotfiles
+- /home/se7en/github_upload/archlinux
 - /home/se7en
 - /home/se7en/scripts
 - /home/se7en/.local/src/dwm
@@ -12,7 +13,6 @@ recentrepos:
 - /home/se7en/lazygit
 - /home/se7en/.dwm
 - /home/se7en/github_upload/chrome_extensions
-- /home/se7en/github_upload/archlinux
 - /home/se7en/github_upload/picom
 - /home/se7en/github_upload/texlive
 - /home/se7en/github_upload/lf

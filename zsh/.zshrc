@@ -179,7 +179,10 @@ export PATH=$PATH:~/.local/src/
 export PATH=$PATH:~/.local/bin/statusbar/
 export PATH=$PATH:~/.local/share/applications/
 
-export PATH=$PATH:~/scripts/
+# export PATH=$PATH:~/scripts/
+# -------------- nnn --------------
+export NNN_PLUG="i:imgview;p:preview-tabbed;f:fzopen;"
+export NNN_FIFO=/tmp/nnn.fifo
 
 export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
 export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
