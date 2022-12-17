@@ -208,7 +208,6 @@ map gg top
 map D delete
 map C copyto
 map M moveto
-map <c-n> push :mkdir<space>
 map <c-r> reload
 map . set hidden!
 map <enter> shell
@@ -248,16 +247,17 @@ map C push :zip<space>
 map R push :tar<space>
 map X extract
 map <c-g> push $lazygit<enter>
-map M push :mkdir<space>
+map <c-n> push :mkdir<space>
+# map M push :mkdir<space>
 map T mkfile
-map d trash
+map M trash
 map gc trash_clear
 map gr trash_restore
 map z push :aj<space>
 map Qg !clear; glow -p $fx 
 map B bulk-rename
 map = chmod
-# map b $setbg $f  # ~/.local/bin/setbg
+map b $setbg $f  # ~/.local/bin/setbg
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"

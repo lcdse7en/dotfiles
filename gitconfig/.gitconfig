@@ -5,6 +5,7 @@
   pager = delta
 [delta]
   syntax-theme = Nord
-  features = line-numbers
+  line-numbers = true
+  side-by-side = true
 [interactive]
   diffFilter = delta --color-only

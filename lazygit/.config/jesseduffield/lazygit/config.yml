@@ -6,7 +6,7 @@ git:
   skiphookprefix: WIP
   paging:
     colorArg: always
-    pager: delta -s --dark --paging=never --24-bit-color=never --syntax-theme="OneHalfDark"
+    pager: delta -s --dark --paging=never --24-bit-color=never --syntax-theme="GitHub"
 gui:
   commitlength:
     show: true

@@ -61,8 +61,11 @@ session  optional  pam_gnupg.so
 
 #### nvim ~/.gnupg/gpg-agent.conf
 ```sh
+yay -S pam-gnupg-git
+
 allow-preset-passphrase
-max-cache-ttl 608400
+default-cache-ttl 34560000
+max-cache-ttl 34560000
 ```
 
 #### gpg -K --with-keygrip
