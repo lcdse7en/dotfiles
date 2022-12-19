@@ -1,4 +1,4 @@
-require('dressing').setup({
+require("dressing").setup {
   input = {
     -- Set to false to disable the vim.ui.input implementation
     enabled = true,
@@ -27,9 +27,9 @@ require('dressing').setup({
     min_width = { 10, 0.1 },
 
     -- Window transparency (0-100)
-    winblend = 0,
+    --winblend = 0,
     -- Change default highlight groups (see :help winhl)
-    winhighlight = "",
+    --winhighlight = "",
 
     override = function(conf)
       -- This is the config that will be passed to nvim_open_win.
@@ -66,19 +66,18 @@ require('dressing').setup({
       max_height = 40,
     },
 
-
     -- see :help dressing_get_config
     get_config = function(opts)
-      if opts.kind == 'codeaction' then
+      if opts.kind == "codeaction" then
         return {
-          backend = 'nui',
+          backend = "nui",
           nui = {
-            relative = 'cursor',
+            relative = "cursor",
             max_width = 80,
             min_height = 2,
-          }
+          },
         }
       end
-    end
+    end,
   },
-})
+}

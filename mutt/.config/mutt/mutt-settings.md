@@ -4,7 +4,7 @@
 ```sh
 yay -S pam-gnupg
 # sudo pacman -Qe pam-gnupg-git
-sudo pacman -S mutt     # 客户端主程序
+sudo pacman -S neomutt     # 客户端主程序
 sudo pacman -S isync    # 拉取邮件工具
 sudo pacman -S msmtp    # 发送邮件工具
 sudo pacman -S pass     # 加密邮箱密码工具
@@ -22,6 +22,7 @@ E970401340040A3062A8577F20315C58DDB80403
 <!--TODO: mw -a 2353442022@qq.com || Enter password:-->
 ```sh
 ytyuwaeqhmozeagd
+zcgtqbqvmfhmdibc
 ```
 
 
@@ -40,7 +41,7 @@ mw -a 2353442022@qq.com               # 添加邮箱账户 Enter password为邮�
 # ~/.mbsyncrc 
 # ~/.config/msmtp/config 
 # ~/.config/mutt/accounts/2353442022@qq.com.muttrc
-# ~/config/muttrc
+# ~/.config/muttrc
 
 
 mv -Y # 手动同步邮件

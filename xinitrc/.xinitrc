@@ -64,9 +64,11 @@ dunst &
 # wallpaper
 nitrogen --restore &
 
-# picom
+#picom
 picom -CGb &
 
 flameshot &
+
+udiskie &
 
 exec dwm

@@ -81,6 +81,7 @@ plugins=(
     git
     zsh-syntax-highlighting
     zsh-autosuggestions
+    autoswitch_virtualenv
     autojump
     sudo
     command-not-found

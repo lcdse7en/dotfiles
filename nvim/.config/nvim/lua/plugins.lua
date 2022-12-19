@@ -5,15 +5,7 @@ local packer_bootstrap = nil
 
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap =
-    -- fn.system { "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path }
-    fn.system {
-      "git",
-      "clone",
-      "--depth",
-      "1",
-      "https://codechina.csdn.net/mirrors/wbthomason/packer.nvim",
-      install_path,
-    }
+    fn.system { "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path }
 end
 
 return require("packer").startup {
@@ -144,7 +136,7 @@ return require("packer").startup {
     use { "ecosse3/galaxyline.nvim", after = "nvim-gps", config = "require('plugins.galaxyline')", event = "BufWinEnter" }
     use {
       "romgrk/barbar.nvim",
-      branch = "feat/wipeout-cmds",
+      --branch = "feat/wipeout-cmds",
       requires = { "kyazdani42/nvim-web-devicons" },
       config = "require('plugins.barbar')",
     }
