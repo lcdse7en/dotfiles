@@ -1,0 +1,18 @@
+session_name: lcdse7en
+start_directory: ~/.config/nvim
+windows:
+  - window_name: ssh
+    layout: tiled  #  NOTE: tiled, main-horizontal, main-vertical
+    shell_command_before:
+    - clear
+    panes:
+      - shell_command:
+        - s
+        - server
+      - shell_command:
+        - cd ~/github_upload/Music
+        - cmus
+        focus: true
+      - shell_command:
+        - pane
+      

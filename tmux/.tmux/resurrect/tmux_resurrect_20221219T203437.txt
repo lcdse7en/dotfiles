@@ -1,0 +1,4 @@
+pane	se7en	1	1	:*	1	se7en-pc	:/home/se7en	0	zsh	:
+pane	se7en	1	1	:*	2	se7en-pc	:/home/se7en/github_upload/Music/chinese/Jay\ Chou	1	cmus	:cmus
+window	se7en	1	:cmus	1	:*	461a,264x59,0,0{132x59,0,0,1,131x59,133,0,2}	off
+state	se7en	

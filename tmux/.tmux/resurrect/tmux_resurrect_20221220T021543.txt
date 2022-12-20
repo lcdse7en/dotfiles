@@ -1,0 +1,3 @@
+pane	se7en	1	1	:*	1	se7en-pc	:/home/se7en/dotfiles	1	sh	:/usr/bin/sh /home/se7en/.local/bin/lfub
+window	se7en	1	:sh	1	:*	b4fe,120x33,0,0,1	:
+state	se7en	

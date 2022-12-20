@@ -180,6 +180,9 @@ export PATH=$PATH:~/.local/src/
 export PATH=$PATH:~/.local/bin/statusbar/
 export PATH=$PATH:~/.local/share/applications/
 
+
+export DISABLE_AUTO_TITLE='true'
+
 # export PATH=$PATH:~/scripts/
 # -------------- nnn --------------
 export NNN_PLUG="i:imgview;p:preview-tabbed;f:fzopen;"

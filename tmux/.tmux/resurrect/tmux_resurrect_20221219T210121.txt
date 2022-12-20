@@ -1,0 +1,3 @@
+pane	se7en	1	1	:*	1	se7en-pc	:/home/se7en	1	zsh	:
+window	se7en	1	:zsh	1	:*	b4fd,120x33,0,0,0	:
+state	se7en	

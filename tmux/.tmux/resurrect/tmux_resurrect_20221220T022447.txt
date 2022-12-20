@@ -1,0 +1,4 @@
+pane	se7en	1	1	:*	1	se7en-pc	:/home/se7en	1	python	:python
+/usr/bin/python /usr/bin/ipython
+window	se7en	1	:python	1	:*	b4fe,120x33,0,0,1	:
+state	se7en	
