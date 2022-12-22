@@ -1,12 +1,10 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/se7en/dotfiles
-- /home/se7en/.config/nvim
+- /home/se7en/github_upload/texdata
 - /home/se7en/github_upload/archlinux
-- /home/se7en/scripts
-- /home/se7en/github_upload/lazygit
+- /home/se7en/.config/nvim
 - /home/se7en/github_upload/chrome_extensions
-- /home/se7en/github_upload/picom
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: false

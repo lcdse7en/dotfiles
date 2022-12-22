@@ -143,6 +143,7 @@ alias "llg"="logo-ls -alD"
 alias "rcf"="rsync -r -v -u"
 alias "rcx"="rsync --bwlimit=30000 --progress --append-verify"
 alias "rcb"="rsync -r -v --archive"
+alias "texdata"="rcf ~/github_upload/texdata/* ."
 
 funciton tmuxopen() {
     tmux attach -t $1
