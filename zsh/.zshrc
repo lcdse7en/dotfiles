@@ -140,12 +140,15 @@ alias "ts"="tmux source ~/.tmux.conf"
 alias "at"="tmux at"
 # ------------ Tmux End--------------------
 
+# ------------ logo-ls Start-------------------
 alias "ls"="logo-ls"
 alias "la"="logo-ls -A"
 alias "ll"="logo-ls -al"
 alias "lsg"="logo-ls -D"
 alias "lag"="logo-ls -AD"
 alias "llg"="logo-ls -alD"
+# ------------ logo-ls End --------------------
+
 alias "rcf"="rsync -r -v -u"
 alias "rcx"="rsync --bwlimit=30000 --progress --append-verify"
 alias "rcb"="rsync -r -v --archive"
