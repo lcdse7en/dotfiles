@@ -128,12 +128,18 @@ alias "name"="git config --global user.name"
 alias "email"="git config --global user.email"
 alias "origin"="git remote add origin"
 alias "b"="bash ~/scripts/dwmblocks-start.sh"
+
+# ------------ Tmux Start-------------------
 alias "tmux"="tmux -u"
-alias "tls"="tmux ls"
-alias "tcs"="tmux new -s"
-alias "tka"="tmux ls | cut -d: -f 1 | xargs -n1 tmux kill-session -t"
+alias "tls"="tmux ls"        #  NOTE: 列出会话
+alias "tcs"="tmux new -s"    #  NOTE: 新建会话
+alias "td"="tmux detach"     #  NOTE: 分离会话
+alias "tsc"="tmux switch -t" #  NOTE: 切换会话
+alias "tka"="tmux ls | cut -d: -f 1 | xargs -n1 tmux kill-session -t" #  NOTE: 杀死全部会话
 alias "ts"="tmux source ~/.tmux.conf"
 alias "at"="tmux at"
+# ------------ Tmux End--------------------
+
 alias "ls"="logo-ls"
 alias "la"="logo-ls -A"
 alias "ll"="logo-ls -al"
