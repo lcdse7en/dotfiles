@@ -19,6 +19,7 @@
 set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
+set mouse disable
 # set hidden true
 set shellopts '-eu'
 set icons

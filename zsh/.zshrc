@@ -81,8 +81,9 @@ plugins=(
     git
     zsh-syntax-highlighting
     zsh-autosuggestions
-    autoswitch_virtualenv
+    # autoswitch_virtualenv
     autojump
+    zsh-history-substring-search
     sudo
     command-not-found
 )
