@@ -14,12 +14,12 @@ root: /home/se7en/.config/smug
 windows:
   - name: code
     root: tool1
-    # layout: main-vertical
+    # layout: tiled  #  NOTE: layout: tiled, main-vertical, main-horizontal
     commands: 
       - clear
       - lf
     panes:
-      - type: horizontal
+      - type: horizontal   #  NOTE: horizontal
         commands:
           - clear
           - s
