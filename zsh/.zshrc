@@ -199,6 +199,7 @@ export DISABLE_AUTO_TITLE='true'
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/golang
+export GOPROXY=https://proxy.golang.com.cn,direct
 
 # export PATH=$PATH:~/scripts/
 # -------------- nnn --------------

@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/se7en/dotfiles
+- /home/se7en/github_upload/archlinux
 - /home/se7en/github_upload/golang
 - /home/se7en/github_upload/Financial_Cost_Management
 - /home/se7en/github_upload/mathsymbols
@@ -9,7 +10,6 @@ recentrepos:
 - /home/se7en/github_upload/accounting
 - /home/se7en/github_upload/fonts
 - /home/se7en/github_upload/hanju_download
-- /home/se7en/github_upload/archlinux
 - /home/se7en/github_upload/pandas
 - /home/se7en/github_upload/chrome_extensions
 - /home/se7en/github_upload/latex-packages
