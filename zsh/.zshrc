@@ -139,6 +139,7 @@ alias "tsc"="tmux switch -t" #  NOTE: 切换会话
 alias "tka"="tmux ls | cut -d: -f 1 | xargs -n1 tmux kill-session -t" #  NOTE: 杀死全部会话
 alias "ts"="tmux source ~/.tmux.conf"
 alias "at"="tmux at"
+alias "ss"="smug start tool1" #  NOTE: smug session tool
 # ------------ Tmux End--------------------
 
 # ------------ logo-ls Start-------------------
