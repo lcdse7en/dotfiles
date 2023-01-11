@@ -171,6 +171,7 @@ funciton tmuxkill() {
 
 export FZF_DEFAULT_COMMAND='fd --hidden --follow -E ".git" -E "node_modules" . /home /etc'
 export FZF_COMPLETION_TRIGGER='\'
+export FZF_DEFAULT_OPTS='--height=80% --layout=reverse --inline-info --bind ctrl-j:down,ctrl-k:up --preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || ccat --color=always {} || highlight -O ansi -l {} || coderay {} || cat {}) 2> /dev/null | head -500" --preview-window right,45%'
 
 # _fzf_compgen_path() {
 #     fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
