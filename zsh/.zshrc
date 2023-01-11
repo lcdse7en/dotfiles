@@ -172,13 +172,13 @@ funciton tmuxkill() {
 export FZF_DEFAULT_COMMAND='fd --hidden --follow -E ".git" -E "node_modules" . /home /etc'
 export FZF_COMPLETION_TRIGGER='\'
 
-_fzf_compgen_path() {
-    fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
-}
-
-_fzf_compgen_dir() {
-    fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
-}
+# _fzf_compgen_path() {
+#     fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
+# }
+#
+# _fzf_compgen_dir() {
+#     fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
+# }
 
 
 export PATH=$PATH:/usr/bin/ueberzug

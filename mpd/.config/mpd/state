@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
 state: pause
-current: 14
-time: 162.556000
+current: 41
+time: 76.361000
 random: 0
 repeat: 1
 single: 1
@@ -48,54 +48,50 @@ playlist_begin
 33:english/Eminem/Recovery (2010)/Eminem - Cinderella Man.flac
 34:english/Eminem/Recovery (2010)/Eminem - 25 to Life.flac
 35:english/Eminem/Recovery (2010)/Eminem - So Bad.flac
-36:english/Eminem/Recovery (2010)/Eminem - Almost Famous.flac
-37:english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac
-38:english/Eminem/Recovery (2010)/Eminem - You're Never Over.flac
-39:english/Eminem/Recovery (2010)/Eminem - [untitled].flac
-40:english/Linkin Park/Leave Out All The Rest.flac
-41:english/Linkin Park/Bleed It Out.flac
-42:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
-43:english/Taylor Swift/04.- Love Story.flac
-44:korea/Tablo (타블로)&太阳 (태양) - Tomorrow (明天) (Live) [mqms2].mp3
-45:korea/Ann One - 기억만이라도 (就算只有记忆) (Bonus Track) [mqms2].mp3
-46:korea/After School (애프터 스쿨) - 밤 하늘에 (在夜空下) [mqms].mp3
-47:korea/金在中 (김재중)&Flowsik (플로우식) - Kiss B [mqms2].mp3
-48:korea/Taibian (타이비언)&Dia (디아) - 배영하는 물고기 (仰泳的鱼) [mqms2].mp3
-49:korea/河佑镇 (H-유진)&淑熙 (숙희) - 쓰레기 (垃圾) [mqms2].mp3
-50:korea/朴默焕 (박묵환) - 그것만은 (只属于我) [mqms].mp3
-51:korea/Boa/Only One - BoA (宝儿).mp3
-52:korea/Brave Girls/Brave Girls (브레이브걸스) - 툭하면 (动辄) (Remix) [mqms2].mp3
-53:korea/EipkHigh/Epik High is Here/01. Here.mp3
-54:korea/EipkHigh/Epik High is Here/02. Prequel.mp3
-55:korea/EipkHigh/Epik High is Here/03. Super Rare (Feat. Wonstein, pH-1).mp3
-56:korea/EipkHigh/Epik High is Here/04. Gray So Gray (Feat. Younha).mp3
-57:korea/EipkHigh/Epik High is Here/05. BRB.mp3
-58:korea/EipkHigh/Epik High is Here/06. I Hated Myself (Tablo's Word).mp3
-59:korea/EipkHigh/Epik High is Here/07. Rain Song (Feat. Colde).mp3
-60:korea/EipkHigh/Epik High is Here/08. Rich Kids Anthem (Feat. Lee Hi).mp3
-61:korea/EipkHigh/Epik High is Here/09. Face ID (Feat. GIRIBOY, Sik-K, JUSTHIS).mp3
-62:korea/EipkHigh/Epik High is Here/10. Piano For Sale.mp3
-63:korea/EipkHigh/Epik High is Here/11. Family Portrait (Feat. Kim Feel).mp3
-64:korea/EipkHigh/Epik High is Here/12. Champagne.mp3
-65:korea/EipkHigh/Shoebox/happy ending.mp3
-66:korea/Gummy/친구라도 될 걸 그랬어.mp3
-67:korea/kard/01 Into You.mp3
-68:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
-69:korea/kard/03 Push & Pull.mp3
-70:korea/kard/04 지니까.mp3
-71:korea/kard/05 You In Me.mp3
-72:korea/kard/06 Trust Me (BM & Somin ver.).mp3
-73:korea/kard/07 Into You (Inst.).mp3
-74:korea/kard/08 You In Me (Inst.).mp3
-75:korea/kard/09 Trust Me.mp3
-76:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/01 Into You.mp3
-77:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/02 Trust Me (J.seph & Jiwoo ver.).mp3
-78:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/03 Push & Pull.mp3
-79:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/04 지니까.mp3
-80:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/05 You In Me.mp3
-81:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/06 Trust Me (BM & Somin ver.).mp3
-82:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/07 Into You (Inst.).mp3
-83:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/08 You In Me (Inst.).mp3
-84:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/09 Trust Me.mp3
-85:korea/이정현/李贞贤 - 疯.wav
+36:english/Linkin Park/Leave Out All The Rest.flac
+37:english/Linkin Park/Bleed It Out.flac
+38:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
+39:english/Taylor Swift/04.- Love Story.flac
+40:korea/Tablo (타블로)&太阳 (태양) - Tomorrow (明天) (Live) [mqms2].mp3
+41:korea/Ann One - 기억만이라도 (就算只有记忆) (Bonus Track) [mqms2].mp3
+42:korea/After School (애프터 스쿨) - 밤 하늘에 (在夜空下) [mqms].mp3
+43:korea/金在中 (김재중)&Flowsik (플로우식) - Kiss B [mqms2].mp3
+44:korea/Taibian (타이비언)&Dia (디아) - 배영하는 물고기 (仰泳的鱼) [mqms2].mp3
+45:korea/河佑镇 (H-유진)&淑熙 (숙희) - 쓰레기 (垃圾) [mqms2].mp3
+46:korea/朴默焕 (박묵환) - 그것만은 (只属于我) [mqms].mp3
+47:korea/Boa/Only One - BoA (宝儿).mp3
+48:korea/Brave Girls/Brave Girls (브레이브걸스) - 툭하면 (动辄) (Remix) [mqms2].mp3
+49:korea/EipkHigh/Epik High is Here/01. Here.mp3
+50:korea/EipkHigh/Epik High is Here/02. Prequel.mp3
+51:korea/EipkHigh/Epik High is Here/03. Super Rare (Feat. Wonstein, pH-1).mp3
+52:korea/EipkHigh/Epik High is Here/04. Gray So Gray (Feat. Younha).mp3
+53:korea/EipkHigh/Epik High is Here/05. BRB.mp3
+54:korea/EipkHigh/Epik High is Here/06. I Hated Myself (Tablo's Word).mp3
+55:korea/EipkHigh/Epik High is Here/07. Rain Song (Feat. Colde).mp3
+56:korea/EipkHigh/Epik High is Here/08. Rich Kids Anthem (Feat. Lee Hi).mp3
+57:korea/EipkHigh/Epik High is Here/09. Face ID (Feat. GIRIBOY, Sik-K, JUSTHIS).mp3
+58:korea/EipkHigh/Epik High is Here/10. Piano For Sale.mp3
+59:korea/EipkHigh/Epik High is Here/11. Family Portrait (Feat. Kim Feel).mp3
+60:korea/EipkHigh/Epik High is Here/12. Champagne.mp3
+61:korea/EipkHigh/Shoebox/happy ending.mp3
+62:korea/Gummy/친구라도 될 걸 그랬어.mp3
+63:korea/kard/01 Into You.mp3
+64:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+65:korea/kard/03 Push & Pull.mp3
+66:korea/kard/04 지니까.mp3
+67:korea/kard/05 You In Me.mp3
+68:korea/kard/06 Trust Me (BM & Somin ver.).mp3
+69:korea/kard/07 Into You (Inst.).mp3
+70:korea/kard/08 You In Me (Inst.).mp3
+71:korea/kard/09 Trust Me.mp3
+72:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/01 Into You.mp3
+73:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/02 Trust Me (J.seph & Jiwoo ver.).mp3
+74:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/03 Push & Pull.mp3
+75:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/04 지니까.mp3
+76:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/05 You In Me.mp3
+77:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/06 Trust Me (BM & Somin ver.).mp3
+78:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/07 Into You (Inst.).mp3
+79:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/08 You In Me (Inst.).mp3
+80:korea/kard/KARD - You & Me (Full CD) [www.koyi.pub].zip/KARD - You & Me (Full CD) [www.koyi.pub]/09 Trust Me.mp3
+81:korea/이정현/李贞贤 - 疯.wav
 playlist_end
