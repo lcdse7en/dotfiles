@@ -14,6 +14,7 @@ map gfl cd ~/dotfiles/lf/.config/lf/
 map gfx cd /etc/X11/xinit/
 map g/ cd /
 map gfm cd ~/Music/
+map gle cd ~/.emacs.d
 map gld cd ~/.local/src/dwm
 map glb cd ~/.local/src/dwmblocks
 
