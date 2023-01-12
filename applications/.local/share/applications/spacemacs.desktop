@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Spacemacs
+Icon=/home/se7en/spacemacs-logo/spacemacs.icns
+# Exec=/usr/local/bin/st -e lfub %u

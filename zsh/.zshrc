@@ -156,6 +156,8 @@ alias "rcx"="rsync --bwlimit=30000 --progress --append-verify"
 alias "rcb"="rsync -r -v --archive"
 alias "texdata"="rcf ~/github_upload/texdata/* ."
 
+alias "es"="emacs -nw"
+
 funciton tmuxopen() {
     tmux attach -t $1
 }
