@@ -32,28 +32,111 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(python
-     html
-     python
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     treemacs
+     ivy
      auto-completion
+     (auto-completion :variables
+                      auto-completion-complete-with-key-sequence nil
+                      auto-completion-complete-with-key-sequence-delay 0.1
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-idle-delay 0.2
+                      auto-completion-minimum-prefix-length 1
+                      auto-completion-private-snippets-directory nil
+                      auto-completion-return-key-behavior nil
+                      auto-completion-tab-key-behavior 'complete
+                      auto-completion-use-company-box t)
      better-defaults
+     (better-defaults :variables
+                      better-defaults-move-to-end-of-code-first t)
+     chinese
+     colors
+     emoji
+     csv
      emacs-lisp
      git
+     (git :variables
+          spacemacs--git-blame-ts-full-hint-toggle t)
+     latex
+     (latex :variables
+            latex-backend 'lsp
+            latex-refresh-preview t
+            latex-enable-folding t
+            latex-enable-magic t
+            latex-build-engine 'xetex
+            latex-enable-auto-fill nil
+            latex-view-pdf-in-split-window t)
+     python
+     (python :variables
+             python-backend 'lsp
+             python-lsp-server 'pylsp
+             python-format-on-save t
+             python-formatter 'black
+             python-pipenv-activate t
+             python-sort-imports-on-save t
+             python-tab-width 2
+             python-test-runner 'pytest
+             python-auto-set-local-pyenv-version 'on-project-switch
+             python-auto-set-local-pyvenv-virtualenv 'on-project-switch)
+     go
+     (go :variables
+         go-backend 'lsp
+         go-tab-width 2
+         go-format-before-save t
+         go-use-golangci-lint t)
      helm
      lsp
      ;; markdown
      multiple-cursors
+     (multiple-cursors :variables
+                       multiple-cursors-backend 'mc)
+     neotree
      org
-     ;; (shell :variables
+     colors
+     (colors :variables
+             colors-colorize-identifiers 'variables
+             colors-enable-nyan-cat-progress-bar (display-graphic-p))
+     shell-scripts
+     (shell-scripts :variables
+                    shell-scripts-backend 'lsp)
+     ;; SPC + '
+     shell
+     ;;(shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
+     spell-checking
+     (spell-checking :variables
+                     enable-flyspell-auto-completion t
+                     spell-checking-enable-auto-dictionary t
+                     spell-checking-enable-by-default nil)
+     syntax-checking
+     (syntax-checking :variables
+                      syntax-checking-auto-hide-tooltips 10
+                      syntax-checking-enable-tooltips t)
      ;; version-control
+     sql
+     (sql :variables
+          sql-backend 'lsp
+          sql-capitalize-keywords t
+          sql-lsp-sqls-workspace-config-path 'workspace
+          sql-auto-indent nil)
+     terraform
+     (terraform :variables
+                terraform-auto-format-on-save t
+                terraform-backend 'lsp)
+     prettier
+     systemd
+     json
+     (json :variables
+           json-backend 'lsp
+           json-fmt-tool 'prettier
+           json-fmt-on-save t)
      treemacs)
 
 
@@ -65,7 +148,16 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages
+   '(aggressive-indent
+     all-the-icons
+     all-the-icons-dired
+     all-the-icons-ivy
+     centered-window
+     highlight-indent-guides
+     pkgbuild-mode
+     mode-icons
+     minimap)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -179,7 +271,7 @@ It should only modify the values of Spacemacs settings."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner '"~/spacemacs.png"
 
    ;; Scale factor controls the scaling (size) of the startup banner. Default
    ;; value is `auto' for scaling the logo automatically to fit all buffer
@@ -213,7 +305,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil, show file icons for entries and headings on Spacemacs home buffer.
    ;; This has no effect in terminal or if "all-the-icons" package or the font
    ;; is not installed. (default nil)
-   dotspacemacs-startup-buffer-show-icons nil
+   dotspacemacs-startup-buffer-show-icons t
 
    ;; Default major mode for a new empty buffer. Possible values are mode
    ;; names such as `text-mode'; and `nil' to use Fundamental mode.
@@ -260,7 +352,8 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-default-font '("Source Code Pro"
                                :size 10.0
                                :weight normal
-                               :width normal)
+                               :width normal
+                               :powerline-scale 1.0)
 
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
@@ -271,6 +364,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; The key used for Vim Ex commands (default ":")
    dotspacemacs-ex-command-key ":"
+
 
    ;; The leader key accessible in `emacs state' and `insert state'
    ;; (default "M-m")
@@ -295,7 +389,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-distinguish-gui-tab nil
 
    ;; Name of the default layout (default "Default")
-   dotspacemacs-default-layout-name "Default"
+   dotspacemacs-default-layout-name "lcdse7en"
 
    ;; If non-nil the default layout name is displayed in the mode-line.
    ;; (default nil)
@@ -321,7 +415,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-auto-save-file-location 'cache
 
    ;; Maximum number of rollback slots to keep in the cache. (default 5)
-   dotspacemacs-max-rollback-slots 5
+   dotspacemacs-max-rollback-slots 20
 
    ;; If non-nil, the paste transient-state is enabled. While enabled, after you
    ;; paste something, pressing `C-j' and `C-k' several times cycles through the
@@ -330,7 +424,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Which-key delay in seconds. The which-key buffer is the popup listing
    ;; the commands bound to the current keystroke sequence. (default 0.4)
-   dotspacemacs-which-key-delay 0.4
+   dotspacemacs-which-key-delay 0.3
 
    ;; Which-key frame position. Possible values are `right', `bottom' and
    ;; `right-then-bottom'. right-then-bottom tries to display the frame to the
@@ -497,7 +591,8 @@ It should only modify the values of Spacemacs settings."
    ;; `trailing' to delete only the whitespace at end of lines, `changed' to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   ;;dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'trailing
 
    ;; If non-nil activate `clean-aindent-mode' which tries to correct
    ;; virtual indentation of simple modes. This can interfere with mode specific
@@ -549,8 +644,8 @@ It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
 (setq configuration-layer--elpa-archives
   '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-  ("org-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-  ("gnu-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+   ("org-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+   ("gnu-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 )
 
 
@@ -568,23 +663,52 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (setq-default evil-escape-delay 0.2)
-  (setq-default evil-escape-key-sequence"jj")
+
+  (setq org-agenda-files (list "~/tmp/todos.org"
+                               "~/tmp/worktodos.org"))
+
+  (setq ns-use-srgb-colorspace nil)
+  (setq powerline-default-separator 'arrow)
+  ;;LaTeX config
+  (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+  (setq TeX-engine 'xetex)
+  ;; spc m v views pdf with Zathura PDF viewer
+  (setq TeX-view-program-selection '((output-pdf "Zathura")))
+  (setq TeX-parse-selt t)
+  ;;PDF正向搜索设置
+  (setq TeX-PDF-mode t)
+  (setq TeX-source-correlate-mode t)
+  (setq TeX-source-correlate-method 'synctex)
+
+  (global-company-mode)
+
+  (global-set-key (kbd "M-w") 'copy-to-clipboard)
+  (global-set-key (kbd "C-y") 'paste-from-clipboard)
+
+  (setq org-agenda-window-setup 'current-window)
+  (setq-default evil-escape-delay 0.3)
+  (setq-default evil-escape-key-sequence"jk")
+  (setq-default evil-ex-nohighlight"<esc>")
+
+  ;; surround
+  (setq-default evil-surround-pairs-alist
+                (push '(?~ . ("{- " . " -}")) evil-surround-pairs-alist))
+
   (defun copy-to-clipboard ()
     "Copies selection to x-clipboard."
     (interactive)
     (if (display-graphic-p)
-       (progn
+        (progn
           (message "Yanked region to x-clipboard!")
           (call-interactively 'clipboard-kill-ring-save)
-       )
-    (if (region-active-p)
-        (progn
-          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
-          (message "Yanked region to clipboard!")
-          (deactivate-mark))
+          )
+      (if (region-active-p)
+          (progn
+            (shell-command-on-region (region-beginning) (region-end) "pbcopy")
+            (message "Yanked region to clipboard!")
+            (deactivate-mark))
         (message "No region active; can't yank to clipboard!")))
-  )
+    )
 
   (defun paste-from-clipboard ()
     "Pastes from x-clipboard."
@@ -594,9 +718,10 @@ before packages are loaded."
           (clipboard-yank)
           (message "graphics active")
           )
-      (insert (shell-command-to-string "xsel -o -b"))
+      (insert (shell-command-to-string "pbpaste"))
       )
     )
+
   (evil-leader/set-key "o y" 'copy-to-clipboard)
   (evil-leader/set-key "o p" 'paste-from-clipboard)
 )
