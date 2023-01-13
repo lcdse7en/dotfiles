@@ -189,3 +189,7 @@ i love linux
   
 章
   
+day-2023-01-13:
+foo
+  abbr. folio (Spanish=folio) （西班牙语）编页码，对开的纸；
+

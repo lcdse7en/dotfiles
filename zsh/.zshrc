@@ -194,6 +194,7 @@ export PATH=$PATH:~/.local/share/applications/
 export PATH=$PATH:~/.local/src/
 export PATH=$PATH:~/.local/bin/statusbar/
 export PATH=$PATH:~/.local/share/applications/
+export PATH=$PATH:~/.emacs.d/bin/
 
 
 export DISABLE_AUTO_TITLE='true'
@@ -213,5 +214,3 @@ export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
 export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
 export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info
 export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

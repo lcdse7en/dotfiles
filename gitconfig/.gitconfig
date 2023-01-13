@@ -9,3 +9,5 @@
   side-by-side = true
 [interactive]
   diffFilter = delta --color-only
+; [url "https://github.com.cnpmjs.org/"]
+; 	insteadof = https://github.com/
