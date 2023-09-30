@@ -1,0 +1,30 @@
+#*******************************************
+# Author:      se7enlcd                    *
+# E-mail:      2353442022@qq.com           *
+# Create_Time: 2023-06-07                  *
+# Description:                             *
+#*******************************************
+
+session: accounting
+
+root: /home/se7en/.config/smug
+
+windows:
+  - name: accounting
+    root: accounting
+    # manual: true # you can start this window only manually, using the -w arg
+    layout: main-vertical
+    commands:
+      - clear
+      - cd ~/github_upload/accounting/documents/
+      - clear
+    panes:
+      - type: vertical
+        commands:
+          - clear
+          - cd ~/github_upload/accounting/
+          - clear
+      - type: horizontal
+        commands:
+          - clear
+          - nvim ~/github_upload/accounting/main.tex

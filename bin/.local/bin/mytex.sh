@@ -1,0 +1,299 @@
+#!/usr/bin/bash
+
+#********************************************
+# Author      : lcdse7en
+# E-mail      : 2353442022@qq.com
+# Create_Time : 2023-07-04 16:38
+# Description :
+#********************************************
+
+# Color
+SkyBlue='\033[0;36m'
+Green='\033[0;32m'
+Plain='\033[0m'
+Red='\e[1;31m'
+Gray='\e[1;30m'
+
+echo -e "${SkyBlue}"
+read -p "Enter Latex Type ( report | article ):" -e TexType
+echo -e "${Plain}"
+
+echo $TexType
+case ${TexType} in
+  report)
+		#  NOTE: report
+		sudo rsync -avzuP --delete ~/github_upload/texdata2/* .
+		ln -s ~/dotfiles/Pictures/Pictures/images .
+		touch README.md
+		touch main.tex
+		cat >> main.tex <<- EOF
+			%*******************************************
+			% Author       :  se7enlcd                 *
+			% E-mail       :  2353442022@qq.com        *
+			% CreateTime   :  $(date +"%F %T")      *
+			% Description  :                           *
+			%*******************************************
+
+			\documentclass[a4paper, 10pt]{report}
+			\usepackage[hyperref=true, backend=bibtex, sorting=none, backref=true]{biblatex} %style=authoryear-icomp
+			\usepackage[dvipsnames, svgnames, x11names]{xcolor}
+			\usepackage{soul} % underline \ul \hl \st
+			\usepackage{soulpos} % underline \uldash
+			\usepackage[a4paper, left=1.5cm, right=1cm, top=1.5cm, bottom=1.5cm]{geometry}
+			\usepackage{tocloft} % 目录设置宏包
+			\usepackage{enumerate}
+			\usepackage{fontspec, xunicode-addon} % 显示中文、韩文(CJK)字符
+			\usepackage[utf8]{inputenc}
+			\usepackage{kotex} % korea font space
+			\usepackage{multicol}
+			\usepackage{verse} % 诗歌
+			\usepackage[fleqn]{amsmath}
+			\usepackage{varwidth}
+			\usepackage{etoolbox}
+			\usepackage{amsfonts}
+			\usepackage{amssymb}
+			\usepackage{pifont} % \ding{51}
+			\usepackage[runin]{abstract}
+			\usepackage{lipsum} % 插入例子
+			\usepackage{xifthen}
+			\usepackage{tcolorbox}
+			\usepackage{xeCJKfntef} % 文本划线
+			\usepackage{IEEEtrantools} % 公式split
+			\usepackage{enumitem}
+			\usepackage{tasks}
+			\usepackage{etoolbox}
+			\usepackage{xr-hyper} % 可以引用外部文件 \externaldocument{filename}
+			\usepackage{graphicx}
+			\usepackage[slantfont, boldfont]{xeCJK}
+			\usepackage{titling}
+			\usepackage[explicit]{titlesec}
+			\usepackage{metalogo}
+			\usepackage{chngcntr}
+			\usepackage{fontawesome5}
+			\usepackage{newclude}
+			\usepackage{minted} % sudo pip install pygments % --shell-escape
+			\usepackage[titletoc, title]{appendix} % 附录
+			\usepackage{todonotes} % 批注将来需要做的事项
+			\usepackage[noautomatic]{imakeidx} % 关键字索引 导言区\index{}
+			\usepackage[totoc, hangindent=2em, subindent=0.8em, initsep=12pt, font=small, unbalanced=true]{idxlayout}
+			\usepackage{pst-plot}
+			\usepackage[customcolors, shade]{hf-tikz}
+			\usetikzlibrary{tikzmark}
+			\usepackage{tkz-euclide}
+			\usepackage{codebox}
+			\usepackage{afterpage}
+			\usepackage{fancyhdr} % 设置页眉、页脚
+			\usepackage{lastpage} % 显示总页数
+			% \usepackage{showlabels}
+			\usepackage{tabularray}
+			\usepackage{hyperref} % 此宏包必须最后导入才能进行引用跳转
+			\usepackage{cleveref}
+
+			%  NOTE: pip install pygments
+			\usemintedstyle{xcode}
+
+			% --------------------------------------------------------
+			% -------------- input sources file begin ----------------
+			% --------------------------------------------------------
+			\input{sources/font}
+			\input{sources/format}
+			\input{sources/mypagestyle}
+			\input{sources/enumitem}
+			\input{sources/newcommand}
+			\input{sources/tasks}
+			\input{sources/png}
+			\input{sources/graphics}
+			\input{sources/defcolor}
+			\input{sources/soul}
+			\input{sources/soulpos}
+			\input{sources/mytblr}
+			\input{sources/href}
+			\input{sources/tcolorbox}
+			\input{sources/entry}
+			\input{sources/attrib}
+			\input{sources/multicol}
+			\input{sources/bib}
+			\input{sources/makeindex}
+			% --------------------------------------------------------
+			% --------------- input sources file end -----------------
+			% --------------------------------------------------------
+
+			% ---------------- begin document start ------------------
+			\begin{document}
+
+			\pagestyle{mypagestyle}
+
+			\input{sources/author-title} % 封面页面
+
+			\thispagestyle{empty}
+			\afterpage{\thispagestyle{plain}}
+			\renewcommand{\thepage}{\Roman{page}}
+			\setcounter{page}{1}
+			\tableofcontents
+
+			\clearpage
+			\listoftables % 表格目录
+
+			\clearpage
+			\listoffigures % 图片目录
+
+			%\listoftodos
+			\newpage
+
+			%\input{sources/basic-info}
+			%\input{sources/abstract}
+
+			\renewcommand{\thepage}{\arabic{page}}
+			\setcounter{page}{1}
+
+			%--------- 前言 ---------
+			%\input{documents/preface}
+
+			\input{documents/chapter_1}
+			%\input{documents/chapter_2}
+			%\input{documents/chapter_3}
+			%\input{documents/chapter_4}
+			%\input{documents/chapter_5}
+			%\input{documents/chapter_6}
+			%\input{documents/chapter_7}
+			%\input{documents/chapter_8}
+			%\input{documents/chapter_9}
+			%\input{documents/chapter_10}
+			%\input{documents/chapter_11}
+			%\input{documents/chapter_12}
+			%\input{documents/chapter_13}
+			%\input{documents/chapter_14}
+			%\input{documents/chapter_15}
+			%\input{documents/chapter_16}
+			%\input{documents/chapter_17}
+			%\input{documents/chapter_18}
+			%\input{documents/chapter_19}
+			%\input{documents/chapter_20}
+			%\input{documents/chapter_21}
+			%\input{documents/chapter_22}
+			%\input{documents/chapter_23}
+			%\input{documents/chapter_24}
+			%\input{documents/chapter_25}
+			%\input{documents/chapter_26}
+			%\input{documents/chapter_27}
+			%\input{documents/chapter_28}
+			%\input{documents/chapter_29}
+			%\input{documents/chapter_30}
+
+
+			\cite{texbook1986} %\nocite{*}
+			%-------------------- 打印文献 start --------------------
+			\printbibliography[title={\kaiti 参考文献}, sorting=nyt] % 打印参考文献
+			\addcontentsline{toc}{chapter}{参考文献}
+			%-------------------- 打印文献 end ----------------------
+
+			%---------------------- 附录 start ----------------------
+			\input{sources/appendices}
+			%---------------------- 附录 end ------------------------
+
+			% 打印关键字索引
+			\printindex % \index{}
+			\end{document}
+		EOF
+    ;;
+  article)
+		#  NOTE: article
+		sudo rsync -avzuP ~/github_upload/texdata1/* .
+		ln -s ~/dotfiles/Pictures/Pictures/images .
+		touch main.tex
+		touch README.md
+		cat >> main.tex <<- EOF
+			%*******************************************
+			% Author       :  se7enlcd                 *
+			% E-mail       :  2353442022@qq.com        *
+			% CreateTime   :  $(date +"%F %T")      *
+			% Description  :                           *
+			%*******************************************
+
+			\documentclass[letterpaper, 10pt]{article}
+			\usepackage[dvipsnames, svgnames, x11names]{xcolor}
+			\usepackage{soul} % underline \ul \hl \st
+			\usepackage{soulpos} % underline \uldash
+			\usepackage[margin=0.45in]{geometry}
+			\usepackage{fontspec, xunicode-addon} % 显示中文、韩文(CJK)字符
+			\usepackage[utf8]{inputenc} % use UTF8 encoding
+			\usepackage{kotex} % korea font space
+			\usepackage{kotex-logo}
+			\usepackage{multicol}
+			\usepackage{verse}
+			\usepackage[fleqn]{amsmath}
+			\usepackage{varwidth}
+			\usepackage{etoolbox}
+			\usepackage{amsfonts}
+			\usepackage{amssymb}
+			\usepackage{pifont}
+			\usepackage[runin]{abstract}
+			\usepackage{lipsum} % 插入例子
+			\usepackage{xifthen}
+			\usepackage{tcolorbox}
+			\usepackage{enumitem}
+			\usepackage{tasks}
+			\usepackage{graphicx}
+			\usepackage{tabularray}
+			\usepackage{titling}
+			\usepackage[explicit]{titlesec}
+			\usepackage{metalogo}
+			\usepackage{chngcntr}
+			\usepackage{fontawesome5}
+			\usepackage{newclude}
+			\usepackage[cache=false]{minted} % sudo pip install pygments % --shell-escape
+			\usepackage{tabularray}
+			\usepackage[customcolors, shade]{hf-tikz}
+			\usepackage{tkz-euclide}
+			\usepackage{codebox}
+			\usepackage[slantfont, boldfont]{xeCJK}
+			\usepackage{fancyhdr} % 页眉、页脚设置
+			\usepackage{lastpage} % 显示总页数
+			\usepackage[colorlinks=true,urlcolor=Blue]{hyperref}
+			\usepackage{cleveref}
+
+
+
+			\usemintedstyle{xcode}
+
+			% --------------------------------------------------------
+			% --------------------- input begin ----------------------
+			% --------------------------------------------------------
+			\input{sources/font}
+			\input{sources/sectionformat}
+			\input{sources/author_date}
+			\input{sources/enumitem}
+			\input{sources/tasks}
+			\input{sources/png}
+			\input{sources/defcolor}
+			\input{sources/soul}
+			\input{sources/soulpos}
+			\input{sources/mytblr}
+			\input{sources/href}
+			\input{sources/tcolorbox}
+			\input{sources/entry}
+			\input{sources/attrib}
+			\input{sources/page}
+			\input{sources/multicol}
+			% --------------------------------------------------------
+			% ---------------------- input end -----------------------
+			% --------------------------------------------------------
+
+			\author{Lyrics}
+			\date{\today}
+
+			\begin{document}
+			\maketitle
+			\thispagestyle{fancy}
+
+
+			\input{sources/basic-info}
+			\input{sources/abstract}
+			% \input{documents/entry}
+
+			%\input{}
+
+			\end{document}
+		EOF
+    ;;
+esac

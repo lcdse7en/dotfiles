@@ -35,18 +35,20 @@ set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
+set autoquit true
 # set autoquit on
 
 # cmds/functions
 cmd open ${{
   case $(file --mime-type "$(readlink -f $f)" -b) in
-      application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
+      # application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
+      application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) gnumeric $fx ;;
       image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
       text/*|application/json|inode/x-empty) $EDITOR $fx;;
       image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
       image/svg+xml) display -- $f ;;
-      image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" |
-          setsid -f sxiv -aio 2>/dev/null | while read -r file; do
+      image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|avif\|tif\|ico\)\(_large\)*$" |
+          setsid -f nsxiv -aio 2>/dev/null | while read -r file; do
               [ -z "$file" ] && continue
               lf -remote "send select \"$file\""
               lf -remote "send toggle"
@@ -236,7 +238,7 @@ map yy copy
 map yd $dirname -- "$f" | head -c-1 | xclip -i -selection clipboard
 map yp $printf "%s" "$fx" | xclip -selection clipboard
 map yn $basename -a -- $fx | head -c-1 | xclip -i -selection clipboard
-map ye yank-basename-without-extension 
+map ye yank-basename-without-extension
 
 
 # show 1 pannel or 2 pannel
@@ -251,11 +253,10 @@ map <c-g> push $lazygit<enter>
 map <c-n> push :mkdir<space>
 # map M push :mkdir<space>
 map T mkfile
-map M trash
 map gc trash_clear
 map gr trash_restore
 map z push :aj<space>
-map Qg !clear; glow -p $fx 
+map Qg !clear; glow -p $fx
 map B bulk-rename
 map = chmod
 map b $setbg $f  # ~/.local/bin/setbg

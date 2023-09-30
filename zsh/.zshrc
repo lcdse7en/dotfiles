@@ -78,14 +78,21 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    #  NOTE: oh-my-zsh 自带的插件
     git
+    sudo
+    vi-mode
+    extract
+    cp # cpv
+    z
+    command-not-found
+    #  NOTE: 第三方的插件
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-completions
     # autoswitch_virtualenv
-    autojump
     zsh-history-substring-search
-    sudo
-    command-not-found
+    # zoxide
 )
 
 export EDITOR="nvim"
@@ -93,20 +100,64 @@ export TERMINAL="st"
 export BROWSER="google-chrome-stable"
 source $ZSH/oh-my-zsh.sh
 
-
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     exec startx
 fi
+
+#  NOTE: vi-mode
+bindkey -v
+export KEYTIMEOUT=1
+
+#  NOTE: Use vim keys in tab complete menu:
+bindkey -M vicmd "i" vi-insert
+bindkey -M vicmd "I" vi-insert-bol
+bindkey -M vicmd "H" vi-beginning-of-line
+bindkey -M vicmd "L" vi-end-of-line
+bindkey -M vicmd "n" down-line-or-history
+bindkey -M vicmd "u" up-line-or-history
+bindkey -M vicmd "l" vi-forward-char
+bindkey -M vicmd "h" vi-backward-char
+bindkey -M vicmd "d" undo
+
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} == '' ]] || [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+  zle -K viins
+  echo -ne "\e[6 q"
+}
+zle -N zle-line-init
+
+# Use beam shape cursor on startup.
+echo -ne '\e[6 q'
+
+# Use beam shape cursor for each new prompt.
+preexec() { echo -ne '\e[6 q' ;}
+
+_fix_cursor() {
+  echo -ne '\e[6 q'
+}
+precmd_functions+=(_fix_cursor)
 
 
 # bindkey
 bindkey ',' autosuggest-accept
 
+
+
 # Example aliases
 alias ra='ranger'
+alias jo='joshuto'
 alias c="clear"
 alias s="neofetch"
 alias pc="sudo pacman -S"
+alias pcs="sudo pacman -Ss"
+alias pcq="sudo pacman -Qs"
 alias e="exit"
 alias vim="nvim"
 alias pac="sudo pacman"
@@ -130,6 +181,11 @@ alias "email"="git config --global user.email"
 alias "origin"="git remote add origin"
 alias "b"="bash ~/scripts/dwmblocks-start.sh"
 
+alias "cmake"="/usr/local/cmake/bin/cmake"
+
+#  NOTE: plocate
+alias "locate"="plocate"
+
 # ------------ Tmux Start-------------------
 alias "tmux"="tmux -u"
 alias "tls"="tmux ls"        #  NOTE: 列出会话
@@ -139,7 +195,8 @@ alias "tsc"="tmux switch -t" #  NOTE: 切换会话
 alias "tka"="tmux ls | cut -d: -f 1 | xargs -n1 tmux kill-session -t" #  NOTE: 杀死全部会话
 alias "ts"="tmux source ~/.tmux.conf"
 alias "at"="tmux at"
-alias "ss"="smug start tool1" #  NOTE: smug session tool
+alias "ss"="smug start server" #  NOTE: smug session tool
+alias "sa"="smug start accounting" #  NOTE: smug session tool
 # ------------ Tmux End--------------------
 
 # ------------ logo-ls Start-------------------
@@ -152,11 +209,37 @@ alias "llg"="logo-ls -alD"
 # ------------ logo-ls End --------------------
 
 alias "rcf"="rsync -r -v -u"
+# alias "rcf"='rcf(){ rsync \-r \-v \-u;};rcf'
 alias "rcx"="rsync --bwlimit=30000 --progress --append-verify"
 alias "rcb"="rsync -r -v --archive"
-alias "texdata"="rcf ~/github_upload/texdata/* ."
+alias "texdata1"="rcf ~/github_upload/texdata1/* ."
+alias "texdata2"="rcf ~/github_upload/texdata2/* ."
+
+# font
+alias "zh"="fc-list :lang=zh > zh.md"
+alias "ko"="fc-list :lang=ko > ko.md"
+
+alias "hs"="sudo shutdown -h now"
+alias "rs"="sudo shutdown -r now"
+alias "fz"="pip freeze > requirements.md"   # pip freeze
 
 alias "es"="emacs -nw"
+
+alias "pipd"="pipdeptree -p"
+alias "pips"="pip3 show"
+
+# jupyterlab
+alias "jpl"="jupyter-lab"
+
+# -----------   nnn ---------------
+alias "nnn"="nnn -de"
+export NNN_PLUG="i:imgvie;p:preview-tabbed;f:fzcd;t:preview-tui"
+export NNN_OPENER="xdg-open"
+export NNN_BMS="a:~/github_upload/accounting/"
+export NNN_SEL="/tmp/.sel"
+export NNN_FIFO="/tmp/nnn.fifo"
+export NNN_COLORS="c1e2272e006033f7c6d6abc4"
+export NNN_ARCHIVE="\\.(7z|bz2|gz|tgz|zip|rar|tar)$"
 
 funciton tmuxopen() {
     tmux attach -t $1
@@ -186,7 +269,7 @@ export FZF_DEFAULT_OPTS='--height=80% --layout=reverse --inline-info --bind ctrl
 
 export PATH=$PATH:/usr/bin/ueberzug
 export PATH=$PATH:/usr/bin
-export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/python/bin/
 export PATH=$PATH:/usr/local/bin/
 export PATH=$PATH:/usr/local/share/
 export PATH=$PATH:~/.local/bin/
@@ -196,21 +279,37 @@ export PATH=$PATH:~/.local/bin/statusbar/
 export PATH=$PATH:~/.local/share/applications/
 export PATH=$PATH:~/.emacs.d/bin/
 
+export PATH=$PATH:~/.local/share/nvim/mason/bin
+
 
 export DISABLE_AUTO_TITLE='true'
 
 ####### golang ########
 export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export GOPATH=$HOME/golang
-export GOPROXY=https://proxy.golang.com.cn,direct
+export GO111MODULE=auto
+# export GOMOD=on
+# export GOPROXY=https://proxy.golang.com.cn,direct
+# export GOPROXY=https://mirrors.aliyun.com/goproxy/
+# export GOPROXY=https://goproxy.cn,https://goproxy.io,direct
+# export GOPROXY=https://goproxy.cn,direct  # 七牛云
 
 # export PATH=$PATH:~/scripts/
 # -------------- nnn --------------
 export NNN_PLUG="i:imgview;p:preview-tabbed;f:fzopen;"
 export NNN_FIFO=/tmp/nnn.fifo
 
-export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
-export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man
-export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info
+export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
+export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man
+export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info
 export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
+
+#  NOTE: rust mirror
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+
+#  NOTE: rye
+export PATH=$PATH:/HOME/.rye/shims
+
+export BOB_CONFIG="$HOME/.config/bob/config.json"

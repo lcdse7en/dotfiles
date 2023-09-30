@@ -1,9 +1,12 @@
 map gh cd ~
+map gfa cd ~/github_upload/ctan/ctanpkg
 map gfc cd ~/.config/
 map gD cd ~/Documents
 map gd cd ~/Downloads
 map gfd cd ~/dotfiles/
 map gfn cd ~/.config/nvim/
+map gfz cd ~/golang/
+map gfs cd ~/github_upload/myscripts/
 map gfe cd ~/dotfiles/emacs/.emacs.d/
 map gfr cd ~/dotfiles/ranger/.config/ranger/
 map gfp cd ~/dotfiles/Pictures/Pictures/
@@ -11,10 +14,14 @@ map gft cd ~/dotfiles/tmux/
 map gfg cd ~/github_upload/
 map gfi cd ~/github_upload/account/
 map gfl cd ~/dotfiles/lf/.config/lf/
+map gfz cd ~/.local/share/nvim/lazy/
+map gfw cd ~/github_upload/Python_whl/
 map gfx cd /etc/X11/xinit/
+map gfu cd /run/media/se7en/Thinkplus/
 map g/ cd /
 map gfm cd ~/Music/
 map gle cd ~/.emacs.d
 map gld cd ~/.local/src/dwm
 map glb cd ~/.local/src/dwmblocks
+map gnp cd ~/.local/share/nvim/site/pack/packer/
 

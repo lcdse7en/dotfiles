@@ -1,6 +1,6 @@
 [user]
-	email = 2353442022@qq.com
-	name = se7enlcd
+	email = arcolinuxinfo@gmail.com
+	name = arcolinuxz
 [core]
   pager = delta
 [delta]
@@ -11,3 +11,9 @@
   diffFilter = delta --color-only
 ; [url "https://github.com.cnpmjs.org/"]
 ; 	insteadof = https://github.com/
+[safe]
+	directory = /home/se7en/.config/nvim
+[pull]
+	rebase = false
+[push]
+	default = simple
