@@ -89,9 +89,9 @@ plugins=(
     #  NOTE: 第三方的插件
     zsh-syntax-highlighting
     zsh-autosuggestions
-    zsh-completions
+    # zsh-completions
     # autoswitch_virtualenv
-    zsh-history-substring-search
+    # zsh-history-substring-search
     # zoxide
 )
 
@@ -223,7 +223,6 @@ alias "hs"="sudo shutdown -h now"
 alias "rs"="sudo shutdown -r now"
 alias "fz"="pip freeze > requirements.md"   # pip freeze
 
-alias "es"="emacs -nw"
 
 alias "pipd"="pipdeptree -p"
 alias "pips"="pip3 show"
@@ -269,20 +268,19 @@ export FZF_DEFAULT_OPTS='--height=80% --layout=reverse --inline-info --bind ctrl
 
 export PATH=$PATH:/usr/bin/ueberzug
 export PATH=$PATH:/usr/bin
-export PATH=$PATH:/usr/local/python/bin/
 export PATH=$PATH:/usr/local/bin/
 export PATH=$PATH:/usr/local/share/
 export PATH=$PATH:~/.local/bin/
-export PATH=$PATH:~/.local/share/applications/
 export PATH=$PATH:~/.local/src/
 export PATH=$PATH:~/.local/bin/statusbar/
 export PATH=$PATH:~/.local/share/applications/
-export PATH=$PATH:~/.emacs.d/bin/
+export PATH=$PATH:~/.cargo/bin
 
 export PATH=$PATH:~/.local/share/nvim/mason/bin
 
 
 export DISABLE_AUTO_TITLE='true'
+
 
 ####### golang ########
 export GOROOT=/usr/local/go
@@ -296,9 +294,6 @@ export GO111MODULE=auto
 # export GOPROXY=https://goproxy.cn,direct  # 七牛云
 
 # export PATH=$PATH:~/scripts/
-# -------------- nnn --------------
-export NNN_PLUG="i:imgview;p:preview-tabbed;f:fzopen;"
-export NNN_FIFO=/tmp/nnn.fifo
 
 export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
 export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man

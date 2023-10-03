@@ -55,10 +55,10 @@ bind index l display-message
 bind index,query <space> tag-entry
 #bind browser h goto-parent
 macro browser h '<change-dir><kill-line>..<enter>' "Go to parent folder"
-bind index,pager H view-raw-message
+#bind index,pager H view-raw-message
 bind browser l select-entry
-bind pager,browser gg top-page
-bind pager,browser G bottom-page
+#bind pager,browser gg top-page
+#bind pager,browser G bottom-page
 bind index,pager,browser d half-down
 bind index,pager,browser u half-up
 bind index,pager S sync-mailbox
@@ -114,20 +114,20 @@ bind index,pager \Cn sidebar-next-new
 bind index,pager B sidebar-toggle-visible
 
 # Default index colors:
-color index yellow default '.*'
-color index_author red default '.*'
-color index_number blue default
-color index_subject cyan default '.*'
+#color index yellow default '.*'
+#color index_author red default '.*'
+#color index_number blue default
+#color index_subject cyan default '.*'
 
 # New mail is boldened:
-color index brightyellow black "~N"
-color index_author brightred black "~N"
-color index_subject brightcyan black "~N"
+#color index brightyellow black "~N"
+#color index_author brightred black "~N"
+#color index_subject brightcyan black "~N"
 
 # Tagged mail is highlighted:
-color index brightyellow blue "~T"
-color index_author brightred blue "~T"
-color index_subject brightcyan blue "~T"
+#color index brightyellow blue "~T"
+#color index_author brightred blue "~T"
+#color index_subject brightcyan blue "~T"
 
 # Other colors and aesthetic settings:
 mono bold bold
