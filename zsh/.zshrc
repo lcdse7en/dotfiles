@@ -223,6 +223,10 @@ alias "hs"="sudo shutdown -h now"
 alias "rs"="sudo shutdown -r now"
 alias "fz"="pip freeze > requirements.md"   # pip freeze
 
+#  NOTE: crontab
+alias "ce"="crontab -e"
+alias "cl"="crontab -l"
+alias "cr"="crontab -r"
 
 alias "pipd"="pipdeptree -p"
 alias "pips"="pip3 show"

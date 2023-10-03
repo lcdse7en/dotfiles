@@ -18,22 +18,22 @@ BOLD=$(printf '\033[1m')
 RESET=$(printf '\033[m')
 
 Install_package() {
-	array=(
-		fcitx5-im
-		fcitx5-chinese-addons
-		fcitx5-material-color
-		fcitx5-nord
-		fcitx5-pinyin-zhwiki
-		fcitx5-pinyin-moegirl
-		fcitx5-hangul
-		fcitx5-anthy
-		fcitx5-mozc
-	)
-	sudo pacman -S --noconfirm "${array[@]}"
+    array=(
+        fcitx5-im
+        fcitx5-chinese-addons
+        fcitx5-material-color
+        fcitx5-nord
+        fcitx5-pinyin-zhwiki
+        fcitx5-pinyin-moegirl
+        fcitx5-hangul
+        fcitx5-anthy
+        fcitx5-mozc
+    )
+    sudo pacman -S --noconfirm "${array[@]}"
 }
 
 Env() {
-	sudo tee /etc/environment <<-EOF
+    sudo tee /etc/environment <<-EOF
 		GTK_IM_MODULE=fcitx
 		QT_IM_MODULE=fcitx
 		XMODIFIERS=@im=fcitx
@@ -41,7 +41,7 @@ Env() {
 		SDL_IM_MODULE=fcitx
 		GLFW_IM_MODULE=ibus
 	EOF
-	sudo tee ~/.pam_enviroment <<-EOF
+    sudo tee ~/.pam_enviroment <<-EOF
 		GTK_IM_MODULE DEFAULT=fcitx5
 		QT_IM_MODULE  DEFAULT=fcitx5
 		XMODIFIERS    DEFAULT=@im=fcitx5
@@ -49,8 +49,8 @@ Env() {
 }
 
 main() {
-	# Install_package
-	Env
+    # Install_package
+    Env
 }
 
 main
