@@ -26,12 +26,12 @@ AddUser() {
 }
 
 Wheel() {
-    sudo sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
-    sudo sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL%/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
+    sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+    sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL%/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 }
 
 main() {
-    # AddUser
+    AddUser
     Wheel
 }
 
