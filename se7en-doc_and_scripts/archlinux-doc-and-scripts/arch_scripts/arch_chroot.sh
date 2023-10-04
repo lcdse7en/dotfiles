@@ -28,6 +28,7 @@ Mirrorlist() {
 }
 
 Pactrap() {
+    pacman -Syy
     pacman -Sy archlinux-keyring
     pacstrap /mnt base linux linux-firmware
     genfstab -U /mnt >>/mnt/etc/fstabs
@@ -59,7 +60,11 @@ Arch_chroot() {
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
     hwclock --systohc
     locale-gen
-    passwd
+
+    passwd <<-EOF
+	921216
+	921216
+	EOF
 
     array=(
         grub
@@ -71,11 +76,17 @@ Arch_chroot() {
         dhcpcd
         networkmanager
     )
-    pacman -S "${array[@]}"
+    pacman -S --needed --noconfirm "${array[@]}"
 
     mkdir /boot/grub
     grub-mkconfgi >/boot/grub/grub.cfg
-    grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=ArchLinux --no-nvram --removable
+    uname=$(uname -m)
+    grub-install --target=$uname-efi --efi-directory=/boot --bootloader-id=ArchLinux --no-nvram --removable
+
+    read -r -p "Reboot now? [Y/n]" confirm
+    if [[ ! "$confirm" =~ ^(n|N) ]]; then
+        reboot
+    fi
 }
 
 main() {
