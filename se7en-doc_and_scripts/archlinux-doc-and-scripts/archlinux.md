@@ -25,7 +25,20 @@ devmon -r
 
 ```shell
 sudo pacman -S cronie
+
+# minute(0-59) hour(0-23) day(1-31) month(1-12) week(0-6)
 crontab -e
 crontab -l
 crontab -r
+```
+
+## 4. Install TexLive
+
+[texlive.iso](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/)
+
+```shell
+sudo mount -o loop texlive.iso /mnt
+cd /mnt
+sudo ./install-tl
+sudo umount /mnt
 ```

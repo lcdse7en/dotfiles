@@ -49,7 +49,7 @@ Env() {
 }
 
 main() {
-    # Install_package
+    Install_package
     Env
 }
 
