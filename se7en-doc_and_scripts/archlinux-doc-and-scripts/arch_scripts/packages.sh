@@ -50,6 +50,7 @@ Install_packages() {
         xclip
         ripgrep
         tree
+        autojump
         ttf-joypixels
         redis
         chromium
