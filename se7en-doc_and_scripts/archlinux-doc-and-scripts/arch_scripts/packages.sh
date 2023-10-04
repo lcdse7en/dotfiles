@@ -54,6 +54,7 @@ Install_packages() {
         autojump
         ttf-joypixels
         redis
+        btop
         chromium
         ttf-firacode-nerd
         ttf-jetbrains-mono-nerd
@@ -70,6 +71,8 @@ Install_packages() {
         python
         rust
         go
+        docker
+        docker-compose
     )
 
     for element in "${array[@]}"; do

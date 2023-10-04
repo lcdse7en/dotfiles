@@ -22,6 +22,7 @@ Install_packages() {
         picom-git
         fixjson
         rar
+        redisinsight
         google-chrome
         wps-office
         qqmusic-bin
