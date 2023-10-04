@@ -121,12 +121,22 @@ Update_neovim() {
     fi
 }
 
+Clone_vimrc() {
+    local vimrcDir="$HOME/.config/nvim"
+    if [[ ! -d "$vimrcDir" ]]; then
+        git clone https://github.com/lcdse7en/nvim_lazy.git "$vimrcDir"
+    else
+        printf "${RED}Directory:$RESET$GREEN${vimrcDir}$RED is exist.%s$RESET\n"
+    fi
+}
+
 main() {
     Remove_neovim
     Install_bob
     Install_neovim
     Use_neovim
     Update_neovim
+    Clone_vimrc
 }
 
 main
