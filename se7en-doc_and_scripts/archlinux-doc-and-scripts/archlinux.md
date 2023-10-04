@@ -5,14 +5,20 @@
 ```shell
 sudo pacman -S bob
 
+# ~/.local/share/bob/nvim-bin
+
 -- nightly version
-bob install nightly # ~/.local/share/bob/nvim-bin
+bob install nightly
 bob use nightly
-nvim --version
 
 -- Release version
 bob install stable
 bob use stable
+
+bob list
+bob update --all
+
+nvim --version
 ```
 
 ## 2. mount Udisk
