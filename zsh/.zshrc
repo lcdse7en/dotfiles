@@ -81,7 +81,7 @@ plugins=(
     #  NOTE: oh-my-zsh 自带的插件
     git
     sudo
-    autojump
+    # autojump
     vi-mode
     extract
     cp # cpv
@@ -153,7 +153,6 @@ bindkey ',' autosuggest-accept
 
 # Example aliases
 alias ra='ranger'
-alias jo='joshuto'
 alias c="clear"
 alias s="neofetch"
 alias pc="sudo pacman -S"

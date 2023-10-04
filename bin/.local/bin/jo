@@ -44,7 +44,7 @@ if [ -n "$DISPLAY" ] && command -v ueberzug > /dev/null; then
 
     trap stop_ueberzug EXIT QUIT INT TERM
     start_ueberzug
-    echo "ueberzug started"
+    # echo "ueberzug started"
 fi
 
 joshuto "$@"

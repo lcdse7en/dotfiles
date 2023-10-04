@@ -68,7 +68,10 @@ Install_packages() {
         mpv
         mpc
         mpd
+        transmission-cli
         libreoffice
+        perl-image-exiftool
+        jq
         stylua
         typst
         python

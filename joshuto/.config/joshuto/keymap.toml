@@ -124,16 +124,20 @@ keymap = [
 	{ keys = [ "m", "M" ],		command = "linemode sizemtime" },
 
 	{ keys = [ "g", "r" ],		command = "cd /" },
-	{ keys = [ "g", "c" ],		command = "cd ~/.config" },
 	{ keys = [ "g", "d" ],		command = "cd ~/Downloads" },
 	{ keys = [ "g", "e" ],		command = "cd /etc" },
 	{ keys = [ "g", "h" ],		command = "cd ~/" },
 	{ keys = [ "?" ],		command = "help" },
 
+	{ keys = [ "g", "f", "a" ],		command = "cd ~/dotfiles/se7en-doc_and_scripts/archlinux-doc-and-scripts" },
+	{ keys = [ "g", "f", "c" ],		command = "cd ~/.config" },
+	{ keys = [ "g", "f", "d" ],		command = "cd ~/dotfiles" },
 	{ keys = [ "g", "f", "n" ],		command = "cd ~/.config/nvim/" },
 	{ keys = [ "g", "f", "g" ],		command = "cd ~/github_upload/" },
 	{ keys = [ "g", "f", "j" ],		command = "cd ~/.config/joshuto/" },
 	{ keys = [ "g", "f", "l" ],		command = "cd ~/.config/lf/" },
+	{ keys = [ "g", "f", "p" ],		command = "cd ~/dotfiles/Pictures/Pictures/wallpapers/use/1920*1080/" },
+	{ keys = [ "g", "f", "t" ],		command = "cd /run/media/se7en/Thinkplus" },
 ]
 
 [task_view]
