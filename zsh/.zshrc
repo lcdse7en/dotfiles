@@ -279,6 +279,7 @@ export PATH=$PATH:~/.local/src/
 export PATH=$PATH:~/.local/bin/statusbar/
 export PATH=$PATH:~/.local/share/applications/
 export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.local/share/bob/nvim-bin/
 
 export PATH=$PATH:~/.local/share/nvim/mason/bin
 
