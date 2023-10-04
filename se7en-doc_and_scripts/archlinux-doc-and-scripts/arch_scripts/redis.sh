@@ -48,6 +48,7 @@ Service() {
     printf "*%.0s" {1..50}
     printf "$RESET%s\n"
     printf "$RED%s$RESET\n" "The redis service is already on."
+    sudo systemctl status redis
 }
 
 main() {
