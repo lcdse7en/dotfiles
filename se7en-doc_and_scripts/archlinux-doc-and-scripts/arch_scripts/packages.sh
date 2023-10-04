@@ -53,10 +53,10 @@ Install_packages() {
         unzip
         tree
         autojump
-        ttf-joypixels
         redis
         btop
         chromium
+        ttf-joypixels
         ttf-firacode-nerd
         ttf-jetbrains-mono-nerd
         nitrogen
@@ -68,6 +68,7 @@ Install_packages() {
         mpv
         mpc
         mpd
+        stylua
         typst
         python
         rust
@@ -79,7 +80,10 @@ Install_packages() {
     for element in "${array[@]}"; do
         installed=$(sudo pacman -Qs "${element}")
         if [[ ! $installed ]]; then
-            printf "$GREEN%s$RESET\n" "Installing ${element} ..."
+            printf "\n$YELLOW%s$RESET\n" "Installing ${element} ..."
+            printf "$SKYBLUE%s"
+            printf "*%.0s" {1..60}
+            printf "$RESET%s\n"
             sudo pacman -S --noconfirm "${element}"
         else
             printf "$RED${element}$RESET%s\n" ": has been installed on your machine"
