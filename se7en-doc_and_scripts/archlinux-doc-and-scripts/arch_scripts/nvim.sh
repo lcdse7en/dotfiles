@@ -113,7 +113,7 @@ Update_neovim() {
 }
 
 main() {
-    # Install_bob
+    Install_bob
     Remove_neovim
     Install_neovim
     Use_neovim
