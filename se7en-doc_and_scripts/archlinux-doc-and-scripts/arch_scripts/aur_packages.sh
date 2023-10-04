@@ -21,6 +21,7 @@ Install_packages() {
     array=(
         picom-git
         fixjson
+        rar
         google-chrome
         wps-office
         qqmusic-bin

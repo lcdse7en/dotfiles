@@ -49,6 +49,7 @@ Install_packages() {
         xsel
         xclip
         ripgrep
+        unzip
         tree
         autojump
         ttf-joypixels
