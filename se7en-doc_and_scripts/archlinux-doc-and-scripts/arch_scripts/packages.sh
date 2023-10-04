@@ -68,6 +68,7 @@ Install_packages() {
         mpv
         mpc
         mpd
+        libreoffice
         stylua
         typst
         python

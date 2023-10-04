@@ -25,6 +25,7 @@ Install_packages() {
         redisinsight
         google-chrome
         wps-office
+        ttf-wps-fonts
         qqmusic-bin
         obs-studio
     )
