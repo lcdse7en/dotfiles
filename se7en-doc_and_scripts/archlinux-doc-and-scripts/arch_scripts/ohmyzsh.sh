@@ -17,6 +17,13 @@ SKYBLUE=$(printf '\033[36m')
 BOLD=$(printf '\033[1m')
 RESET=$(printf '\033[m')
 
+Install_ohmyzsh() {
+    sh "$HOME"/dotfiles/se7en-doc_and_scripts/archlinux-doc-and-scripts/arch_scripts/ohmyzsh/install-ohmyzsh.sh
+    sudo rm -rf "$HOME"/.zshrc >/dev/null
+    cd "$HOME"/dotfiles || exit
+    stow zsh
+}
+
 Install_plugins() {
     printf "${YELLOW}%s\n"
     read -r -p "Configure oh-my-zsh, Download plugins? [y/N] " answer
@@ -84,12 +91,14 @@ Install_plugins() {
 }
 
 Install_themes() {
-    printf "${YELLOW}%s\n"
+    printf "${YELLOW}%s"
     read -r -p "Configure oh-my-zsh, Download powerleverl10k themes? [y/N] " answer
     printf "${RESET}%s\n"
 
     if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+        printf "${RED}%s"
         printf "\nSkipping configure oh-my-zsh...\n"
+        printf "${RESET}%s"
     else
         local powerlevel10k_dir="$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
 
@@ -108,6 +117,7 @@ Install_themes() {
 }
 
 main() {
+    Install_ohmyzsh
     Install_plugins
     Install_themes
 }
