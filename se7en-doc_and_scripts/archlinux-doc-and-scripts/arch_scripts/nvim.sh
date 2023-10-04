@@ -17,10 +17,6 @@ SKYBLUE=$(printf '\033[36m')
 BOLD=$(printf '\033[1m')
 RESET=$(printf '\033[m')
 
-Install_bob() {
-    sudo pacman -S bob
-}
-
 Remove_neovim() {
     printf "$YELLOW %s $RESET \n" "removing old neovim version on your machine ..."
     sudo rm -rf /usr/bin/nvim >/dev/null
@@ -28,6 +24,19 @@ Remove_neovim() {
     sudo rm -rf /usr/lib/nvim >/dev/null
     printf "$RED %s $RESET \n" "Old nvim is removed on your machine!"
     printf "\n"
+}
+
+Install_bob() {
+    installed="$(sudo pacman -Qs bob)"
+    if [[ "$installed" ]]; then
+        printf "$RED bob$RESET%s\n" ": has been installed on your machine."
+    else
+        printf "$YELLOW%s$RESET\n" "Installing bob ..."
+        printf "$SKYBLUE%s"
+        printf "*%.0s" {1..60}
+        printf "$SKYBLUE%s\n"
+        sudo pacman -S bob
+    fi
 }
 
 Install_neovim() {
@@ -113,8 +122,8 @@ Update_neovim() {
 }
 
 main() {
-    Install_bob
     Remove_neovim
+    Install_bob
     Install_neovim
     Use_neovim
     Update_neovim
