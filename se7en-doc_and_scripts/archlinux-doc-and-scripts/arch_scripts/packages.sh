@@ -30,6 +30,7 @@ Install_packages() {
         curl
         atool
         zsh
+        bob
         openssh
         plocate
         cronie
