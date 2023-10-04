@@ -67,6 +67,7 @@ Install_packages() {
         mpc
         mpd
         typst
+        python
         rust
         go
     )
