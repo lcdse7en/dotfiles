@@ -22,7 +22,6 @@ Install_packages() {
         picom-git
         fixjson
         rar
-        redisinsight
         google-chrome
         wps-office
         ttf-wps-fonts
