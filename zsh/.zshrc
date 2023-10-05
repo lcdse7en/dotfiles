@@ -81,7 +81,7 @@ plugins=(
     #  NOTE: oh-my-zsh 自带的插件
     git
     sudo
-    # autojump
+    autojump
     vi-mode
     extract
     cp # cpv
