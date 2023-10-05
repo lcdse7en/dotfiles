@@ -59,6 +59,8 @@ Install_packages() {
         ttf-joypixels
         ttf-firacode-nerd
         ttf-jetbrains-mono-nerd
+        ttf-linux-libertine
+        noto-fonts-sc
         nitrogen
         flameshot
         feh
