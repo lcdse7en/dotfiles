@@ -25,6 +25,7 @@ Install_packages() {
         google-chrome
         wps-office
         ttf-wps-fonts
+        ttf-cascadia-code
         qqmusic-bin
         obs-studio
     )

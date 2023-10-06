@@ -311,5 +311,6 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 #  NOTE: rye
 export PATH=$PATH:/HOME/.rye/shims
+# source "$HOME/.rye/env"
 
 export BOB_CONFIG="$HOME/.config/bob/config.json"
