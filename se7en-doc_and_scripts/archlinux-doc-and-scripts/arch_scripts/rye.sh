@@ -18,6 +18,10 @@ BOLD=$(printf '\033[1m')
 RESET=$(printf '\033[m')
 
 Install_rye() {
+    printf "$YELLOW%s$RESET\n" "Installing rye ..."
+    printf "$SKYBLUE%s"
+    printf "*%.0s" {1..60}
+    printf "$RESET%s\n"
     cargo install --git https://github.com/mitsuhiko/rye rye
 }
 
