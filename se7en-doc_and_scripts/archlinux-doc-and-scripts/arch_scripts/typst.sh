@@ -22,6 +22,7 @@ Install_typst() {
     printf "$SKYBLUE%s"
     printf "*%.0s" {1..60}
     printf "$RESET%s\n"
+
     cargo install --git https://github.com/typst/typst
 }
 
@@ -30,6 +31,7 @@ Install_typstfmt() {
     printf "$SKYBLUE%s"
     printf "*%.0s" {1..60}
     printf "$RESET%s\n"
+
     cargo install --git https://github.com/astrale-sharp/typstfmt.git
     # typstfmt --make-default-config
 }
@@ -39,6 +41,7 @@ Install_typst-live() {
     printf "$SKYBLUE%s"
     printf "*%.0s" {1..60}
     printf "$RESET%s\n"
+
     cargo install typst-live
 }
 

@@ -1,0 +1,18 @@
+#********************************************
+# Author      : se7enlcd
+# E-mail      : 2353442022@qq.com
+# Create_Time : 2023-10-06 20:08
+# Description :
+#********************************************
+
+version: "1.0"
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: 123

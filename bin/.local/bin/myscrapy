@@ -1,0 +1,126 @@
+#!/usr/bin/bash
+
+#********************************************
+# Author      : lcdse7en                    *
+# E-mail      : 2353442022@qq.com           *
+# Create_Time : 2023-10-07 17:28            *
+# Description :                             *
+#********************************************
+
+# source /etc/profile.d/import_shell_libs.sh
+
+RED=$(printf '\033[31m')
+GREEN=$(printf '\033[32m')
+YELLOW=$(printf '\033[33m')
+BLUE=$(printf '\033[34m')
+SKYBLUE=$(printf '\033[36m')
+BOLD=$(printf '\033[1m')
+RESET=$(printf '\033[m')
+
+enterDir=$HOME/PyProject
+env_project="se7en-rye"
+# read -r -p "${YELLOW}Enter rye env project name: ${RESET}" -e env_project
+baseDir="$enterDir"/"$env_project"
+
+Scrapy_createProject() {
+    printf "${YELLOW}%s"
+    read -r -p "Are you sure want to creat scrapy project? [y/N] " answer
+    printf "${RESET}%s"
+
+    if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+        printf "${RED}%s"
+        printf "Welcome scrapy again!"
+        printf "${RESET}%s"
+    else
+        printf "$SKYBLUE%s"
+        printf "*%.0s" {1..25}
+        printf "%s" " rye "
+        printf "*%.0s" {1..25}
+        printf "$RESET%s\n"
+
+        printf "${YELLOW}%s"
+        read -r -p "Have you already created a virtual environment? [y/N] " -e answer
+        printf "${RESET}%s\n"
+
+        if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+            sudo rm -rf "$baseDir"
+            cd "$enterDir" || exit
+            rye init "$env_project"
+
+            cd "$env_project" || exit
+            rye sync
+            # rye pin 3.10
+            rye add scrapy pandas numpy openpyxl matplotlib requests
+            rye sync
+
+            # git init
+            # git add \*
+            # git commit -m "first commit"
+            # git remote add origin git@github.com:lcdse7en/"$env_project".git
+            # git push -u origin master
+        else
+            printf "$YELLOW%s"
+            read -r -p "Please enter the name of the crawler project: " -e project_Name
+            printf "$RESET%s\n"
+
+            printf "$YELLOW%s"
+            read -r -p "Enter spider file name want to creat for you: " -e spider_file_Name
+            printf "$RESET%s\n"
+
+            printf "$YELLOW%s"
+            read -r -p "Have you already created a crawler project? [y/N] " -e crawl_project
+            printf "$RESET%s\n"
+            if [[ "$crawl_project" != y ]] && [[ "$crawl_project" != Y ]]; then
+
+                printf "$SKYBLUE%s"
+                printf "*%.0s" {1..50}
+                printf "\n"
+                printf "$GREEN\t%s $project_Name" "scrapy startproject"
+                printf "\n"
+                printf "$GREEN\t%s $spider_file_Name example.com" "scrapy genspider"
+                printf "$SKYBLUE%s"
+                printf "*%.0s" {1..50}
+                printf "$RESET%s\n"
+
+                cd "$baseDir" || exit
+                scrapy startproject "$project_Name"
+
+                cd "$baseDir"/"$project_Name" || exit
+                scrapy genspider -t crawl "$spider_file_Name" example.com
+
+                sudo tee -a "$baseDir"/"$project_Name"/"$project_Name"/settings.py <<-EOF
+					LOG_LEVEL = "WARNING"
+				EOF
+                sudo tee -a "$baseDir"/"$project_Name"/"$project_Name"/settings.py <<-EOF
+					USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
+				EOF
+                sed -i 's/^ROBOTSTXT_OBEY = True/ROBOTSTXT_OBEY = False/' "$baseDir"/"$project_Name"/"$project_Name"/settings.py
+                sudo tee -a "$baseDir"/"$project_Name"/run.py <<-EOF
+					from scrapy import cmdline
+
+					cmdline.execute("scrapy crawl ${spider_file_Name}".split())
+					# cmdline.execute("scrapy crawl mv -o ${spider_file_Name}.csv".split())
+				EOF
+
+            else
+                printf "$YELLOW%s"
+                read -r -p "are you want to edit $spider_file_Name? [y/N] " -e edit_spider
+                printf "$RESET%s"
+                if [[ "$edit_spider" != y ]] && [[ "$edit_spider" != Y ]]; then
+                    echo "nihao"
+                else
+                    cd "$baseDir" || exit
+                    rye shell
+                    nvim "$baseDir"/"$project_Name"/"$project_Name"/spiders/"$spider_file_Name".py
+                fi
+            fi
+        fi
+    fi
+
+}
+
+main() {
+    Scrapy_createProject
+}
+
+main

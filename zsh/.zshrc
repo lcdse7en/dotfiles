@@ -195,9 +195,13 @@ alias "tsc"="tmux switch -t" #  NOTE: 切换会话
 alias "tka"="tmux ls | cut -d: -f 1 | xargs -n1 tmux kill-session -t" #  NOTE: 杀死全部会话
 alias "ts"="tmux source ~/.tmux.conf"
 alias "at"="tmux at"
-alias "ss"="smug start server" #  NOTE: smug session tool
-alias "sa"="smug start accounting" #  NOTE: smug session tool
+alias "sss"="smug start server" #  NOTE: smug session tool
+alias "ssr"="smug start rye" #  NOTE: smug session tool
+alias "ssa"="smug start accounting" #  NOTE: smug session tool
 # ------------ Tmux End--------------------
+
+#  NOTE: scrapy crawl
+alias "sc"="scrapy crawl"
 
 # ------------ logo-ls Start-------------------
 alias "ls"="logo-ls"
@@ -233,6 +237,9 @@ alias "pips"="pip3 show"
 
 # jupyterlab
 alias "jpl"="jupyter-lab"
+
+#  NOTE: docker-compose
+alias "dcu"="sudo docker compose up '-f' '~/.config/docker-compose/docker-compose.yml' '-p' se7en  -d"
 
 # -----------   nnn ---------------
 alias "nnn"="nnn -de"
@@ -309,8 +316,8 @@ export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
-#  NOTE: rye
-export PATH=$PATH:/HOME/.rye/shims
-# source "$HOME/.rye/env"
 
 export BOB_CONFIG="$HOME/.config/bob/config.json"
+# export PATH=$PATH:$HOME/.rye/shims
+export RYE_NO_AUTO_INSTALL=1
+# source $HOME/.rye/env

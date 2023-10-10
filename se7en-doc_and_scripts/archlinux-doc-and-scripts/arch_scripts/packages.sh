@@ -51,6 +51,7 @@ Install_packages() {
         xclip
         ripgrep
         unzip
+        net-tools
         tree
         autojump
         redis
@@ -60,27 +61,44 @@ Install_packages() {
         ttf-firacode-nerd
         ttf-jetbrains-mono-nerd
         ttf-linux-libertine
-        noto-fonts-sc
         nitrogen
         flameshot
+        mysql-workbench
+        gnome-keyring
         feh
         neofetch
         nodejs
         npm
+        ffmpegthumbnailer
         mpv
+        pamixer
         mpc
         mpd
+        ncmpcpp
+        sof-firmware
+        pipewire
+        wireplumber
+        pipewire-pulse
+        pipewire-alsa
+        bluez
+        bluez-utils
+        blueman
+        pavucontrol
         transmission-cli
         libreoffice
         perl-image-exiftool
+        cava
+        calcurse
+        playerctl
+        xdotool
         jq
         stylua
         typst
         python
-        rust
         go
         docker
         docker-compose
+        mariadb
     )
 
     for element in "${array[@]}"; do

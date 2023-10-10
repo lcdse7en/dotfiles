@@ -18,11 +18,21 @@ BOLD=$(printf '\033[1m')
 RESET=$(printf '\033[m')
 
 Install_rust() {
+    installed=$(sudo pacman -Qs stow)
+    if [[ "$installed" ]]; then
+        stow "$HOME"/dotfiles/cargo >/dev/null 2>&1
+    else
+        sudo pamcan -S stow
+        stow "$HOME"/dotfiles/cargo >/dev/null 2>&1
+    fi
+
     printf "$YELLOW%s$RESET\n" "Installing rust ..."
     printf "$SKYBLUE%s"
     printf "*%.0s" {1..60}
     printf "$RESET%s\n"
+
     curl https://sh.rustup.rs -sSf | sh
+
     printf "$YELLOW%s$RESET\n" "rust version:"
     printf "$SKYBLUE%s"
     printf "*%.0s" {1..60}

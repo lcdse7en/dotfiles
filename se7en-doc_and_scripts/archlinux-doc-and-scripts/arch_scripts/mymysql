@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+
+#********************************************
+# Author      : lcdse7en                    *
+# E-mail      : 2353442022@qq.com           *
+# Create_Time : 2023-10-06 19:32            *
+# Description :                             *
+#********************************************
+
+# source /etc/profile.d/import_shell_libs.sh
+
+RED=$(printf '\033[31m')
+GREEN=$(printf '\033[32m')
+YELLOW=$(printf '\033[33m')
+BLUE=$(printf '\033[34m')
+SKYBLUE=$(printf '\033[36m')
+BOLD=$(printf '\033[1m')
+RESET=$(printf '\033[m')
+
+mysql_run() {
+    sudo docker run -d \
+        --name mysql \
+        -p 3306:3306 \
+        -e TZ=Asia/Shanghai \
+        -e MYSQL_ROOT_PASSWORD=123 \
+        mysql:5.7.25
+}
+
+mysql_remove() {
+    docker remove mysql
+}
+
+main() {
+    mysql_run
+    # mysql_remove
+}
+
+main

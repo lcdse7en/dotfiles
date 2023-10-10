@@ -34,41 +34,41 @@ repeat_str "*" 40
 echo -e "${Green}"
 read -p "Please Enter Num 1、2、3、4、5、6 or 7 for github-cli: " -e inputNum
 case ${inputNum} in
-  1)
+1)
     echo -e "${Red}"
-		read -p "Enter the name of the repository you want to create:" -e Repo_Name
+    read -p "Enter the name of the repository you want to create:" -e Repo_Name
     gh repo create $Repo_Name --clone --private
     ;;
-  2)
+2)
     echo -e "${Red}"
-		read -p "Enter the name of the repository you want to clone:" -e Repo_Name
+    read -p "Enter the name of the repository you want to clone:" -e Repo_Name
     gh repo clone $Repo_Name
     ;;
-  3)
+3)
     echo -e "${Red}"
-		read -p "Enter the name of the repository you want to delete:" -e Repo_Name
+    read -p "Enter the name of the repository you want to delete:" -e Repo_Name
     gh repo delete lcdse7en/$Repo_Name
     ;;
-  4)
+4)
     echo -e "${Red}"
-		read -p "Enter the name of the github you want to fork:" -e Github_Name
-		read -p "Enter the name of the repository you want to fork:" -e Repo_Name
+    read -p "Enter the name of the github you want to fork:" -e Github_Name
+    read -p "Enter the name of the repository you want to fork:" -e Repo_Name
     gh repo fork "$Github_Name"/"$Repo_Name"
     ;;
-  5)
+5)
     echo -e "${Red}"
-		read -p "Enter the new name of the repository you want to rename:" -e new_Name
-		read -p "Enter the old name of the repository you want to rename:" -e old_Name
+    read -p "Enter the new name of the repository you want to rename:" -e new_Name
+    read -p "Enter the old name of the repository you want to rename:" -e old_Name
     gh repo rename "$new_Name" --repo lcdse7en/"$old_Name" --yes
     ;;
-  6)
+6)
     echo -e "${Red}"
-		echo "Now, Show all private repo for you!"
+    echo "Now, Show all private repo for you!"
     gh repo list --visibility private
     ;;
-  7)
+7)
     echo -e "${Red}"
-		echo -e "Now, Show all public repo for you!"
+    echo -e "Now, Show all public repo for you!"
     gh repo list --visibility public
     ;;
 esac

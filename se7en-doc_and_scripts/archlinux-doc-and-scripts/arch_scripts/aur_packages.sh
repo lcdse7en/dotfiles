@@ -26,6 +26,8 @@ Install_packages() {
         wps-office
         ttf-wps-fonts
         ttf-cascadia-code
+        # navicat
+        lemonbar-xft-git
         qqmusic-bin
         obs-studio
     )
