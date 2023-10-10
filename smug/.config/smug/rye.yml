@@ -23,5 +23,5 @@ windows:
         commands:
           - clear
           - rye shell
-          - cd ./movies/movies/spiders
+          - cd ./movies
           - clear

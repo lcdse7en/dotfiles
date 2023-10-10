@@ -46,7 +46,8 @@ crontab -r
 
 ## 4. Install TexLive
 
-[texlive.iso](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/) <kbd>4.8GiB</kbd>
+[tuna mirror](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/)
+[texlive.iso](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive.iso) <kbd>4.8GiB</kbd>
 
 ```shell
 sudo mount -o loop texlive.iso /mnt
