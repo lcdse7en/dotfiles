@@ -61,6 +61,7 @@ Install_packages() {
         ttf-firacode-nerd
         ttf-jetbrains-mono-nerd
         ttf-linux-libertine
+        ttf-ibm-plex
         nitrogen
         flameshot
         mysql-workbench
