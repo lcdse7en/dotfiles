@@ -41,7 +41,7 @@
       - 时间序列：支持日期范围生成、频率转换、移动窗口统计、移动窗口线性回归、日期位移等时间序列功能。
 
       #qrcode("https://github.com/lcdse7en")
-      #link("https://www.github.com/lcdse7en/pandas")[https://www.github.com/lcdse7en/pandas]
+      #link("https://github.com/lcdse7en/pandas")[https://github.com/lcdse7en/pandas]
   ],
   date: "October 11, 2023",
 )
@@ -93,7 +93,7 @@
 #show: chic.with(
   chic-footer(
     left-side: strong(
-        link("https://www.github.com/lcdse7en/pandas", "https://www.github.com/lcdse7en/pandas")
+        link("https://github.com/lcdse7en/pandas", "https://github.com/lcdse7en/pandas")
     ),
     right-side: chic-page-number()
   ),
