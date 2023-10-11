@@ -19,7 +19,7 @@
   set document(author: authors.map(a => a.name), title: title)
   set page(paper: "a4", margin: (x: 1cm, y: 1cm), numbering: "1", number-align: center)
   // set text(font: "Linux Libertine", lang: "en")
-  set text(font: "IBM Plex Mono", lang: "en")
+  set text(font: ("IBM Plex Mono", "KaiTi"), lang: "en")
 
   // Title row.
   align(center)[
@@ -47,12 +47,11 @@
     x: 2em,
     top: 1em,
     bottom: 1.1em,
-    align(center)[
+    align(start+horizon)[
       #heading(
-        outlined: false,
+        outlined: true,
         numbering: none,
-        // text(0.85em, smallcaps[Abstract]),
-        text(0.85em, smallcaps[摘要]),
+        text(0.85em, smallcaps[摘要], fill: gray),
       )
       #abstract
     ],
@@ -63,3 +62,26 @@
 
   body
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
