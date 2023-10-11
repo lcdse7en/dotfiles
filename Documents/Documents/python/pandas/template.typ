@@ -18,8 +18,8 @@
   // Set the document's basic properties.
   set document(author: authors.map(a => a.name), title: title)
   set page(paper: "a4", margin: (x: 1cm, y: 1cm), numbering: "1", number-align: center)
-  set text(font: "Linux Libertine", lang: "en")
-  // set text(font: "SauceCodePro Nerd Font Mono", lang: "en")
+  // set text(font: "Linux Libertine", lang: "en")
+  set text(font: "IBM Plex Mono", lang: "en")
 
   // Title row.
   align(center)[
