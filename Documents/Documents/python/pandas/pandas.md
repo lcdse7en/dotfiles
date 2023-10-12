@@ -54,8 +54,6 @@
 <kbd>DataFrame insert</kbd>
 
 - loc: int
-- column: Hashable
-- value: int, Series or array-like
 - allow_duplicates: bool, default False
 
 ```python

@@ -8,7 +8,7 @@ map gfn cd ~/.config/nvim/
 map gfz cd ~/golang/
 map gfs cd ~/github_upload/myscripts/
 map gfe cd ~/dotfiles/emacs/.emacs.d/
-map gfr cd ~/dotfiles/ranger/.config/ranger/
+map gfr cd ~/PyProject/se7en-rye/
 map gfp cd ~/dotfiles/Pictures/Pictures/
 map gft cd ~/dotfiles/tmux/
 map gfg cd ~/github_upload/

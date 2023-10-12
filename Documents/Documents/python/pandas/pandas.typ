@@ -115,8 +115,11 @@
 ==== pd.read_csv
 - #text(fill: purple)[filepath_or_buffer]: string
 - #text(fill: purple)[sep]: character, default ","
-- #text(fill: purple)[usecols]: use name of columns
+- #text(fill: purple)[usecols]: list of string, use name of columns
 - #text(fill: purple)[encoding]: string, "utf-8", "GBK"
+- #text(fill: purple)[index_col]: int, sequence or boolean, optional. default None, use index_col=False
+- #text(fill: purple)[header]: int or None, default 0
+- #text(fill: purple)[names]: list of string, add custom columns name, use: header=None
 ==== df.to_excel
 #sourcecode[```python
 df.to_excel(
@@ -165,3 +168,7 @@ df["ID"] = range(1, len(df) + 1)
 - #text(fill: purple)[inplace]: boolean
 
 == Advanced Operations
+
+=== DataFrame loc and iloc for Data targeting
+
+==== df.iloc
