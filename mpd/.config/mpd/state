@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
 state: pause
-current: 0
-time: 4.265000
+current: 5
+time: 181.673000
 random: 0
 repeat: 1
 single: 1
@@ -12,5 +12,31 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac
+0:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
+1:english/Taylor Swift/04.- Love Story.flac
+2:korea/kard/06 Trust Me (BM & Somin ver.).mp3
+3:korea/kard/03 Push & Pull.mp3
+4:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+5:english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac
+6:english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac
+7:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
+8:english/Taylor Swift/04.- Love Story.flac
+9:korea/kard/06 Trust Me (BM & Somin ver.).mp3
+10:korea/kard/03 Push & Pull.mp3
+11:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+12:chinese/Jay Chou/周杰伦-明明就.ape
+13:english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac
+14:english/Eminem/Recovery (2010)/Eminem - So Bad.flac
+15:english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac
+16:english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac
+17:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
+18:english/Taylor Swift/04.- Love Story.flac
+19:korea/kard/06 Trust Me (BM & Somin ver.).mp3
+20:korea/kard/03 Push & Pull.mp3
+21:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+22:chinese/Jay Chou/周杰伦-明明就.ape
+23:korea/Gummy/친구라도 될 걸 그랬어.mp3
+24:korea/Gummy/친구라도 될 걸 그랬어.mp3
+25:chinese/Jay Chou/周杰伦-明明就.ape
+26:chinese/Jay Chou/周杰伦-明明就.ape
 playlist_end

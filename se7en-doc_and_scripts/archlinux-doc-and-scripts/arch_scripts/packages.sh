@@ -62,6 +62,7 @@ Install_packages() {
         ttf-jetbrains-mono-nerd
         ttf-linux-libertine
         ttf-ibm-plex
+        xwallpaper
         nitrogen
         flameshot
         mysql-workbench
@@ -100,6 +101,8 @@ Install_packages() {
         docker
         docker-compose
         mariadb
+        geoip
+        newsboat
     )
 
     for element in "${array[@]}"; do

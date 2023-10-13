@@ -8,3 +8,29 @@ Oct 07 23:23 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afrai
 Oct 09 05:16 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
 Oct 11 04:30 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
 Oct 12 05:19 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Oct 12 19:26 : update: removing chinese/Jay Chou/周杰伦-我是如此相信.flac
+Oct 12 19:30 : update: removing chinese/Jay Chou/等你下课.flac
+Oct 12 19:34 : exception: Failed to decode /home/se7en/github_upload/Music/chinese/Jay Chou/等你下课.flac; Failed to open '/home/se7en/github_upload/Music/chinese/Jay Chou/等你下课.flac': No such file or directory
+Oct 12 19:34 : player: played "chinese/Jay Chou/周杰伦-明明就.ape"
+Oct 12 19:34 : player: played "chinese/Jay Chou/等你下课.flac"
+Oct 12 19:34 : exception: Failed to decode /home/se7en/github_upload/Music/chinese/Jay Chou/等你下课.flac; Failed to open '/home/se7en/github_upload/Music/chinese/Jay Chou/等你下课.flac': No such file or directory
+Oct 12 19:34 : player: played "chinese/Jay Chou/等你下课.flac"
+Oct 12 19:38 : exception: Failed to decode /home/se7en/github_upload/Music/chinese/Jay Chou/周杰伦-我是如此相信.flac; Failed to open '/home/se7en/github_upload/Music/chinese/Jay Chou/周杰伦-我是如此相信.flac': No such file or directory
+Oct 12 19:38 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Oct 12 19:38 : player: played "chinese/Jay Chou/周杰伦-我是如此相信.flac"
+Oct 12 19:38 : exception: Failed to decode /home/se7en/github_upload/Music/chinese/Jay Chou/周杰伦-我是如此相信.flac; Failed to open '/home/se7en/github_upload/Music/chinese/Jay Chou/周杰伦-我是如此相信.flac': No such file or directory
+Oct 12 19:38 : player: played "chinese/Jay Chou/周杰伦-我是如此相信.flac"
+Oct 12 19:43 : flac: FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+Oct 12 19:43 : player: played "chinese/Jay Chou/黑色幽默.flac"
+Oct 12 19:47 : player: played "chinese/Jay Chou/周杰伦-明明就.ape"
+Oct 12 21:17 : player: played "korea/Ann One - 기억만이라도 (就算只有记忆) (Bonus Track) [mqms2].mp3"
+Oct 12 21:21 : player: played "chinese/Jay Chou/周杰伦-明明就.ape"
+Oct 12 21:46 : player: played "chinese/Jay Chou/周杰伦-明明就.ape"
+Oct 12 21:52 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Oct 12 22:11 : player: played "korea/After School (애프터 스쿨) - 밤 하늘에 (在夜空下) [mqms].mp3"
+Oct 12 22:15 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Oct 12 22:21 : player: played "english/Eminem/Recovery (2010)/Eminem - So Bad.flac"
+Oct 12 22:25 : player: played "english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac"
+Oct 12 22:29 : player: played "english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac"
+Oct 12 22:37 : player: played "chinese/Jay Chou/周杰伦-明明就.ape"
+Oct 12 22:43 : player: played "english/Eminem/Recovery (2010)/Eminem - So Bad.flac"
