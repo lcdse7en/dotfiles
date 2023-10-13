@@ -1,0 +1,4 @@
+* * * * * sudo ln -s /run/media/se7en/Thinkplus/* ~/Thinkplus
+5 17,20 * * * sudo rsync -r -v -u ~/.local/share/nvim/lazy /run/media/se7en/Thinkplus
+* * * * * sudo timedatectl set-ntp true
+5 * * * * sudo rsync -r -v -u ~/PyProject/se7en-rye/movies/videos /run/media/se7en/Thinkplus/
