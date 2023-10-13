@@ -98,6 +98,7 @@ Install_packages() {
         typst
         python
         go
+        deno
         docker
         docker-compose
         mariadb

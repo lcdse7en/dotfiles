@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
 state: pause
-current: 5
-time: 181.673000
+current: 27
+time: 15.466000
 random: 0
 repeat: 1
 single: 1
@@ -39,4 +39,5 @@ playlist_begin
 24:korea/Gummy/친구라도 될 걸 그랬어.mp3
 25:chinese/Jay Chou/周杰伦-明明就.ape
 26:chinese/Jay Chou/周杰伦-明明就.ape
+27:chinese/Jay Chou/最伟大的作品/12. I Truly Believe.mp3
 playlist_end
