@@ -111,6 +111,7 @@ Install_packages() {
         python-reportlab
         python-notify2
         sane
+        xsane
         ghostscript
         gsfonts
     )
