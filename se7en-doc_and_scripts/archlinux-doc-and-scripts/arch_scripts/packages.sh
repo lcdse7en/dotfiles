@@ -104,10 +104,19 @@ Install_packages() {
         mariadb
         geoip
         newsboat
+        cups
+        system-config-printer
+        hplip
+        python-pyqt5
+        python-reportlab
+        python-notify2
+        sane
+        ghostscript
+        gsfonts
     )
 
     for element in "${array[@]}"; do
-        installed=$(sudo pacman -Qs "${element}")
+        installed=$(sudo pacman -Qs "^${element}")
         if [[ ! $installed ]]; then
             printf "\n$YELLOW%s$RESET\n" "Installing ${element} ..."
             printf "$SKYBLUE%s"

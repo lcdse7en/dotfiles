@@ -18,10 +18,10 @@ windows:
       - clear
       - rye shell
       - lf
-    panes:
-      - type: horizontal #  NOTE: horizontal
-        commands:
-          - clear
-          - rye shell
-          - cd ./movies
-          - clear
+    # panes:
+    #   - type: horizontal #  NOTE: horizontal
+    #     commands:
+    #       - clear
+    #       - rye shell
+    #       - cd ./movies
+    #       - clear

@@ -19,7 +19,7 @@
   set document(author: authors.map(a => a.name), title: title)
   set page(paper: "a4", margin: (x: 1cm, y: 1cm), numbering: "1", number-align: center)
   // set text(font: "Linux Libertine", lang: "en")
-  set text(font: ("IBM Plex Mono", "KaiTi"), lang: "en")
+  set text(font: ("IBM Plex Mono", "KaiTi"), lang: "en", size: 11pt)
 
   // Title row.
   align(center)[

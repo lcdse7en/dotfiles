@@ -241,15 +241,6 @@ alias "jpl"="jupyter-lab"
 #  NOTE: docker-compose
 alias "dcu"="sudo docker compose up '-f' '~/.config/docker-compose/docker-compose.yml' '-p' se7en  -d"
 
-# -----------   nnn ---------------
-alias "nnn"="nnn -de"
-export NNN_PLUG="i:imgvie;p:preview-tabbed;f:fzcd;t:preview-tui"
-export NNN_OPENER="xdg-open"
-export NNN_BMS="a:~/github_upload/accounting/"
-export NNN_SEL="/tmp/.sel"
-export NNN_FIFO="/tmp/nnn.fifo"
-export NNN_COLORS="c1e2272e006033f7c6d6abc4"
-export NNN_ARCHIVE="\\.(7z|bz2|gz|tgz|zip|rar|tar)$"
 
 funciton tmuxopen() {
     tmux attach -t $1
@@ -307,9 +298,12 @@ export GO111MODULE=auto
 
 # export PATH=$PATH:~/scripts/
 
-export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
-export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man
-export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info
+export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+export TEXMF=/usr/local/texlive/2023/texmf-dist
+export PATH=$PATH:/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt
+export TEXINPUTS=/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig
 export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
 
 #  NOTE: rust mirror
