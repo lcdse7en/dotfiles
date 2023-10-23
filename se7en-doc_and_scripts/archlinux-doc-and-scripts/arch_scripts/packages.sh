@@ -109,6 +109,7 @@ Install_packages() {
         ghostscript
         gsfonts
         gutenprint
+        # hpoj
         # hplip
         python-pyqt5
         python-reportlab
