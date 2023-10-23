@@ -106,14 +106,15 @@ Install_packages() {
         newsboat
         cups
         system-config-printer
-        hplip
+        ghostscript
+        gsfonts
+        gutenprint
+        # hplip
         python-pyqt5
         python-reportlab
         python-notify2
         sane
         xsane
-        ghostscript
-        gsfonts
     )
 
     for element in "${array[@]}"; do

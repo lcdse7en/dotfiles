@@ -236,7 +236,7 @@ alias "pipd"="pipdeptree -p"
 alias "pips"="pip3 show"
 
 # jupyterlab
-alias "jpl"="jupyter-lab"
+alias "jn"="jupyter-notebook"
 
 #  NOTE: docker-compose
 alias "dcu"="sudo docker compose up '-f' '~/.config/docker-compose/docker-compose.yml' '-p' se7en  -d"
