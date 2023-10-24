@@ -23,9 +23,11 @@ Install_package() {
         fcitx5-chinese-addons
         fcitx5-material-color
         fcitx5-nord
+        fcitx5-lua
         fcitx5-pinyin-zhwiki
         fcitx5-pinyin-moegirl
         fcitx5-hangul
+        kcm-fcitx5
         fcitx5-anthy
         fcitx5-mozc
     )
@@ -50,7 +52,7 @@ Env() {
 
 main() {
     Install_package
-    Env
+    # Env
 }
 
 main

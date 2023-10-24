@@ -62,6 +62,8 @@ Install_packages() {
         ttf-jetbrains-mono-nerd
         ttf-linux-libertine
         ttf-ibm-plex
+        adobe-source-han-sans-cn-fonts
+        adobe-source-han-serif-cn-fonts
         xwallpaper
         nitrogen
         flameshot

@@ -1,15 +1,4 @@
 === "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
-=== "stdin" ===
 //********************************************
 // Author      : se7enlcd                    *
 // E-mail      : 2353442022@qq.com           *
@@ -19,8 +8,6 @@
 #import "template.typ": *
 #import "@preview/rubby:0.9.2": get-ruby
 #import "@preview/codelst:1.0.0": sourcecode
-#import "@preview/t4t:0.3.2": *
-// #import "@preview/t4t:0.3.2": is, def, alias, math, get
 #import "@preview/tablex:0.0.5": tablex, cellx, rowspanx, colspanx, hlinex, vlinex
 #import "@preview/chic-hdr:0.3.0": *
 #import "@preview/rose-pine:0.1.0": rose-pine
@@ -100,17 +87,6 @@
   right-side: smallcaps("Pandas"),
 ), chic-separator(1pt), chic-offset(7pt), chic-height(1.5cm))
 
-// Sets date to a datetime from an optional
-// string argument in the format "YYYY-MM-DD"
-#let date = def.if-none(
-  datetime.today(), // default
-  passed_date, // passed-in argument
-  do: (d) >= { // post-processor
-    d = d.split("-")
-    datetime(year = d[0], month = d[1], day = d[2])
-  },
-)
-
 == Basic Operations
 
 === Series
@@ -166,18 +142,18 @@
 
 ==== Series.map(dic) -- 映射
 #sourcecode[```python
-                        # map --> 映射
-                        dic = {
-                            "py": "python",
-                            "js": "javascript",
-                        }
-                        df1 = df["lang"].map(dic)
+                                              # map --> 映射
+                                              dic = {
+                                                  "py": "python",
+                                                  "js": "javascript",
+                                              }
+                                              df1 = df["lang"].map(dic)
 
-                        # map --> 运算
-                        def after_sal(s):
-                            return s - (s-3000)*0.5
-                        df["after_sal"] = df["salary"].map(after_sal)
-                        ```]
+                                              # map --> 运算
+                                              def after_sal(s):
+                                                  return s - (s-3000)*0.5
+                                              df["after_sal"] = df["salary"].map(after_sal)
+                                              ```]
 
 #pad(
   x: 16pt,
@@ -215,15 +191,15 @@
 - #text(fill: purple)[columns]: list of string ,设置列的显式索引
 - #text(fill: purple)[index]: list of string ,设置行的显式索引
 #sourcecode[```python
-                        import numpy as np
-                        from pandas import DataFrame
+                                              import numpy as np
+                                              from pandas import DataFrame
 
-                        df = DataFrame(data=np.random.randint(low=0, high=100, size(8,4)))
-                        df1 = df[["column1 Name", "column2 Name"]] --> 取多列
-                        df1 = df.iloc[[0, 3, 5]] --> 取多行
-                        df1 = df[0:2] --> 取1-2行
-                        df1 = df.iloc[:, 0:2] --> 取1-2列 iloc: [
-                        ```]
+                                              df = DataFrame(data=np.random.randint(low=0, high=100, size(8,4)))
+                                              df1 = df[["column1 Name", "column2 Name"]] --> 取多列
+                                              df1 = df.iloc[[0, 3, 5]] --> 取多行
+                                              df1 = df[0:2] --> 取1-2行
+                                              df1 = df.iloc[:, 0:2] --> 取1-2列 iloc: [
+                                              ```]
 
 #pad(
   x: 12pt,
@@ -268,23 +244,23 @@
   header=None
 ==== df.to_excel()
 #sourcecode[```python
-                        df.to_excel(
-                            excel_writer = "test.xlsx",
-                            sheet_name = "test",
-                            index = False,
-                            freeze_panes = (1,1)
-                        )
-                        ```]
+                                              df.to_excel(
+                                                  excel_writer = "test.xlsx",
+                                                  sheet_name = "test",
+                                                  index = False,
+                                                  freeze_panes = (1,1)
+                                              )
+                                              ```]
 
 === Get DataFrame the number of rows and columns
 #sourcecode[```python
-                        # get rows
-                        len(df)
-                        df.shape[0]
-                        # get columns
-                        df.shape[1]
-                        len(df.columns)
-                        ```]
+                                              # get rows
+                                              len(df)
+                                              df.shape[0]
+                                              # get columns
+                                              df.shape[1]
+                                              len(df.columns)
+                                              ```]
 
 === DataFrame insert column
 
@@ -294,16 +270,16 @@
 - #text(fill: purple)[value]: int, Series or array-like
 - #text(fill: purple)[allow_duplicates]: bool, default False
 #sourcecode[```python
-                        # method one
-                        df.insert(
-                            loc=0,
-                            column="ID",
-                            value=range(1, len(df) + 1)
-                        )
-                        # method two
-                        df["ID"] = range(1, len(df) + 1)
+                                              # method one
+                                              df.insert(
+                                                  loc=0,
+                                                  column="ID",
+                                                  value=range(1, len(df) + 1)
+                                              )
+                                              # method two
+                                              df["ID"] = range(1, len(df) + 1)
 
-                        ```]
+                                              ```]
 
 === DataFrame sort
 
@@ -324,58 +300,58 @@
 - #text(fill: purple)[axis]: int, 1(row), 0(column)
 - #text(fill: purple)[value]: int, string
 #sourcecode[```python
-                        import numpy as np
-                        from pandas import DataFrame
+                                              import numpy as np
+                                              from pandas import DataFrame
 
-                        df = DataFrame(data=np.random.randint(low=0, high=100, size(3,5)))
-                        df.iloc[1,2] = None --> (np.nan) NaN
+                                              df = DataFrame(data=np.random.randint(low=0, high=100, size(3,5)))
+                                              df.iloc[1,2] = None --> (np.nan) NaN
 
-                        # 查看存在空值的行
-                        print(df.loc[df.isnull().any(axis=1)])
-                        # 查看不存在空值的行
-                        print(df.loc[df.notnull().all(axis=1)])
+                                              # 查看存在空值的行
+                                              print(df.loc[df.isnull().any(axis=1)])
+                                              # 查看不存在空值的行
+                                              print(df.loc[df.notnull().all(axis=1)])
 
-                        # 空值(NaN)填充
-                        df1 = df.fillna(method="ffill", axis=0)
-                        # 检测是否填充完整
-                        print(df1.isnull().any(axis=0)) --> boolean
-                        ```]
+                                              # 空值(NaN)填充
+                                              df1 = df.fillna(method="ffill", axis=0)
+                                              # 检测是否填充完整
+                                              print(df1.isnull().any(axis=0)) --> boolean
+                                              ```]
 
 ==== df.drop() -- (空值[NaN]处理：删除空值行)
 
 - #text(fill: purple)[labels]: list of int64Index
 - #text(fill: purple)[axis]: 0(row), 1(column)
 #sourcecode[```python
-                        import numpy as np
-                        from pandas import DataFrame
+                                              import numpy as np
+                                              from pandas import DataFrame
 
-                        df = DataFrame(data=np.random.randint(low=0, high=100, size(3,5)))
-                        df.iloc[1,2] = None --> (np.nan) NaN
+                                              df = DataFrame(data=np.random.randint(low=0, high=100, size(3,5)))
+                                              df.iloc[1,2] = None --> (np.nan) NaN
 
-                        # 查看存在空值的行
-                        print(df.loc[df.isnull().any(axis=1)])
-                        # 查看不存在空值的行
-                        print(df.loc[df.notnull().all(axis=1)])
+                                              # 查看存在空值的行
+                                              print(df.loc[df.isnull().any(axis=1)])
+                                              # 查看不存在空值的行
+                                              print(df.loc[df.notnull().all(axis=1)])
 
-                        # 空值(NaN)删除
-                        drop_index = df.loc[df.isnull().any(axis=1)].index
-                        df1 = df.drop(labels=drop_index, axis=0, inplace=True) --> df.drop*: 0(row), 1(column)
+                                              # 空值(NaN)删除
+                                              drop_index = df.loc[df.isnull().any(axis=1)].index
+                                              df1 = df.drop(labels=drop_index, axis=0, inplace=True) --> df.drop*: 0(row), 1(column)
 
-                        # 检测是否填存在空值
-                        print(df1.isnull().any(axis=0)) --> boolean
-                        ```]
+                                              # 检测是否填存在空值
+                                              print(df1.isnull().any(axis=0)) --> boolean
+                                              ```]
 
 ==== df.dropna() -- (可以直接将存在缺失值[NaN]的行或者列删除)
 - #text(fill: purple)[axis]: 0(row), 1(column)
 #sourcecode[```python
-                        df1 = df.dropna(axis=0)
-                        ```]
+                                              df1 = df.dropna(axis=0)
+                                              ```]
 
 ==== df.drop_duplicate() -- Handle duplicate data (删除重复数据)
 - #text(fill: purple)[keep]: "first", "last", False
 #sourcecode[```python
-                        df1 = df.drop_duplicate(keep="first")
-                        ```]
+                                              df1 = df.drop_duplicate(keep="first")
+                                              ```]
 
 === pd.concat() -- Cascade (内-外级联)
 
@@ -385,10 +361,10 @@
 - #text(fill: purple)[join]: inner, outer, default inner
 - #text(fill: purple)[ignore_index]: boolean, default False
 #sourcecode[```python
-                        df = pd.concat(objs=(df1, df2), axis=1)  --> col + col
-                        # 不匹配级联
-                        df = pd.concat(objs=(df1, df2), axis=0, join="outer") --> row + row --> + NaN
-                        ```]
+                                              df = pd.concat(objs=(df1, df2), axis=1)  --> col + col
+                                              # 不匹配级联
+                                              df = pd.concat(objs=(df1, df2), axis=0, join="outer") --> row + row --> + NaN
+                                              ```]
 
 === pd.merge() -- Merge (合并)
 
@@ -400,8 +376,8 @@
 - #text(fill: purple)[left_on]: string of column name
 - #text(fill: purple)[right_on]: string of column name
 #sourcecode[```python
-                        df = pd.merge(left=df1, right=df2, on="column Name", how="outer")
-                        ```]
+                                              df = pd.merge(left=df1, right=df2, on="column Name", how="outer")
+                                              ```]
 
 === pd.apply()
 
@@ -412,14 +388,14 @@ DataFrame's index (axis=0) or the DataFrame's columns (axis=1)
 
 ==== pd.apply()
 #sourcecode[```python
-                        def get_type(x):
-                            if x["bwendu"] > 33:
-                                return "高温"
-                            if x["ywendu"] < -10:
-                                return "低温"
-                            return "常温"
+                                              def get_type(x):
+                                                  if x["bwendu"] > 33:
+                                                      return "高温"
+                                                  if x["ywendu"] < -10:
+                                                      return "低温"
+                                                  return "常温"
 
-                        df.loc[:,"wendu_type"] = df.apply(get_type, axis=1)
-                        ```]
+                                              df.loc[:,"wendu_type"] = df.apply(get_type, axis=1)
+                                              ```]
 
 === Grouped aggregations (分组聚合)

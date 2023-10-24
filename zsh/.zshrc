@@ -236,7 +236,7 @@ alias "pipd"="pipdeptree -p"
 alias "pips"="pip3 show"
 
 # jupyterlab
-alias "jn"="jupyter-notebook"
+alias "jl"="jupyter-lab"
 
 #  NOTE: docker-compose
 alias "dcu"="sudo docker compose up '-f' '~/.config/docker-compose/docker-compose.yml' '-p' se7en  -d"
@@ -301,9 +301,6 @@ export GO111MODULE=auto
 export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux:$PATH
 export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
-export TEXMF=/usr/local/texlive/2023/texmf-dist
-export PATH=$PATH:/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt
-export TEXINPUTS=/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig
 export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
 
 #  NOTE: rust mirror
