@@ -104,6 +104,7 @@ Install_packages() {
         docker
         docker-compose
         mariadb
+        kcalc
         geoip
         newsboat
         cups
