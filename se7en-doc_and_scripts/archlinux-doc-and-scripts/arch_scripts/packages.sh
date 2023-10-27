@@ -38,6 +38,7 @@ Install_packages() {
         glow
         fzf
         zathura
+        okular
         lf
         joshuto
         stow
