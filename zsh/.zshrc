@@ -270,6 +270,9 @@ export FZF_DEFAULT_OPTS='--height=80% --layout=reverse --inline-info --bind ctrl
 #     fd --hidden --follow -E ".git" -E "node_modules" . /home /etc
 # }
 
+#  NOTE: modular
+export MODULAR_HOME="$HOME/.modular"
+export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin"
 
 export PATH=$PATH:/usr/bin/ueberzug
 export PATH=$PATH:/usr/bin

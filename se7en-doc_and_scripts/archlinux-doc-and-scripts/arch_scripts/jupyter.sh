@@ -18,10 +18,11 @@ BOLD=$(printf '\033[1m')
 RESET=$(printf '\033[m')
 
 install() {
+    pip install jupyterlab
     pip install jupyter_contrib_nbextensions
     pip install jupyter notebook==6.1.0
-    jupyter-contrib-nbextension install --user
-    pip install jupyterthemes
+    # jupyter-contrib-nbextension install --user
+    # pip install jupyterthemes
 }
 
 main() {
