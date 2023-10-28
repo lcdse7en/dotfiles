@@ -24,7 +24,8 @@ Install_modular() {
 
 Install_mojo() {
     modular clean
-    modular auth mut_mut_9003a4f2cce44096bd8d3165ff9c1678
+    modular auth mut_mut_16132486efc04824ad90e4d5a2afbaed
+
     # modular auth mut_1ab442b0938f435388ecc1851d9b6286
     modular install mojo
     mojo --version
