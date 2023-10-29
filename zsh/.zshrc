@@ -242,7 +242,7 @@ alias "pips"="pip3 show"
 alias "jl"="jupyter-lab"
 
 #  NOTE: docker-compose
-alias "dcu"="sudo docker compose up '-f' '~/.config/docker-compose/docker-compose.yml' '-p' se7en  -d"
+alias "dcu"="sudo docker-compose -f ~/.config/docker-compose/docker-compose.yml -p se7en up -d"
 
 
 funciton tmuxopen() {
