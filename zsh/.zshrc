@@ -244,8 +244,8 @@ alias "jl"="jupyter-lab"
 #  NOTE: docker-compose
 alias "dcps"="docker ps -a"
 alias "dcim"="docker images"
-alias "dcrm"="docker rm -f"  #  NOTE: 删除容器
-alias "dcrmi"="docker rmi"   #  NOTE: 删除镜像
+alias "dcrm"="docker rm -f"  #  NOTE: 删除容器: Container
+alias "dcrmi"="docker rmi"   #  NOTE: 删除镜像: Image
 alias "dcu"="sudo docker-compose -f ~/.config/docker-compose/docker-compose.yml -p se7en up -d"
 
 
