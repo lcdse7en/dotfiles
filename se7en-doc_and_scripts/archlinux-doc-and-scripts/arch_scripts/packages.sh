@@ -104,6 +104,12 @@ Install_packages() {
         deno
         docker
         docker-compose
+        qemu
+        libvirt
+        bridge-utils
+        flex
+        bison
+        edk2-ovmf
         mariadb
         kcalc
         geoip

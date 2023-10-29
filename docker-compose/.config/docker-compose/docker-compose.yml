@@ -8,11 +8,10 @@
 version: "1.0"
 
 services:
-  mysql:
-    image: mysql
-    container_name: mysql
+  docker-osx:
+    image: sickcodes/docker-osx:monterey
+    container_name: docker-osx
     ports:
-      - "3306:3306"
+      - "50922:10022"
     environment:
       TZ: Asia/Shanghai
-      MYSQL_ROOT_PASSWORD: 123
