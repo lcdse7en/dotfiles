@@ -20,7 +20,9 @@ RESET=$(printf '\033[m')
 Install_packages() {
     array=(
         picom-git
+        # mojo
         fixjson
+        ttf-times-new-roman
         rar
         google-chrome
         wps-office
