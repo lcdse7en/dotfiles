@@ -31,6 +31,7 @@ clone_repo() {
         printf "${RESET}%s\n"
 
         # git clone git@github.com:lcdse7en/lyrics.git
+        # git clone git@github.com:lcdse7en/korean.git
         # git clone git@github.com:lcdse7en/pandas.git
         # git clone git@github.com:lcdse7en/os.git
 
@@ -48,6 +49,7 @@ clone_repo() {
 
         cd "$target_dir" || exit
         git clone git@github.com:lcdse7en/lyrics.git
+        git clone git@github.com:lcdse7en/korean.git
         git clone git@github.com:lcdse7en/pandas.git
         git clone git@github.com:lcdse7en/os.git
 
