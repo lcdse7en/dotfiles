@@ -22,6 +22,8 @@ clone_repo() {
 
     if [[ -d "$target_dir" ]]; then
         cd "$target_dir" || exit
+
+        git clone git@github.com:lcdse7en/fonts.git
         git clone git@github.com:lcdse7en/lyrics.git
         git clone git@github.com:lcdse7en/pandas.git
         git clone git@github.com:lcdse7en/os.git
@@ -37,6 +39,7 @@ clone_repo() {
         mkdir "$target_dir"
 
         cd "$target_dir" || exit
+        git clone git@github.com:lcdse7en/fonts.git
         git clone git@github.com:lcdse7en/lyrics.git
         git clone git@github.com:lcdse7en/pandas.git
         git clone git@github.com:lcdse7en/os.git
