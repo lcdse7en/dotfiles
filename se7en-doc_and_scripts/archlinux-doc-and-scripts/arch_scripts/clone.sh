@@ -22,16 +22,24 @@ clone_repo() {
 
     if [[ -d "$target_dir" ]]; then
         cd "$target_dir" || exit
+        printf "${SKYBLUE}%s"
+        printf "*%.0s" {1..60}
+        printf "${RESET}%s\n"
+        printf "$YELLOW target dir: $target_dir %s$RESET\n"
+        printf "${SKYBLUE}%s"
+        printf "*%.0s" {1..60}
+        printf "${RESET}%s\n"
 
-        git clone git@github.com:lcdse7en/fonts.git
-        git clone git@github.com:lcdse7en/lyrics.git
-        git clone git@github.com:lcdse7en/pandas.git
-        git clone git@github.com:lcdse7en/os.git
+        # git clone git@github.com:lcdse7en/lyrics.git
+        # git clone git@github.com:lcdse7en/pandas.git
+        # git clone git@github.com:lcdse7en/os.git
+
+        # git clone git@github.com:lcdse7en/accounting.git
     else
         printf "${SKYBLUE}%s"
         printf "*%.0s" {1..60}
         printf "${RESET}%s\n"
-        printf "Creating dir: ${target_dir} ...%s"
+        printf "$YELLOW Creating dir: ${target_dir} ...%s$RESET\n"
         printf "${SKYBLUE}%s"
         printf "*%.0s" {1..60}
         printf "${RESET}%s\n"
@@ -39,10 +47,11 @@ clone_repo() {
         mkdir "$target_dir"
 
         cd "$target_dir" || exit
-        git clone git@github.com:lcdse7en/fonts.git
         git clone git@github.com:lcdse7en/lyrics.git
         git clone git@github.com:lcdse7en/pandas.git
         git clone git@github.com:lcdse7en/os.git
+
+        git clone git@github.com:lcdse7en/accounting.git
     fi
 }
 
