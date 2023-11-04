@@ -17,7 +17,7 @@ SKYBLUE=$(printf '\033[36m')
 BOLD=$(printf '\033[1m')
 RESET=$(printf '\033[m')
 
-Clone() {
+clone_repo() {
     local target_dir="$HOME/github_upload"
 
     if [[ -d "$target_dir" ]]; then
@@ -44,7 +44,7 @@ Clone() {
 }
 
 main() {
-    Clone
+    clone_repo
 }
 
 main
