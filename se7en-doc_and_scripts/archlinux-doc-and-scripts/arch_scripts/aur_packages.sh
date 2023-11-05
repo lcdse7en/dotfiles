@@ -23,6 +23,7 @@ Install_packages() {
         # mojo
         fixjson
         ttf-times-new-roman
+        tex-gyre-math-fonts
         rar
         google-chrome
         wps-office
