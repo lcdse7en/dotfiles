@@ -20,13 +20,13 @@ echo -e "${Plain}"
 
 echo $TexType
 case ${TexType} in
-  report)
-		#  NOTE: report
-		sudo rsync -avzuP --delete ~/github_upload/texdata2/* .
-		ln -s ~/dotfiles/Pictures/Pictures/images .
-		touch README.md
-		touch main.tex
-		cat >> main.tex <<- EOF
+report)
+    #  NOTE: report
+    sudo rsync -avzuP --delete ~/github_upload/texdata2/* .
+    ln -s ~/dotfiles/Pictures/Pictures/images .
+    touch README.md
+    touch main.tex
+    cat >>main.tex <<-EOF
 			%*******************************************
 			% Author       :  se7enlcd                 *
 			% E-mail       :  2353442022@qq.com        *
@@ -47,11 +47,12 @@ case ${TexType} in
 			\usepackage{kotex} % korea font space
 			\usepackage{multicol}
 			\usepackage{verse} % 诗歌
+			% \usepackage{newtxtext, newtxmath}
+			% \usepackage{amssymb}
 			\usepackage[fleqn]{amsmath}
+			\usepackage{amsthm}
 			\usepackage{varwidth}
 			\usepackage{etoolbox}
-			\usepackage{amsfonts}
-			\usepackage{amssymb}
 			\usepackage{pifont} % \ding{51}
 			\usepackage[runin]{abstract}
 			\usepackage{lipsum} % 插入例子
@@ -88,6 +89,7 @@ case ${TexType} in
 			\usepackage{tabularray}
 			\usepackage{hyperref} % 此宏包必须最后导入才能进行引用跳转
 			\usepackage{cleveref}
+			\usepackage{unicode-math}
 
 			%  NOTE: pip install pygments
 			\usemintedstyle{xcode}
@@ -196,13 +198,13 @@ case ${TexType} in
 			\end{document}
 		EOF
     ;;
-  article)
-		#  NOTE: article
-		sudo rsync -avzuP ~/github_upload/texdata1/* .
-		ln -s ~/dotfiles/Pictures/Pictures/images .
-		touch main.tex
-		touch README.md
-		cat >> main.tex <<- EOF
+article)
+    #  NOTE: article
+    sudo rsync -avzuP ~/github_upload/texdata1/* .
+    ln -s ~/dotfiles/Pictures/Pictures/images .
+    touch main.tex
+    touch README.md
+    cat >>main.tex <<-EOF
 			%*******************************************
 			% Author       :  se7enlcd                 *
 			% E-mail       :  2353442022@qq.com        *
