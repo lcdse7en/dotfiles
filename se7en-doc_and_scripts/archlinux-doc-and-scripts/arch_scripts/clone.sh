@@ -34,6 +34,8 @@ clone_repo() {
         # git clone git@github.com:lcdse7en/korean.git
         # git clone git@github.com:lcdse7en/pandas.git
         # git clone git@github.com:lcdse7en/os.git
+        # git clone git@github.com:lcdse7en/contact.git
+        # git clone git@github.com:lcdse7en/country_list.git
 
         # git clone git@github.com:lcdse7en/accounting.git
     else
@@ -52,6 +54,8 @@ clone_repo() {
         git clone git@github.com:lcdse7en/korean.git
         git clone git@github.com:lcdse7en/pandas.git
         git clone git@github.com:lcdse7en/os.git
+        git clone git@github.com:lcdse7en/contact.git
+        git clone git@github.com:lcdse7en/country_list.git
 
         git clone git@github.com:lcdse7en/accounting.git
     fi
