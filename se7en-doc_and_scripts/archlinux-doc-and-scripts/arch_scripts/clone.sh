@@ -30,12 +30,19 @@ clone_repo() {
         printf "*%.0s" {1..60}
         printf "${RESET}%s\n"
 
+        # git clone git@github.com:lcdse7en/chrome_extensions.git
+        # git clone git@github.com:lcdse7en/texdata1.git
+        # git clone git@github.com:lcdse7en/texdata2.git
+        # git clone git@github.com:lcdse7en/Music.git
+
         # git clone git@github.com:lcdse7en/lyrics.git
         # git clone git@github.com:lcdse7en/korean.git
         # git clone git@github.com:lcdse7en/pandas.git
         # git clone git@github.com:lcdse7en/os.git
         # git clone git@github.com:lcdse7en/contact.git
         # git clone git@github.com:lcdse7en/country_list.git
+
+        #  NOTE: work
 
         # git clone git@github.com:lcdse7en/accounting.git
     else
@@ -50,6 +57,11 @@ clone_repo() {
         mkdir "$target_dir"
 
         cd "$target_dir" || exit
+        git clone git@github.com:lcdse7en/chrome_extensions.git
+        git clone git@github.com:lcdse7en/texdata1.git
+        git clone git@github.com:lcdse7en/texdata2.git
+        git clone git@github.com:lcdse7en/Music.git
+
         git clone git@github.com:lcdse7en/lyrics.git
         git clone git@github.com:lcdse7en/korean.git
         git clone git@github.com:lcdse7en/pandas.git
@@ -57,6 +69,7 @@ clone_repo() {
         git clone git@github.com:lcdse7en/contact.git
         git clone git@github.com:lcdse7en/country_list.git
 
+        #  NOTE: work
         git clone git@github.com:lcdse7en/accounting.git
     fi
 }
