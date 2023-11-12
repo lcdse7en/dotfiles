@@ -1,5 +1,5 @@
 map gh cd ~
-map gfa cd ~/dotfiles/se7en-doc_and_scripts/archlinux-doc-and-scripts/arch_scripts/
+map gfa cd ~/github_upload/arch_scripts/
 map gfc cd ~/.config/
 map gD cd ~/Documents
 map gd cd ~/Downloads
