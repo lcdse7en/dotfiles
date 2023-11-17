@@ -6,70 +6,74 @@
 # Create_Time : 2023-07-04 21:00
 # Description :
 #********************************************
-
-source /etc/profile.d/import_shell_libs.sh
-
+# source /etc/profile.d/import_shell_libs.sh
 # Color
-SkyBlue='\033[0;36m'
-Green='\033[0;32m'
-Plain='\033[0m'
-Red='\e[1;31m'
-Gray='\e[1;30m'
-
-echo -e "${SkyBlue}"
-repeat_str "*" 15
-center -l 10 "List:"
-repeat_str "*" 15
-# echo "************************************"
-echo -e "\n"
-echo "1:create"
-echo "2:clone"
-echo "3:delete"
-echo "4:fork"
-echo "5:rename"
-echo "6:show all list of private repo "
-echo -e "7:show all list of public repo \n"
-# echo "************************************"
-repeat_str "*" 40
-echo -e "${Green}"
-read -p "Please Enter Num 1、2、3、4、5、6 or 7 for github-cli: " -e inputNum
+RED=$(printf '\033[31m')
+GREEN=$(printf '\033[32m')
+YELLOW=$(printf '\033[33m')
+BLUE=$(printf '\033[34m')
+SKYBLUE=$(printf '\033[36m')
+BOLD=$(printf '\033[1m')
+RESET=$(printf '\033[m')
+printf "${SKYBLUE}%s"
+printf "*%.0s" {1..60}
+printf "${RESET}%s\n"
+printf "$YELLOW%s"
+echo "    1: create"
+echo "    2: clone"
+echo "    3: delete"
+echo "    4: fork"
+echo "    5: rename"
+echo "    6: show all list of private repo "
+echo "    7: show all list of public repo"
+printf "$RESET%s"
+printf "${SKYBLUE}%s"
+printf "*%.0s" {1..60}
+printf "${RESET}%s\n"
+printf "$GREEN%s"
+read -r -p "Please Enter Num 1、2、3、4、5、6 or 7 for github-cli: " -e inputNum
 case ${inputNum} in
 1)
-    echo -e "${Red}"
-    read -p "Enter the name of the repository you want to create:" -e Repo_Name
-    gh repo create $Repo_Name --clone --private
+    cd "$HOME/github_upload" || exit
+    echo -e "${RED}"
+    read -r -p "Enter the name of the repository you want to create: " -e Repo_Name
+    gh repo create "$Repo_Name" --clone --private
     ;;
 2)
-    echo -e "${Red}"
-    read -p "Enter the name of the repository you want to clone:" -e Repo_Name
-    gh repo clone $Repo_Name
+    cd "$HOME/github_upload" || exit
+    echo -e "${RED}"
+    read -r -p "Enter the name of the repository you want to clone: " -e Repo_Name
+    gh repo clone "$Repo_Name"
     ;;
 3)
-    echo -e "${Red}"
-    read -p "Enter the name of the repository you want to delete:" -e Repo_Name
-    gh repo delete lcdse7en/$Repo_Name
+    echo -e "${RED}"
+    read -r -p "Enter the name of the repository you want to delete: " -e Repo_Name
+    gh repo delete lcdse7en/"$Repo_Name"
     ;;
 4)
-    echo -e "${Red}"
-    read -p "Enter the name of the github you want to fork:" -e Github_Name
-    read -p "Enter the name of the repository you want to fork:" -e Repo_Name
+    echo -e "${RED}"
+    read -r -p "Enter the name of the github you want to fork: " -e Github_Name
+    read -r -p "Enter the name of the repository you want to fork:" -e Repo_Name
     gh repo fork "$Github_Name"/"$Repo_Name"
     ;;
 5)
-    echo -e "${Red}"
-    read -p "Enter the new name of the repository you want to rename:" -e new_Name
-    read -p "Enter the old name of the repository you want to rename:" -e old_Name
+    echo -e "${RED}"
+    read -r -p "Enter the new name of the repository you want to rename: " -e new_Name
+    read -r -p "Enter the old name of the repository you want to rename: " -e old_Name
     gh repo rename "$new_Name" --repo lcdse7en/"$old_Name" --yes
     ;;
 6)
-    echo -e "${Red}"
+    echo -e "${RED}"
     echo "Now, Show all private repo for you!"
     gh repo list --visibility private
     ;;
 7)
-    echo -e "${Red}"
+    echo -e "${RED}"
     echo -e "Now, Show all public repo for you!"
     gh repo list --visibility public
+    ;;
+*)
+    printf "\n$BLUE%s$RESET\n" "Enter num error, Please enter again!"
     ;;
 esac
 
