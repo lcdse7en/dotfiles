@@ -161,7 +161,8 @@ bindkey ',' autosuggest-accept
 alias cpp="copypath"
 alias ra='ranger'
 alias c="clear"
-alias s="neofetch"
+# alias s="neofetch"
+alias s="fastfetch --data-raw '$(fortune | cowsay -W 30 | lolcat -f)'"
 alias pc="sudo pacman -S"
 alias pcs="sudo pacman -Ss"
 alias pcq="sudo pacman -Qs"
