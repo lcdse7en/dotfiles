@@ -84,6 +84,7 @@ plugins=(
     autojump
     vi-mode
     copypath
+    copybuffer #  NOTE: Ctrl + o
     extract
     cp # cpv
     z
