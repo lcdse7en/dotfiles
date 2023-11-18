@@ -93,6 +93,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     you-should-use
+    zsh-history-substring-search
     # zsh-completions
     # autoswitch_virtualenv
     # zsh-history-substring-search
@@ -114,6 +115,14 @@ export KEYTIMEOUT=1
 
 #  NOTE: you-should-use
 export YSU_MESSAGE_POSITION="after"
+
+#  NOTE: zsh-history-substring-search
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcuu1]" history-substring-search-dowm
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^p' history-substring-search-up
+bindkey '^n' history-substring-search-down
 
 #  NOTE: Use vim keys in tab complete menu:
 bindkey -M vicmd "i" vi-insert
