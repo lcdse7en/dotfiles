@@ -83,6 +83,7 @@ plugins=(
     sudo
     autojump
     vi-mode
+    copypath
     extract
     cp # cpv
     z
@@ -156,6 +157,7 @@ bindkey ',' autosuggest-accept
 
 
 # Example aliases
+alias cpp="copypath"
 alias ra='ranger'
 alias c="clear"
 alias s="neofetch"
