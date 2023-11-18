@@ -90,6 +90,7 @@ plugins=(
     #  NOTE: 第三方的插件
     zsh-syntax-highlighting
     zsh-autosuggestions
+    you-should-use
     # zsh-completions
     # autoswitch_virtualenv
     # zsh-history-substring-search
@@ -108,6 +109,9 @@ fi
 #  NOTE: vi-mode
 bindkey -v
 export KEYTIMEOUT=1
+
+#  NOTE: you-should-use
+export YSU_MESSAGE_POSITION="after"
 
 #  NOTE: Use vim keys in tab complete menu:
 bindkey -M vicmd "i" vi-insert
