@@ -43,7 +43,8 @@ cmd open ${{
   case $(file --mime-type "$(readlink -f $f)" -b) in
       # application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
       # application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) gnumeric $fx ;;
-      application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) libreoffice $fx >/dev/null 2>&1 ;;
+      # application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) libreoffice $fx >/dev/null 2>&1 ;; #  NOTE: libreoffice
+      application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) et $fx >/dev/null 2>&1 ;; #  NOTE: wps spreadsheets
       image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
       text/*|application/json|inode/x-empty) $EDITOR $fx;;
       image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
@@ -65,6 +66,9 @@ cmd open ${{
       application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template) setsid -f lodraw $fx >/dev/null 2>&1 ;;
       application/vnd.oasis.opendocument.formula) setsid -f lomath $fx >/dev/null 2>&1 ;;
       application/vnd.oasis.opendocument.database) setsid -f lobase $fx >/dev/null 2>&1 ;;
+      application/javascript) $EDITOR $fx ;;
+      application/typescript) $EDITOR $fx ;;
+      application/typescriptreact) $EDITOR $fx ;;
       *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
   esac
 }}

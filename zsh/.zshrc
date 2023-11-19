@@ -164,8 +164,6 @@ precmd_functions+=(_fix_cursor)
 # bindkey
 bindkey ',' autosuggest-accept
 
-
-
 # Example aliases
 alias cpp="copypath"
 alias ra='ranger'
