@@ -333,7 +333,39 @@ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 
+#  NOTE: bob
 export BOB_CONFIG="$HOME/.config/bob/config.json"
 # export PATH=$PATH:$HOME/.rye/shims
 export RYE_NO_AUTO_INSTALL=1
 # source $HOME/.rye/env
+
+#  NOTE: LF color
+
+# export LS_COLORS="$(vivid generate alabaster_dark)"
+# export LS_COLORS="$(vivid generate ayu)"
+# export LS_COLORS="$(vivid generate catppuccin-frappe)"
+# export LS_COLORS="$(vivid generate catppuccin-latte)"
+# export LS_COLORS="$(vivid generate catppuccin-macchiato)"
+# export LS_COLORS="$(vivid generate catppuccin-mocha)"
+# export LS_COLORS="$(vivid generate dracula)"
+# export LS_COLORS="$(vivid generate gruvbox-dark)"
+# export LS_COLORS="$(vivid generate gruvbox-dark-hard)"
+# export LS_COLORS="$(vivid generate gruvbox-dark-soft)"
+# export LS_COLORS="$(vivid generate gruvbox-light)"
+# export LS_COLORS="$(vivid generate gruvbox-light-hard)"
+# export LS_COLORS="$(vivid generate gruvbox-light-soft)"
+# export LS_COLORS="$(vivid generate iceberg-dark)"
+# export LS_COLORS="$(vivid generate jellybeans)"
+# export LS_COLORS="$(vivid generate lava)"
+# export LS_COLORS="$(vivid generate modus-operandi)"
+# export LS_COLORS="$(vivid generate molokai)"
+# export LS_COLORS="$(vivid generate nord)"
+# export LS_COLORS="$(vivid generate one-dark)"
+# export LS_COLORS="$(vivid generate one-light)"
+export LS_COLORS="$(vivid generate snazzy)"
+# export LS_COLORS="$(vivid generate solarized-dark)"
+# export LS_COLORS="$(vivid generate solarized-light)"
+
+#  NOTE: flyctl
+export FLYCTL_INSTALL="/home/se7en/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
