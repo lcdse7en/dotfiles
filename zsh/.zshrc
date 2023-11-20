@@ -201,6 +201,9 @@ alias "cmake"="/usr/local/cmake/bin/cmake"
 #  NOTE: plocate
 alias "locate"="plocate"
 
+#  NOTE: mirrorlist
+alias "mirrors"="sudo nvim /etc/pacman.d/mirrorlist"
+
 # ------------ Tmux Start-------------------
 alias "tmux"="tmux -u"
 alias "tls"="tmux ls"        #  NOTE: 列出会话
