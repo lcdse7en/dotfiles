@@ -195,8 +195,9 @@ alias "name"="git config --global user.name"
 alias "email"="git config --global user.email"
 alias "origin"="git remote add origin"
 alias "b"="bash ~/scripts/dwmblocks-start.sh"
-
 alias "cmake"="/usr/local/cmake/bin/cmake"
+#  NOTE: run: python bilibili-downloader
+alias "bili"="python ~/PyProject/se7en-rye/bilibili/bilibili-downloader/main.py"
 
 #  NOTE: plocate
 alias "locate"="plocate"
