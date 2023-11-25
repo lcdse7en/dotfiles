@@ -63,9 +63,9 @@
                 (aux-info
                     (show-button-bar "true")
                     (edit-active "true")
-                    (current-data "Text"))))
+                    (current-data "Core Pointer"))))
         (book
-            (position 336)
+            (position 282)
             (current-page 0)
             (dockable "gimp-layer-list"
                 (tab-style automatic)
