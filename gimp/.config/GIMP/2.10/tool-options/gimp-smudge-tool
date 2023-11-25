@@ -1,0 +1,12 @@
+# GIMP gimp-smudge-tool options
+
+(brush "2. Star")
+(dynamics "Dynamics Off")
+(gradient "FG to BG (RGB)")
+(palette "Color History")
+(brush-size 55)
+(brush-aspect-ratio 1.5789473684210527)
+(brush-angle 17.5)
+(brush-spacing 0.5)
+
+# end of gimp-smudge-tool options

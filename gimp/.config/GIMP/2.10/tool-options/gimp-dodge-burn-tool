@@ -1,0 +1,11 @@
+# GIMP gimp-dodge-burn-tool options
+
+(brush "2. Star")
+(dynamics "Dynamics Off")
+(palette "Color History")
+(brush-size 55)
+(brush-aspect-ratio 1.5789473684210527)
+(brush-angle 17.5)
+(brush-spacing 0.5)
+
+# end of gimp-dodge-burn-tool options

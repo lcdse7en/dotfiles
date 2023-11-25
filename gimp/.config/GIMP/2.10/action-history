@@ -1,0 +1,8 @@
+# GIMP action-history
+
+(history-item "tools-align" 1)
+(history-item "file-open" 0)
+(history-item "layers-delete" 0)
+(history-item "tool-options-save-new-preset" 1)
+
+# end of action-history

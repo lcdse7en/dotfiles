@@ -199,3 +199,15 @@ Nov 23 04:00 : player: played "english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z]
 Nov 23 13:06 : player: played "english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav"
 Nov 23 23:07 : player: played "english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav"
 Nov 24 15:02 : output: Failed to pause "pulse" (pulse): failed to connect the stream: Connection terminated
+Nov 24 15:29 : update: added english/Brian McKnight/R&B巨星Brian McKnight现场演唱回馈陶喆《天天》对Brian McKnight的致敬的歌曲《Still》.mp3
+Nov 24 15:30 : update: removing english/Brian McKnight/R&B巨星Brian McKnight现场演唱回馈陶喆《天天》对Brian McKnight的致敬的歌曲《Still》.mp3
+Nov 24 15:30 : update: added english/Brian McKnight/Brian McKnight - Still.mp3
+Nov 24 15:30 : update: removing english/Brian McKnight/Brian McKnight - Still.mp3
+Nov 24 15:30 : update: added english/Brian McKnight/Still.mp3
+Nov 24 15:33 : player: played "english/Brian McKnight/Still.mp3"
+Nov 24 15:33 : player: played "english/Brian McKnight/Still.mp3"
+Nov 24 15:38 : player: played "english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav"
+Nov 24 15:49 : output: Failed to pause "pulse" (pulse): failed to connect the stream: Connection terminated
+Nov 25 13:28 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 25 13:28 : update: added english/Brian McKnight/14 Still (Live).m4a
+Nov 25 13:28 : update: removing english/Brian McKnight/Still.mp3
