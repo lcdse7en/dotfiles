@@ -315,15 +315,15 @@ export DISABLE_AUTO_TITLE='true'
 
 
 ####### golang ########
-export GOROOT=/usr/local/go
+export GOROOT=/usr/lib/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export GOPATH=$HOME/golang
-export GO111MODULE=auto
+export GO111MODULE=on
 # export GOMOD=on
 # export GOPROXY=https://proxy.golang.com.cn,direct
 # export GOPROXY=https://mirrors.aliyun.com/goproxy/
 # export GOPROXY=https://goproxy.cn,https://goproxy.io,direct
-# export GOPROXY=https://goproxy.cn,direct  # 七牛云
+export GOPROXY=https://goproxy.cn,direct  # 七牛云
 
 # export PATH=$PATH:~/scripts/
 
