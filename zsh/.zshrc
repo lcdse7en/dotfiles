@@ -336,6 +336,8 @@ export PATH="$HOME/.local/bin${PATH:+:${PATH}}"
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
+#  NOTE: Javascript | npm
+export ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/"
 
 #  NOTE: bob
 export BOB_CONFIG="$HOME/.config/bob/config.json"
