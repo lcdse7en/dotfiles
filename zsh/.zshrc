@@ -197,7 +197,8 @@ alias "origin"="git remote add origin"
 alias "b"="bash ~/scripts/dwmblocks-start.sh"
 alias "cmake"="/usr/local/cmake/bin/cmake"
 #  NOTE: run: python bilibili-downloader
-alias "bili"="python ~/PyProject/se7en-rye/bilibili/bilibili-downloader/main.py"
+alias "mybl1"="python ~/PyProject/se7en-rye/bilibili/bilibili-downloader/main.py"
+alias "mybl2"="sh ~/PyProject/se7en-rye/bilibili/bilili/run.sh"
 
 #  NOTE: plocate
 alias "locate"="plocate"
