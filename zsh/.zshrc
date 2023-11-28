@@ -250,6 +250,10 @@ alias "fz"="pip freeze > requirements.md"   # pip freeze
 #  NOTE: kcalc
 alias "cc"="kcalc"
 
+#  NOTE: systemctl
+alias "sstart"="sudo systemctl start"
+alias "sstop"="sudo systemctl stop"
+
 #  NOTE: crontab
 alias "ce"="crontab -e"
 alias "cl"="crontab -l"
