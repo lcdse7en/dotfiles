@@ -42,11 +42,10 @@ set autoquit true
 cmd open ${{
   case $(file --mime-type "$(readlink -f $f)" -b) in
       # application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
-      # application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) gnumeric $fx ;;
       application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) libreoffice $fx >/dev/null 2>&1 ;; #  NOTE: libreoffice
       # application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) et $fx >/dev/null 2>&1 ;; #  NOTE: wps spreadsheets
       image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
-      text/*|application/json|inode/x-empty) $EDITOR $fx;;
+      text/*|application/json|inode/x-empty|application/x-subrip) $EDITOR $fx;;
       image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
       image/svg+xml) display -- $f ;;
       image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|avif\|tif\|ico\)\(_large\)*$" |
@@ -60,12 +59,7 @@ cmd open ${{
       video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
       application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
       application/pgp-encrypted) $EDITOR $fx ;;
-      application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text) setsid -f lowriter $fx >/dev/null 2>&1 ;;
-      application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/octet-stream|application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template) setsid -f localc $fx >/dev/null 2>&1 ;;
-      application/vnd.openxmlformats-officedocument.presentationml.presentation|application/vnd.oasis.opendocument.presentation-template|application/vnd.oasis.opendocument.presentation|application/vnd.ms-powerpoint) setsid -f loimpress $fx >/dev/null 2>&1 ;;
-      application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template) setsid -f lodraw $fx >/dev/null 2>&1 ;;
-      application/vnd.oasis.opendocument.formula) setsid -f lomath $fx >/dev/null 2>&1 ;;
-      application/vnd.oasis.opendocument.database) setsid -f lobase $fx >/dev/null 2>&1 ;;
+	    application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/octet-stream|application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template|application/vnd.openxmlformats-officedocument.presentationml.presentation|application/vnd.oasis.opendocument.presentation-template|application/vnd.oasis.opendocument.presentation|application/vnd.ms-powerpoint|application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template|application/vnd.oasis.opendocument.formula|application/vnd.oasis.opendocument.database) setsid -f libreoffice $fx >/dev/null 2>&1 ;;
       application/javascript) $EDITOR $fx ;;
       application/typescript) $EDITOR $fx ;;
       application/typescriptreact) $EDITOR $fx ;;
@@ -73,31 +67,44 @@ cmd open ${{
   esac
 }}
 
-cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+# cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+cmd mkdir $mkdir -p "$@"
 
-# extrat files
-# sudo pacman -S atool
+#  NOTE: extrat files
+#  NOTE: sudo pacman -S atool
+
+# cmd extract ${{
+# 	clear; tput cup $(($(tput lines)/3)); tput bold
+# 	set -f
+# 	printf "%s\n\t" "$fx"
+# 	printf "extract?[y/N]"
+# 	read ans
+# 	[ $ans = "y" ] && aunpack $fx
+# }}
+
 cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
 	printf "%s\n\t" "$fx"
 	printf "extract?[y/N]"
 	read ans
-	[ $ans = "y" ] && aunpack $fx
+	[ $ans = "y" ] && {
+		case $fx in
+			*.tar.bz2)   tar xjf $fx     ;;
+			*.tar.gz)    tar xzf $fx     ;;
+			*.bz2)       bunzip2 $fx     ;;
+			*.rar)       unrar e $fx     ;;
+			*.gz)        gunzip $fx      ;;
+			*.tar)       tar xf $fx      ;;
+			*.tbz2)      tar xjf $fx     ;;
+			*.tgz)       tar xzf $fx     ;;
+			*.zip)       unzip $fx       ;;
+			*.Z)         uncompress $fx  ;;
+			*.7z)        7z x $fx        ;;
+			*.tar.xz)    tar xf $fx      ;;
+		esac
+	}
 }}
-# cmd extract ${{
-#   set -f
-#   case $f in
-#     *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
-#     *.tar.gz|*.tgz) tar xzvf $f;;
-#     *.tar.xz|*.txz) tar xJvf $f;;
-#     *.tar) tar xvf $f;;
-#     *.zip) unzip $f;;
-#     *.rar) unrar x $f;;
-#     *.7z) 7z x $f;;
-#     *) echo "Unsupported format";;
-#   esac
-# }}
 
 # compress current file or selected files with tar
 cmd tar ${{
@@ -163,27 +170,51 @@ cmd copyto ${{
 cmd openwith %"$@" "$fx"
 cmd setbg "$1"
 
-cmd bulk-rename ${{
-    old="$(mktemp)"
-    new="$(mktemp)"
-    if [ -n "$fs" ]; then
-        fs="$(basename -a $fs)"
-    else
-        fs="$(ls)"
-    fi
-    printf '%s\n' "$fs" >"$old"
-    printf '%s\n' "$fs" >"$new"
-    $EDITOR "$new"
-    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
-    paste "$old" "$new" | while IFS= read -r names; do
-        src="$(printf '%s' "$names" | cut -f1)"
-        dst="$(printf '%s' "$names" | cut -f2)"
-        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
-            continue
-        fi
-        mv -- "$src" "$dst"
+#  NOTE: bulkrename
+
+# cmd bulk-rename ${{
+#     old="$(mktemp)"
+#     new="$(mktemp)"
+#     if [ -n "$fs" ]; then
+#         fs="$(basename -a $fs)"
+#     else
+#         fs="$(ls)"
+#     fi
+#     printf '%s\n' "$fs" >"$old"
+#     printf '%s\n' "$fs" >"$new"
+#     $EDITOR "$new"
+#     [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+#     paste "$old" "$new" | while IFS= read -r names; do
+#         src="$(printf '%s' "$names" | cut -f1)"
+#         dst="$(printf '%s' "$names" | cut -f2)"
+#         if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+#             continue
+#         fi
+#         mv -- "$src" "$dst"
+#     done
+#     rm -- "$old" "$new"
+#     lf -remote "send $id unselect"
+# }}
+
+
+cmd bulkrename ${{
+    tmpfile_old="$(mktemp)"
+    tmpfile_new="$(mktemp)"
+
+    [ -n "$fs" ] && fs=$(basename -a $fs) || fs=$(ls)
+
+    echo "$fs" > "$tmpfile_old"
+    echo "$fs" > "$tmpfile_new"
+    $EDITOR "$tmpfile_new"
+
+    [ "$(wc -l < "$tmpfile_old")" -eq "$(wc -l < "$tmpfile_new")" ] || { rm -f "$tmpfile_old" "$tmpfile_new"; exit 1; }
+
+    paste "$tmpfile_old" "$tmpfile_new" | while IFS="$(printf '\t')" read -r src dst
+    do
+        [ "$src" = "$dst" ] || [ -e "$dst" ] || mv -- "$src" "$dst"
     done
-    rm -- "$old" "$new"
+
+    rm -f "$tmpfile_old" "$tmpfile_new"
     lf -remote "send $id unselect"
 }}
 
@@ -220,23 +251,21 @@ map <c-r> reload
 map . set hidden!
 map <enter> shell
 map x $$f
-#map X !$f
-#map o &mimeopen $f
-map O $mimeopen --ask $f
+map X !$f
 
-map A rename # at the very end
+map A :rename; cmd-end # at the very end
 map c push A<c-u> # new rename
-map I push A<c-a> # at the very beginning
-map i push A<a-b><a-b><a-f> # before extension
-map a push A<a-b> # after extension
+map I :rename; cmd-home # at the very beginning
+map i :rename # before extension
+map a :rename; cmd-right # after extension
+
+map B bulkrename
+map b $setbg $f  # ~/.local/bin/setbg
 
 map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
 
-map S $setsid -f $TERMINAL >/dev/null 2>&1
-
-map Y $printf "%s" "$fx" | xclip -selection clipboard
 
 # map copy file or file name
 map yy copy
@@ -251,20 +280,25 @@ map w %lf -remote "send $id set ratios 1:2"
 map W %lf -remote "send $id set ratios 1:2:3"
 
 map o push :openwith<space>
+# map o &mimeopen "$f"
+map O $mimeopen --ask "$f"
 map C push :zip<space>
 map R push :tar<space>
-map X extract
+map E extract
 map <c-g> push $lazygit<enter>
-map <c-n> push :mkdir<space>
+map <c-n> push :mkdir<space>""<left>
 # map M push :mkdir<space>
 map T mkfile
 map gc trash_clear
 map gr trash_restore
 map z push :aj<space>
 map Qg !clear; glow -p $fx
-map B bulk-rename
+# map B bulk-rename
 map = chmod
-map b $setbg $f  # ~/.local/bin/setbg
+
+map S $setsid -f $TERMINAL >/dev/null 2>&1
+
+map Y $printf "%s" "$fx" | xclip -selection clipboard
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
