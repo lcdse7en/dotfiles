@@ -281,7 +281,7 @@ map W %lf -remote "send $id set ratios 1:2:3"
 
 map o push :openwith<space>
 # map o &mimeopen "$f"
-map O $mimeopen --ask "$f"
+# map O $mimeopen --ask "$f"
 map C push :zip<space>
 map R push :tar<space>
 map E extract
