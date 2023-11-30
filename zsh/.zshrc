@@ -254,6 +254,9 @@ alias "cc"="kcalc"
 alias "sstart"="sudo systemctl start"
 alias "sstop"="sudo systemctl stop"
 
+#  NOTE: Redis
+alias "redis"="sudo redis-cli"
+
 #  NOTE: crontab
 alias "ce"="crontab -e"
 alias "cl"="crontab -l"
@@ -349,6 +352,8 @@ export BOB_CONFIG="$HOME/.config/bob/config.json"
 # export PATH=$PATH:$HOME/.rye/shims
 export RYE_NO_AUTO_INSTALL=1
 # source $HOME/.rye/env
+
+export NODE_PATH="/usr/lib/node_modules/"
 
 #  NOTE: LF color
 
