@@ -354,6 +354,7 @@ export RYE_NO_AUTO_INSTALL=1
 # source $HOME/.rye/env
 
 export NODE_PATH="/usr/lib/node_modules/"
+export NODE_OPTIONS="--no-deprecation"
 
 #  NOTE: LF color
 
