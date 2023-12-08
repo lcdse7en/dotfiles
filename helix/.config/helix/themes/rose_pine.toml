@@ -1,0 +1,9 @@
+inherits = "rose_pine"
+
+"ui.background" = ""
+"ui.help" = ""
+"ui.popup" = ""
+"ui.statusline" = ""
+"diagnostic.error" = { fg = "errorfg", bg = "errorbg", underline = { color = "red" } }
+
+"comment" = "#7f7f7f"

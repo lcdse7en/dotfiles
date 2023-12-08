@@ -1,0 +1,64 @@
+theme = "edge_neon"
+# theme = "rose_pine"
+
+[editor]
+true-color = true
+cursorline = true
+line-number = "relative"
+completion-replace = true
+color-modes = true
+bufferline = "multiple"
+text-width = 80
+
+[keys.insert]
+j = { j = "normal_mode" }
+
+[keys.normal]
+C-s = [":fmt", ":w"]
+F = ":fmt"
+D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"]
+N = ":bp"
+M = ":bn"
+E = ":bc"
+V = ":o .env"
+W = ":w!"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.whitespace]
+render = "all"
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+
+# line-up
+C-e = ["keep_primary_selection","extend_line","yank","move_line_up","open_above","normal_mode","replace_with_yanked", "move_line_down", "move_line_down", "extend_line", "delete_selection", "move_line_up", "move_line_up"]
+# line-down
+C-f = ["keep_primary_selection","extend_line","delete_selection", "paste_after", "move_line_down", "move_line_up"]
