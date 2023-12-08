@@ -245,3 +245,28 @@ Nov 28 21:21 : player: played "korea/kard/06 Trust Me (BM & Somin ver.).mp3"
 Nov 28 21:24 : player: played "korea/kard/03 Push & Pull.mp3"
 Nov 28 21:28 : player: played "korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3"
 Nov 28 21:33 : player: played "chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3"
+Dec 08 20:17 : update: added chinese/萧亚轩/【台版4K修复】萧亚轩 他和她的故事 (Up2U Live).mp3
+Dec 08 20:17 : update: removing chinese/萧亚轩/【台版4K修复】萧亚轩 他和她的故事 (Up2U Live).mp3
+Dec 08 20:17 : update: added chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3
+Dec 08 20:17 : player: played "chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3"
+Dec 08 20:17 : player: played "chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3"
+Dec 08 20:17 : player: played "chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3"
+Dec 08 20:18 : player: played "chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3"
+Dec 08 20:18 : player: played "chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3"
+Dec 08 20:18 : player: played "chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3"
+Dec 08 20:19 : player: played "chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3"
+[src/libmpg123/parse.c:skip_junk():1260] error: Giving up searching valid MPEG header after 65536 bytes of junk.
+Dec 08 20:31 : mpg123: mpg123_getformat() failed: A generic mpg123 error.
+Dec 08 20:31 : update: added korea/2PM/（中字）15年日本演唱会  beautiful  2pm  日语中字.mp3
+Dec 08 20:31 : update: removing korea/2PM/（中字）15年日本演唱会  beautiful  2pm  日语中字.mp3
+[src/libmpg123/parse.c:skip_junk():1260] error: Giving up searching valid MPEG header after 65536 bytes of junk.
+Dec 08 20:31 : mpg123: mpg123_getformat() failed: A generic mpg123 error.
+Dec 08 20:31 : update: added korea/2PM/beautiful.mp3
+Dec 08 20:32 : mad: input does not appear to be a mp3 bit stream
+[src/libmpg123/parse.c:skip_junk():1260] error: Giving up searching valid MPEG header after 65536 bytes of junk.
+Dec 08 20:32 : mpg123: mpg123_getformat() failed: A generic mpg123 error.
+Dec 08 20:35 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Dec 08 20:35 : player: played "chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3"
+Dec 08 20:36 : update: removing chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3
+Dec 08 20:36 : update: added chinese/萧亚轩/他和她的故事.mp3
+Dec 08 20:36 : player: played "chinese/萧亚轩/他和她的故事.mp3"
