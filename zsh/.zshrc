@@ -101,7 +101,8 @@ plugins=(
 )
 
 export EDITOR="nvim"
-export TERMINAL="st"
+# export TERMINAL="st"
+export TERMINAL="kitty"
 export BROWSER="google-chrome-stable"
 source $ZSH/oh-my-zsh.sh
 

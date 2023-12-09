@@ -270,3 +270,48 @@ Dec 08 20:35 : player: played "chinese/萧亚轩/萧亚轩 他和她的故事 (U
 Dec 08 20:36 : update: removing chinese/萧亚轩/萧亚轩 他和她的故事 (Up2U Live).mp3
 Dec 08 20:36 : update: added chinese/萧亚轩/他和她的故事.mp3
 Dec 08 20:36 : player: played "chinese/萧亚轩/他和她的故事.mp3"
+Dec 09 04:00 : output: Failed to pause "pulse" (pulse): failed to connect the stream: Connection terminated
+Dec 09 05:06 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 09 05:42 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 09 05:45 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 09 05:47 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 09 05:51 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 09 15:53 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Dec 09 15:53 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 09 15:59 : player: played "english/Brian McKnight/14 Still (Live).m4a"
+Dec 09 16:03 : player: played "english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac"
+Dec 09 16:07 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 09 16:13 : player: played "english/Eminem/Recovery (2010)/Eminem - So Bad.flac"
+Dec 09 16:17 : player: played "english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac"
+Dec 09 16:21 : player: played "english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac"
+Dec 09 16:26 : player: played "english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav"
+Dec 09 16:30 : player: played "english/Taylor Swift/04.- Love Story.flac"
+Dec 09 16:34 : player: played "korea/kard/06 Trust Me (BM & Somin ver.).mp3"
+Dec 09 16:38 : player: played "korea/kard/03 Push & Pull.mp3"
+Dec 09 16:42 : player: played "korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3"
+Dec 09 16:46 : player: played "chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3"
+Dec 09 16:51 : player: played "chinese/Jay Chou/Greatest Works of ART/09. Waiting For You (with Gary Yang).mp3"
+Dec 09 16:51 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Dec 09 16:51 : player: played "korea/2PM/beautiful.mp3"
+Dec 09 16:56 : player: played "english/Brian McKnight/14 Still (Live).m4a"
+Dec 09 17:00 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 09 17:06 : player: played "english/Eminem/Recovery (2010)/Eminem - So Bad.flac"
+Dec 09 17:10 : player: played "english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac"
+Dec 09 17:14 : player: played "english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac"
+Dec 09 17:19 : player: played "english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav"
+Dec 09 17:30 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 09 17:35 : mad: input does not appear to be a mp3 bit stream
+[src/libmpg123/parse.c:skip_junk():1260] error: Giving up searching valid MPEG header after 65536 bytes of junk.
+Dec 09 17:35 : mpg123: mpg123_getformat() failed: A generic mpg123 error.
+Dec 09 17:35 : player: played "english/Eminem/Recovery (2010)/Eminem - Cold Wind Blows.flac"
+Dec 09 17:38 : player: played "korea/2PM/beautiful.mp3"
+Dec 09 17:43 : player: played "korea/kard/06 Trust Me (BM & Somin ver.).mp3"
+Dec 09 17:46 : player: played "korea/kard/03 Push & Pull.mp3"
+Dec 09 17:51 : player: played "korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3"
+Dec 09 17:55 : mad: input does not appear to be a mp3 bit stream
+[src/libmpg123/parse.c:skip_junk():1260] error: Giving up searching valid MPEG header after 65536 bytes of junk.
+Dec 09 17:55 : mpg123: mpg123_getformat() failed: A generic mpg123 error.
+Dec 09 17:55 : player: played "chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3"
+Dec 09 17:58 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Dec 09 17:58 : player: played "korea/2PM/beautiful.mp3"
+Dec 09 18:04 : player: played "english/Brian McKnight/14 Still (Live).m4a"
