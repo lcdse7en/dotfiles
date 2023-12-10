@@ -315,3 +315,34 @@ Dec 09 17:55 : player: played "chinese/Jay Chou/Greatest Works of ART/12. I Trul
 Dec 09 17:58 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Dec 09 17:58 : player: played "korea/2PM/beautiful.mp3"
 Dec 09 18:04 : player: played "english/Brian McKnight/14 Still (Live).m4a"
+Dec 10 15:57 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 10 16:08 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 10 16:12 : player: played "english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac"
+Dec 10 19:55 : exception: Failed to decode /home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3; Failed to open '/home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3': No such file or directory
+Dec 10 19:55 : player: played "chinese/萧亚轩/他和她的故事.mp3"
+Dec 10 19:59 : exception: Failed to decode /home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3; Failed to open '/home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3': No such file or directory
+Dec 10 19:59 : player: played "chinese/Leehong Wang/王力宏 - 你不知道的事.flac"
+Dec 10 19:59 : player: played "chinese/萧亚轩/他和她的故事.mp3"
+Dec 10 19:59 : exception: Failed to decode /home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3; Failed to open '/home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3': No such file or directory
+Dec 10 19:59 : player: played "chinese/萧亚轩/他和她的故事.mp3"
+Dec 10 20:08 : exception: Failed to decode /home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3; Failed to open '/home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3': No such file or directory
+Dec 10 20:08 : player: played "english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac"
+Dec 10 20:08 : player: played "chinese/萧亚轩/他和她的故事.mp3"
+Dec 10 20:08 : exception: Failed to decode /home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3; Failed to open '/home/se7en/github_upload/Music/chinese/萧亚轩/他和她的故事.mp3': No such file or directory
+Dec 10 20:08 : player: played "chinese/萧亚轩/他和她的故事.mp3"
+Dec 10 20:13 : player: played "english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac"
+Dec 10 20:17 : player: played "english/Adele/Adele-Set Fire To The Rain.flac"
+Dec 10 20:21 : player: played "korea/Boa/Only One - BoA (宝儿).mp3"
+Dec 10 21:22 : player: played "english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac"
+Dec 10 21:28 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 10 21:33 : player: played "english/Eminem/Recovery (2010)/Eminem - So Bad.flac"
+Dec 10 21:37 : player: played "english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac"
+Dec 10 21:41 : player: played "english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac"
+Dec 10 21:46 : player: played "english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav"
+Dec 10 21:51 : player: played "korea/kard/06 Trust Me (BM & Somin ver.).mp3"
+Dec 10 21:51 : exception: Failed to decode /home/se7en/github_upload/Music/korea/2PM/beautiful.mp3; Failed to open '/home/se7en/github_upload/Music/korea/2PM/beautiful.mp3': No such file or directory
+Dec 10 21:51 : player: played "korea/2PM/beautiful.mp3"
+Dec 10 21:51 : exception: Failed to decode /home/se7en/github_upload/Music/korea/2PM/beautiful.mp3; Failed to open '/home/se7en/github_upload/Music/korea/2PM/beautiful.mp3': No such file or directory
+Dec 10 21:51 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Dec 10 21:57 : player: played "english/Brian McKnight/14 Still (Live).m4a"
+Dec 10 22:01 : player: played "chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3"
