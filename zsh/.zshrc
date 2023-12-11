@@ -170,7 +170,8 @@ alias cpp="copypath"
 alias ra='ranger'
 alias c="clear"
 # alias s="neofetch"
-alias s='fastfetch --data-raw "$(fortune | cowsay -W 30 | lolcat -f)"'
+# alias s='fastfetch --data-raw "$(fortune | cowsay -W 30 | lolcat -f)"'
+alias s='neofetch'
 alias pc="sudo pacman -S"
 alias pcs="sudo pacman -Ss"
 alias pcq="sudo pacman -Qs"
@@ -388,3 +389,8 @@ export LS_COLORS="$(vivid generate snazzy)"
 #  NOTE: flyctl
 export FLYCTL_INSTALL="/home/se7en/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+
+
+#Display Pokemon
+pokemon-colorscripts --no-title -r 1,3,6

@@ -346,3 +346,29 @@ Dec 10 21:51 : exception: Failed to decode /home/se7en/github_upload/Music/korea
 Dec 10 21:51 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Dec 10 21:57 : player: played "english/Brian McKnight/14 Still (Live).m4a"
 Dec 10 22:01 : player: played "chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3"
+Dec 11 23:09 : player: played "english/Adele/Adele-Set Fire To The Rain.flac"
+Dec 11 23:17 : player: played "english/Adele/Adele-Set Fire To The Rain.flac"
+Dec 11 23:21 : player: played "english/Adele/Adele-Set Fire To The Rain.flac"
+Dec 11 23:35 : player: played "english/Adele/Adele-Set Fire To The Rain.flac"
+Dec 11 23:39 : player: played "chinese/Jay Chou/周杰伦-明明就.ape"
+Dec 11 23:40 : player: played "english/Adele/Adele-Set Fire To The Rain.flac"
+Dec 11 23:51 : exception: Failed to decode /home/se7en/github_upload/Music/korea/2PM/beautiful.mp3; Failed to open '/home/se7en/github_upload/Music/korea/2PM/beautiful.mp3': No such file or directory
+Dec 11 23:51 : player: played "korea/2PM/beautiful.mp3"
+Dec 11 23:51 : exception: Failed to decode /home/se7en/github_upload/Music/korea/2PM/beautiful.mp3; Failed to open '/home/se7en/github_upload/Music/korea/2PM/beautiful.mp3': No such file or directory
+Dec 11 23:55 : player: played "english/Adele/Adele-Set Fire To The Rain.flac"
+Dec 11 23:59 : player: played "english/Adele/Adele-Set Fire To The Rain.flac"
+Dec 12 00:18 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 12 00:48 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 12 00:54 : player: played "english/Eminem/Recovery (2010)/Eminem - So Bad.flac"
+Dec 12 00:58 : player: played "english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac"
+Dec 12 01:02 : player: played "english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac"
+Dec 12 01:07 : player: played "english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav"
+Dec 12 01:11 : player: played "korea/kard/06 Trust Me (BM & Somin ver.).mp3"
+Dec 12 01:15 : player: played "korea/kard/03 Push & Pull.mp3"
+Dec 12 01:19 : player: played "korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3"
+Dec 12 01:23 : exception: Failed to decode /home/se7en/github_upload/Music/korea/2PM/beautiful.mp3; Failed to open '/home/se7en/github_upload/Music/korea/2PM/beautiful.mp3': No such file or directory
+Dec 12 01:23 : player: played "korea/2PM/beautiful.mp3"
+Dec 12 01:23 : exception: Failed to decode /home/se7en/github_upload/Music/korea/2PM/beautiful.mp3; Failed to open '/home/se7en/github_upload/Music/korea/2PM/beautiful.mp3': No such file or directory
+Dec 12 01:23 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Dec 12 01:28 : player: played "chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3"
+Dec 12 01:33 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
