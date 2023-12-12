@@ -30,6 +30,7 @@ Yay_packages() {
         nwg-look
         kvantum
         qt5ct
+        ocs-url
         catppuccin-gtk-theme-mocha
         catppuccin-cursors-mocha
         catppuccin-mocha-grub-theme-git
