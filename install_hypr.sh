@@ -25,8 +25,7 @@ Yay_packages() {
         waybar-hyprland-git
         wlogout
         swaylock-effects-git
-        # wlsunset
-        rofi-lbonn-wayland-git
+        hyprpicker-git
         grimblast-git
         nwg-look
         kvantum
@@ -50,6 +49,7 @@ Yay_packages() {
 
 Paru_packages() {
     local array=(
+        rofi-lbonn-wayland-git
         code
         code-features
         code-marketplace
