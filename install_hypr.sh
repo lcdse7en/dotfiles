@@ -41,6 +41,7 @@ Yay_packages() {
         rar
         qqmusic-bin
         obs-studio
+        # xdg-desktop-portal-hyprland-git
         transmission-remote-gui
     )
     for element in "${array[@]}"; do
