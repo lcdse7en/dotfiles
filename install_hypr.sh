@@ -96,6 +96,7 @@ Pacman_packages() {
         brightnessctl
         imagemagick
         qt5-imageformats
+        viewnior
         ffmpegthumbs
         ark
         sddm-git
