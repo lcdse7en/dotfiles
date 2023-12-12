@@ -75,6 +75,7 @@ Pacman_packages() {
         swappy
         cliphist
         slurp
+        dolphin
         qt5-wayland
         qt6-wayland
         qt5-quickcontrols
