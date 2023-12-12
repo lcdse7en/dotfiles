@@ -472,7 +472,7 @@ main() {
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo
-    #Stow_Dir
+    Stow_Dir
     # Font
     # Python
 }
