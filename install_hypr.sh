@@ -50,9 +50,9 @@ Yay_packages() {
 Paru_packages() {
     local array=(
         rofi-lbonn-wayland-git
-        code
-        code-features
-        code-marketplace
+        # code
+        # code-features
+        # code-marketplace
         colloid-gtk-theme-git
         papirus-icon-theme
 
@@ -397,6 +397,7 @@ Stow_Dir() {
         sxiv
         tmux
         smug
+        icons
     )
     for element in "${stowfile[@]}"; do
         if [[ ! -d "$stowtargetdir/$element" ]]; then
