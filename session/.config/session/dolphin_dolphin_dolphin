@@ -1,0 +1,13 @@
+[1]
+Active Tab Index=0
+Tab Count=1
+Tab Data 0=\x00\x00\x00\x02\x00\x00\x00\x00=file:///home/se7en/github_upload/chrome_extensions/tools/iTab\x00\x00\x00\x00\x01\x00\x00\x00jfile:///home/se7en/github_upload/chrome_extensions/tools/iTab/itab%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5.crx\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x1b\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x02\xab\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
+
+[WindowProperties1]
+ClassName=DolphinMainWindow
+MenuBar=Disabled
+ObjectName=Dolphin#1
+
+[WindowProperties1][Toolbar mainToolBar]
+IconSize=16
+ToolButtonStyle=IconOnly
