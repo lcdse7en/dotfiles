@@ -79,6 +79,7 @@ Pacman_packages() {
         qt5-quickcontrols
         qt5-quickcontrols2
         qt5-graphicaleffects
+        eza
         starship
         pacman-contrib
         polkit-kde-agent
