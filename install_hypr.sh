@@ -27,7 +27,7 @@ Yay_packages() {
         swaylock-effects-git
         # wlsunset
         rofi-lbonn-wayland-git
-        # grimblast-git
+        grimblast-git
         nwg-look
         kvantum
         qt5ct
@@ -69,7 +69,7 @@ Pacman_packages() {
         git
         hyprland-git
         kitty
-        grim
+        dunst
         swww
         swappy
         cliphist

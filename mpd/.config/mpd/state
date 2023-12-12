@@ -3,7 +3,7 @@ audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
 state: play
 current: 0
-time: 120.081000
+time: 120.297000
 random: 0
 repeat: 1
 single: 1
@@ -12,13 +12,10 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac
-1:english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac
-2:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
-3:korea/kard/06 Trust Me (BM & Somin ver.).mp3
-4:korea/kard/03 Push & Pull.mp3
-5:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
-6:chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3
-7:korea/2PM/beautiful.mp3
-8:english/Brian McKnight/14 Still (Live).m4a
+0:korea/kard/06 Trust Me (BM & Somin ver.).mp3
+1:korea/kard/03 Push & Pull.mp3
+2:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+3:chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3
+4:korea/2PM/beautiful.mp3
+5:english/Brian McKnight/14 Still (Live).m4a
 playlist_end
