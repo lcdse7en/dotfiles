@@ -88,6 +88,7 @@ Pacman_packages() {
         polkit-kde-agent
         xdg-desktop-portal-hyprland
         parallel
+        rsync
         pamixer
         pipewire
         pipewire-alsa
