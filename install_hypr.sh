@@ -76,6 +76,7 @@ Pacman_packages() {
         cliphist
         slurp
         dolphin
+        konsole
         qt5-wayland
         qt6-wayland
         qt5-quickcontrols
