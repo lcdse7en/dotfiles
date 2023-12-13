@@ -450,6 +450,7 @@ Python() {
         Scrapy
         aiohttp
         aiofiles
+        rich
         bs4
         fake-useragent
         loguru
