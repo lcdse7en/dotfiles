@@ -449,6 +449,7 @@ Python() {
         openpyxl
         Scrapy
         aiohttp
+        aiofiles
         bs4
         fake-useragent
         loguru
