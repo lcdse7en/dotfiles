@@ -29,6 +29,7 @@ Yay_packages() {
         grimblast-git
         nwg-look
         kvantum
+        hyprshot
         qt5ct
         ocs-url
         catppuccin-gtk-theme-mocha
