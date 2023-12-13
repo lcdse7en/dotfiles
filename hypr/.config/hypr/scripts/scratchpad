@@ -29,6 +29,9 @@ function main() {
     calc)
         open "$1" qalculate-gtk
         ;;
+    obs)
+        open "$1" obs
+        ;;
     *)
         echo "no scratchpad with the name of $1"
         ;;
