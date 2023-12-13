@@ -1,8 +1,9 @@
 sw_volume: 100
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
-state: stop
-current: 0
+state: play
+current: 2
+time: 120.058000
 random: 0
 repeat: 1
 single: 1
@@ -13,4 +14,8 @@ mixrampdelay: -1.000000
 playlist_begin
 0:korea/2PM/beautiful.mp3
 1:english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac
+2:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+3:chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3
+4:korea/2PM/beautiful.mp3
+5:english/Brian McKnight/14 Still (Live).m4a
 playlist_end

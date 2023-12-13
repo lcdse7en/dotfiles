@@ -167,3 +167,12 @@ tooltip {
     margin-left: 9px;
     padding-left: 3px;
 }
+
+#custom-weather {
+    color: @main-fg;
+    background: @main-bg;
+    opacity: 1;
+    margin: 4px 0px 4px 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
