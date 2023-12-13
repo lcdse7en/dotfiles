@@ -191,6 +191,7 @@ alias m="neomutt"
 alias "fd"='fd(){ cd $(find ~/ -type d | fzf);ra;};fd'
 alias "fe"='fe(){ nvim $(find ~/ -type f | fzf);};fe'
 alias "lf"='lfub'
+alias "jo"='joshuto'
 alias "patch"="sudo patch -p1 <"
 alias "clean"="sudo make clean install"
 alias "gc"="git clone"

@@ -5,6 +5,7 @@ audio_default	= [
 ]
 
 image_default	= [
+	{ command = "nsxiv" },
 	{ command = "qimgv", args = [ "--" ], fork = true, silent = true },
 	{ command = "krita", args = [ "--" ], fork = true, silent = true },
 	{ command = "exiftool", confirm_exit = true },
@@ -18,10 +19,8 @@ video_default	= [
 ]
 
 text_default	= [
-#	{ command = "notepadqq" },
-	{ command = "vim" },
 	{ command = "nvim" },
-	{ command = "nano" },
+	{ command = "micro" },
 	{ command = "gedit", fork = true, silent = true },
 	{ command = "bat", args = [ "--paging=always" ] },
 ]
@@ -84,7 +83,6 @@ cpp.inherit	= "text_default"
 css.inherit	= "text_default"
 csv.inherit	= "text_default"
 cu.inherit	= "text_default"
-dart.inherit	= "text_default"
 ebuild.inherit	= "text_default"
 eex.inherit	= "text_default"
 env.inherit	= "text_default"
