@@ -2,7 +2,7 @@
     //shows the current weather and forecast
     "tooltip" : true,
     "format" : "{}",
-    "interval" : 30,
+    "interval" : 3600,
     "exec" : "~/.config/hypr/scripts/waybar-wttr.py",
     "return-type" : "json",
     "tooltip": true
