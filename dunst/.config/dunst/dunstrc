@@ -449,3 +449,17 @@
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon
+
+[urgency_low]
+    background = "#3A3C40"
+    foreground = "#C9C6BC"
+    frame_color = "#4D5967"
+    icon = "~/.config/dunst/icons/hyprdots.svg"
+    timeout = 10
+
+[urgency_normal]
+    background = "#687374"
+    foreground = "#C9C6BC"
+    frame_color = "#545C3F"
+    icon = "~/.config/dunst/icons/hyprdots.svg"
+    timeout = 10
