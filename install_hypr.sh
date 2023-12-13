@@ -226,6 +226,7 @@ Pacman_packages() {
         scribus
         helix
         numlockx
+        qalculate-gtk
         wezterm
         udiskie
         net-tools
