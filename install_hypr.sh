@@ -490,19 +490,19 @@ Fcitx5() {
     sudo pacman -S --noconfirm "${fcitx_packages[@]}"
 
     sudo tee /etc/environment <<-EOF
-		GTK_IM_MODULE=fcitx
-		QT_IM_MODULE=fcitx
-		XMODIFIERS=@im=fcitx
-		INPUT_METHOD=fcitx
-		SDL_IM_MODULE=fcitx
-		GLFW_IM_MODULE=ibus
-	EOF
-    sudo tee ~/.pam_enviroment <<-EOF
-		GTK_IM_MODULE DEFAULT=fcitx5
-		QT_IM_MODULE  DEFAULT=fcitx5
-		XMODIFIERS    DEFAULT=@im=fcitx5
-	EOF
+    		GTK_IM_MODULE=fcitx
+    		QT_IM_MODULE=fcitx
+    		XMODIFIERS=@im=fcitx
+    		INPUT_METHOD=fcitx
+    		SDL_IM_MODULE=fcitx
+    		GLFW_IM_MODULE=ibus
+    EOF
 
+    sudo tee ~/.pam_enviroment <<-EOF
+				GTK_IM_MODULE DEFAULT=fcitx5
+				QT_IM_MODULE  DEFAULT=fcitx5
+				XMODIFIERS    DEFAULT=@im=fcitx5
+		EOF
 }
 
 main() {
@@ -512,7 +512,7 @@ main() {
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo
-    Stow_Dir
+    # Stow_Dir
     # Font
     # Python
     Fcitx5
