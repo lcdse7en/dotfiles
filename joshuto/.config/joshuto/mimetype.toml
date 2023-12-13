@@ -19,9 +19,7 @@ video_default	= [
 
 text_default	= [
 #	{ command = "notepadqq" },
-	{ command = "vim" },
 	{ command = "nvim" },
-	{ command = "nano" },
 	{ command = "gedit", fork = true, silent = true },
 	{ command = "bat", args = [ "--paging=always" ] },
 ]

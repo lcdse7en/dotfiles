@@ -447,6 +447,7 @@ Python() {
         pandas
         openpyxl
         Scrapy
+        aiohttp
     )
     for element in "${pip_packages[@]}"; do
         local pipinstalled=$(pip list | grep $element)
