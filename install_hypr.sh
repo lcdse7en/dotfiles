@@ -452,7 +452,7 @@ Python() {
         bs4
         fake-useragent
         loguru
-        Redis
+        redis
     )
     for element in "${pip_packages[@]}"; do
         local pipinstalled=$(pip list | grep $element)
@@ -474,6 +474,9 @@ Python() {
             printf "${RED}$element: ${RESET} is installed on your machine.\n"
 
         fi
+
+        pip freeze >requirements.txt
+        # pip install -r requirements.txt
     done
 }
 
