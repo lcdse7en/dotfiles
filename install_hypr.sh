@@ -456,6 +456,7 @@ Python() {
         fake-useragent
         loguru
         redis
+        ninja
     )
     for element in "${pip_packages[@]}"; do
         local pipinstalled=$(pip list | grep $element)
