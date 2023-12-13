@@ -1,5 +1,8 @@
     "hyprland/language": {
         "format": "{short} {variant}",
+        // "format-en": "🇺🇸 ENG (US)",
+        // "format-uk": "🇺🇦 UKR",
+        // "format-ru": "🇷🇺 RUS",
         "on-click": "~/.config/hypr/scripts/keyboardswitch.sh",
     },
 
