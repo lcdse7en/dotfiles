@@ -452,6 +452,7 @@ Python() {
         bs4
         fake-useragent
         loguru
+        Redis
     )
     for element in "${pip_packages[@]}"; do
         local pipinstalled=$(pip list | grep $element)
