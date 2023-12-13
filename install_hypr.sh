@@ -449,6 +449,9 @@ Python() {
         openpyxl
         Scrapy
         aiohttp
+        bs4
+        fake-useragent
+        loguru
     )
     for element in "${pip_packages[@]}"; do
         local pipinstalled=$(pip list | grep $element)
@@ -464,7 +467,7 @@ Python() {
             printf "*%.0s" {1..60}
             printf "${RESET}%s\n"
 
-            pip install "^$element"
+            pip install "$element"
 
         else
             printf "${RED}$element: ${RESET} is installed on your machine.\n"
@@ -514,8 +517,8 @@ main() {
     # clone_se7en_repo
     # Stow_Dir
     # Font
-    # Python
-    Fcitx5
+    Python
+    # Fcitx5
 }
 
 main
