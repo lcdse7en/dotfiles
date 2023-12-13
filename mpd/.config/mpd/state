@@ -3,7 +3,7 @@ audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
 state: play
 current: 2
-time: 120.058000
+time: 120.297000
 random: 0
 repeat: 1
 single: 1
@@ -14,13 +14,10 @@ mixrampdelay: -1.000000
 playlist_begin
 0:korea/2PM/beautiful.mp3
 1:korea/Gummy/친구라도 될 걸 그랬어.mp3
-2:english/Eminem/Recovery (2010)/Eminem - Love the Way You Lie feat. Rihanna.flac
-3:english/Akon - Freedom (2008) Flac/Right Now (Na Na Na).flac
-4:english/Rihanna/Rihanna -  Umbrella [Feat. Jay-Z].wav
-5:korea/kard/06 Trust Me (BM & Somin ver.).mp3
-6:korea/kard/03 Push & Pull.mp3
-7:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
-8:chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3
-9:korea/2PM/beautiful.mp3
-10:english/Brian McKnight/14 Still (Live).m4a
+2:korea/kard/06 Trust Me (BM & Somin ver.).mp3
+3:korea/kard/03 Push & Pull.mp3
+4:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
+5:chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3
+6:korea/2PM/beautiful.mp3
+7:english/Brian McKnight/14 Still (Live).m4a
 playlist_end
