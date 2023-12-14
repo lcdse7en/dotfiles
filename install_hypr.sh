@@ -37,6 +37,7 @@ Yay_packages() {
         catppuccin-mocha-grub-theme-git
         eww-wayland
         pokemon-colorscripts-git
+        fontpreview
         ctpv
         ttf-times-new-roman
         google-chrome
