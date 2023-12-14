@@ -10,6 +10,9 @@ image() {
     ueberzugpp cmd -s "$UB_SOCKET" -a add -i PREVIEW -x "$X" -y "$Y" --max-width "$MW" --max-height "$MH" -f "$FILE_PATH"
     exit 1
 }
+# image() {
+#     chafa -f sixel -s "$2x$3" --animate false "$1"
+# }
 
 batorcat() {
     file="$1"
@@ -82,7 +85,7 @@ video/*)
     ;;
 *.ttf | *.otf | *.woff | *.woff2)
     OUTPUT_PATH="/tmp/font_previews/font_preview_$(basename "$1").png"
-    font-preview "$1" >/dev/null
+    fontpreview "$1" >/dev/null
     ctpv "$OUTPUT_PATH"
     ;;
 *.wav | *.mp3 | *.flac | *.m4a | *.wma | *.ape | *.ac3 | *.og[agx] | *.spx | *.opus | *.as[fx] | *.mka)
