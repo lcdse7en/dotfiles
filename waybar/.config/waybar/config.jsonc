@@ -14,9 +14,9 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","hyprland/window","custom/r_end","custom/l_end","mpd","cava","custom/r_end","custom/l_end","custom/weather","custom/r_end","custom/l_end","custom/music","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","hyprland/window","custom/r_end","custom/l_end","mpd","cava","custom/r_end","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","backlight","network","bluetooth","pulseaudio","pulseaudio#microphone","custom/updates","custom/r_end","custom/l_end","cpu","memory","custom/gpuinfo","custom/r_end","","custom/l_end","tray","battery","custom/r_end","custom/l_end","custom/wallchange","custom/mode","custom/wbar","custom/cliphist","custom/power","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","backlight","network","bluetooth","pulseaudio","pulseaudio#microphone","custom/updates","custom/r_end","custom/l_end","cpu","memory","custom/gpuinfo","custom/r_end","","custom/l_end","custom/weather","tray","battery","custom/r_end","custom/l_end","custom/wallchange","custom/mode","custom/wbar","custom/cliphist","custom/power","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
@@ -96,32 +96,6 @@
       "on-click": "kitty --class center-float-mini cava",
       "on-click-right": "qpwgraph"
     },
- "custom/weather" : {
-    //shows the current weather and forecast
-    "tooltip" : true,
-    "format" : "{}",
-    "interval" : 30,
-    "exec" : "~/.config/hypr/scripts/waybar-wttr.py",
-    "return-type" : "json",
-    "tooltip": true
-  },
-"custom/music": {
-  "format": "{icon}{}",
-  "format-icons": {
-  // "Playing": " ", // Uncomment if not using the dynamic script
-  "Paused": " ",
-  "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
-  },
-    "escape": true,
-    "tooltip": true,
-    "exec": "~/.config/hypr/scripts/Caway.sh",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next",
-    "on-click-right": "g4music",
-    "max-length": 35,
-},
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -250,6 +224,15 @@
         "max-length": 1000
     },
 
+ "custom/weather" : {
+    //shows the current weather and forecast
+    "tooltip" : true,
+    "format" : "{}",
+    "interval" : 3600,
+    "exec" : "~/.config/hypr/scripts/waybar-wttr.py",
+    "return-type" : "json",
+    "tooltip": true
+  },
     "tray": {
         "icon-size": 12,
         "spacing": 5
