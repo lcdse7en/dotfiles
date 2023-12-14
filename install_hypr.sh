@@ -458,6 +458,7 @@ Python() {
         fake-useragent
         loguru
         redis
+        python-mpd2
         ninja
     )
     for element in "${pip_packages[@]}"; do
@@ -649,7 +650,7 @@ main() {
     # Font
     Python
     # Fcitx5
-    Zsh
+    # Zsh
 }
 
 main
