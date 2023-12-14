@@ -166,6 +166,7 @@ precmd_functions+=(_fix_cursor)
 bindkey ',' autosuggest-accept
 
 # Example aliases
+alias "hl"="Hyprland"
 alias cpp="copypath"
 alias ra='ranger'
 alias c="clear"
