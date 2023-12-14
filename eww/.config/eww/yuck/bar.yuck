@@ -1,0 +1,75 @@
+;; Variables
+(include "yuck/bar/left.yuck")
+(include "yuck/bar/center.yuck")
+(include "yuck/bar/right.yuck")
+
+(defwidget sep []
+  (box :class "module-2" :vexpand false :hexpand false
+    (label :class "separ" :text "|")
+  )
+)
+
+(defwidget left []
+  (box
+    :width "100%"
+    :hexpand true
+    :space-evenly false
+    :halign "start"
+    (powermenu_botton)
+    (sep)
+    (workspaces)
+    (sep)
+    (systrays)
+    (sep)
+    (weather)
+    (electricity)
+  )
+)
+
+(defwidget center []
+  (box
+    :width "100%"
+    :hexpand true
+    :halign "center"
+    :space-evenly false
+    (music)
+  )
+)
+
+(defwidget right []
+  (box
+    :width "100%"
+    :hexpand true
+    :halign "end"
+    :space-evenly false
+    (tray)
+    (sep)
+    (volume)
+    (lightbulb)
+    (wifi)
+    (sep)
+    (cpu)
+    (temps)
+    (mem)
+    (sep)
+    (clock_module)
+  )
+)
+
+(defwindow bar
+  :geometry (geometry :x "0%"
+    :y "8px"
+    :width "99.5%"
+    :height "43px"
+  :anchor "top center")
+  :monitor "0"
+  :stacking "fg"
+  :exclusive true
+  :namespace true
+  :windowtype "dock"
+  (box :class "bar_class" :space-evenly false
+    (left)
+    (center)
+    (right)
+  )
+)
