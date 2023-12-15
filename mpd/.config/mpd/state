@@ -1,9 +1,9 @@
 sw_volume: 100
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
-state: pause
-current: 0
-time: 162.419000
+state: play
+current: 10
+time: 125.578000
 random: 0
 repeat: 1
 single: 1
@@ -21,6 +21,6 @@ playlist_begin
 6:korea/kard/03 Push & Pull.mp3
 7:korea/kard/02 Trust Me (J.seph & Jiwoo ver.).mp3
 8:chinese/Jay Chou/Greatest Works of ART/12. I Truly Believe.mp3
-9:korea/2PM/beautiful.mp3
-10:english/Brian McKnight/14 Still (Live).m4a
+9:english/Brian McKnight/14 Still (Live).m4a
+10:english/Nelly Furtado/Nelly Furtado - Say It Right.flac
 playlist_end

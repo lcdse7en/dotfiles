@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env sh
 
 #********************************************
 # Author      : lcdse7en
@@ -19,6 +19,15 @@ RESET=$(printf '\033[m')
 
 clonepath="$HOME/github_upload"
 stowpath="$HOME/dotfiles"
+
+
+GithubHosts() {
+    sudo tee /etc/hosts<<-EOF
+				140.82.114.3    github.com
+				185.199.108.153 github.io
+				EOF
+}
+
 
 Yay_packages() {
     array=(
@@ -267,16 +276,16 @@ Git_config() {
     git config --global user.email "2353442022@qq.com"
 
     #  NOTE: set proxy for git
-    git config --global http.proxy http://127.0.0.1:1080
-    git config --global https.proxy https://127.0.0.1:1080
+    # git config --global http.proxy http://127.0.0.1:1080
+    # git config --global https.proxy https://127.0.0.1:1080
 
     #  NOTE: proxy preview
-    git config --global --get http.proxy
-    git config --global --get https.proxy
+    # git config --global --get http.proxy
+    # git config --global --get https.proxy
 
     #  NOTE: unset proxy
-    git config --global --unset http.proxy
-    git config --global --unset https.proxy
+    # git config --global --unset http.proxy
+    # git config --global --unset https.proxy
 
     printf "$GREEN%s"
     printf "%s\n" "git config --global user.name lcdse7en"
@@ -642,7 +651,9 @@ Zsh() {
     fi
 }
 
+
 main() {
+		GithubHosts
     # Yay_packages
     # Paru_packages
     # Pacman_packages
@@ -651,7 +662,7 @@ main() {
     # clone_se7en_repo
     # Stow_Dir
     # Font
-    Python
+    # Python
     # Fcitx5
     # Zsh
 }
