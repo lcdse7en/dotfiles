@@ -109,7 +109,7 @@ Pacman_packages() {
         pipewire-alsa
         pipewire-audio
         pipewire-jack
-        pipewire-pulse
+        # pipewire-pulse
         pulseaudio
         wireplumber
         blueman
