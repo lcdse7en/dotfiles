@@ -3,7 +3,7 @@ audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
 state: play
 current: 1
-time: 73.955000
+time: 189.520000
 random: 0
 repeat: 1
 single: 1
