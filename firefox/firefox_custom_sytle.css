@@ -1,0 +1,41 @@
+#interface #time #time-container #clock {
+  font-size: 9em;
+}
+
+#interface #time #date {
+  font-size: 1.2em;
+}
+
+#interface #main #greetings {
+  font-size: 2.5em;
+}
+
+#interface #main #weather #current,
+#interface #main #weather #forecast {
+  font-size: 0.7em;
+}
+
+#interface #widgets {
+  opacity: 0.89;
+}
+
+#interface #widgets #linkblocks.medium li a img {
+  padding: 0.2em;
+  border-radius: 1em;
+}
+
+#interface #linkblocks li.block a img {
+  opacity: 0.85;
+}
+
+#creditContainer #credit {
+  display: none;
+}
+
+#interface #quotes_container #quote {
+  font-size: 1em;
+}
+
+#interface #quotes_container #author {
+  font-size: 0.9em;
+}
