@@ -81,6 +81,7 @@ Pacman_packages() {
         slurp
         dolphin
         konsole
+        rust
         qt5-wayland
         qt6-wayland
         qt5-quickcontrols
