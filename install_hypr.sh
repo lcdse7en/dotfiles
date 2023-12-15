@@ -31,7 +31,7 @@ Yay_packages() {
         kvantum
         hyprshot
         wttrbar
-        qbittorrent-cli
+        qbittorrent-qt5
         qt5ct
         ocs-url
         catppuccin-gtk-theme-mocha
