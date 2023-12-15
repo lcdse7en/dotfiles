@@ -562,3 +562,19 @@ Dec 15 23:35 : update: removing korea/SHINee/(2018) - SHINee - SHINee The Best F
 Dec 15 23:35 : update: removing korea/SHINee/(2018) - SHINee - SHINee The Best From Now On/17. Kiminoseide.flac
 Dec 15 23:35 : update: removing korea/SHINee/(2018) - SHINee - SHINee The Best From Now On/16. DxDxD.flac
 Dec 15 23:35 : update: removing korea/SHINee/(2018) - SHINee - SHINee The Best From Now On/15. Sing Your Song.flac
+Dec 16 00:50 : player: played "english/Nelly Furtado/Nelly Furtado - Say It Right.flac"
+Dec 16 01:06 : player: played "korea/SHINee/03. Lucifer.flac"
+Dec 16 01:09 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 16 01:12 : player: played "english/Eminem/Recovery (2010)/Eminem - So Bad.flac"
+Dec 16 01:12 : output: Failed to play on "pulse" (pulse): failed to connect the stream: Input/Output error
+Dec 16 01:12 : output: Failed to play on "pulse" (pulse): failed to connect the stream: Input/Output error
+Dec 16 01:12 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Dec 16 01:12 : output: Failed to play on "pulse" (pulse): failed to connect the stream: Input/Output error
+Dec 16 01:15 : player: played "english/Nelly Furtado/Nelly Furtado - Say It Right.flac"
+Dec 16 01:19 : output: Failed to play on "pulse" (pulse): failed to connect the stream: Input/Output error
+Dec 16 01:25 : player: played "korea/SHINee/03. Lucifer.flac"
+Dec 16 01:25 : output: Failed to play on "pulse" (pulse): failed to connect the stream: Input/Output error
+Dec 16 01:29 : player: played "korea/SHINee/03. Lucifer.flac"
+Dec 16 01:32 : output: Failed to play on "pulse" (pulse): failed to connect the stream: Input/Output error
+Dec 16 01:36 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"
+Dec 16 01:40 : player: played "english/Eminem/Recovery (2010)/Eminem - Not Afraid.flac"

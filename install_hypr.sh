@@ -110,6 +110,7 @@ Pacman_packages() {
         pipewire-audio
         pipewire-jack
         pipewire-pulse
+        pulseaudio
         wireplumber
         blueman
         brightnessctl
