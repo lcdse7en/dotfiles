@@ -17,7 +17,8 @@ map gfl cd ~/dotfiles/lf/.config/lf/
 map gfS cd ~/.config/smug/
 map gfj cd ~/dotfiles/joshuto/.config/joshuto/
 map gfz cd ~/.local/share/nvim/lazy/
-map gfw cd ~/github_upload/Python_whl/
+map gfh cd ~/.config/hypr/
+map gfw cd ~/.config/waybar/
 map gfx cd /etc/X11/xinit/
 map gfu cd /run/media/se7en/Thinkplus/
 map g/ cd /

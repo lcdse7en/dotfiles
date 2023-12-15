@@ -30,6 +30,7 @@ Yay_packages() {
         nwg-look
         kvantum
         hyprshot
+        wttrbar
         qt5ct
         ocs-url
         catppuccin-gtk-theme-mocha

@@ -7,4 +7,4 @@
 0|Graphite-Mono|StepanVanzuriak.mono~mono dark|~/.config/swww/Graphite-Mono/spring_bloom.jpg
 0|Cyberpunk-Edge|JWSandeman.cyberpunk2077-theme~cyberpunk2077|~/.config/swww/Cyberpunk-Edge/lucy_2.png
 0|Frosted-Glass|msnilshartmann.blue-light~Blue Light Theme|~/.config/swww/Frosted-Glass/cloudy_mountain.png
-1|Gruvbox-Retro|jdinhlife.gruvbox~Gruvbox Dark Medium|~/.config/swww/Gruvbox-Retro/Sakura.png
+1|Gruvbox-Retro|jdinhlife.gruvbox~Gruvbox Dark Medium|~/.config/swww/Gruvbox-Retro/misty_forest.jpg

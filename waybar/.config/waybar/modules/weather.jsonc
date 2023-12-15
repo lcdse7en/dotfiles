@@ -1,9 +1,17 @@
- "custom/weather" : {
-    //shows the current weather and forecast
-    "tooltip" : true,
-    "format" : "{}",
-    "interval" : 3600,
-    "exec" : "~/.config/hypr/scripts/waybar-wttr.py",
-    "return-type" : "json",
-    "tooltip": true
-  },
+ // "custom/weather" : {
+ //    //shows the current weather and forecast
+ //    "tooltip" : true,
+ //    "format" : "{}",
+ //    "interval" : 3600,
+ //    "exec" : "~/.config/hypr/scripts/waybar-wttr.py",
+ //    "return-type" : "json",
+ //    "tooltip": true
+ //  },
+
+"custom/weather": {
+    "format": "{}°C",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --location xiantao",
+    "return-type": "json"
+},
