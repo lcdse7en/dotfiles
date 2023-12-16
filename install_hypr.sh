@@ -283,6 +283,8 @@ Cargo_Packages() {
         printf "Skipping install typstfmt."
     else
         cargo install --git https://github.com/astrale-sharp/typstfmt.git
+
+        # typstfmt --make-default-config
     fi
 
 
@@ -309,7 +311,6 @@ Cargo_Packages() {
         cargo build --release
     fi
 
-    typstfmt --make-default-config
 }
 
 Git_config() {
