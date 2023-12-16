@@ -276,19 +276,6 @@ CargoMirror() {
 
 Cargo_Packages() {
     printf "${YELLOW}%s"
-    read -r -p "Do you want to install typstfmt? [y/N]" -e answer
-    printf "${RESET}%s"
-
-    if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
-        printf "Skipping install typstfmt."
-    else
-        cargo install --git https://github.com/astrale-sharp/typstfmt.git
-
-        # typstfmt --make-default-config
-    fi
-
-
-    printf "${YELLOW}%s"
     read -r -p "Do you want to install typst? [y/N]" -e answer
     printf "${RESET}%s"
 
@@ -311,7 +298,19 @@ Cargo_Packages() {
         cargo build --release
     fi
 
+    printf "${YELLOW}%s"
+    read -r -p "Do you want to install typstfmt? [y/N]" -e answer
+    printf "${RESET}%s"
+
+    if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+        printf "Skipping install typstfmt."
+    else
+        cargo install --git https://github.com/astrale-sharp/typstfmt.git
+
+        # typstfmt --make-default-config
+    fi
 }
+
 
 Git_config() {
     printf "$YELLOW%s"
