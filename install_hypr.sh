@@ -265,16 +265,18 @@ GithubHosts() {
 }
 
 CargoMirror() {
+    # registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+    # registry = "https://mirrors.ustc.edu.cn/crates.io-index"
     sudo tee $HOME/.cargo/config<<-EOF
 				[source.crates-io]
 				replace-with = 'mirror'
 
 				[source.mirror]
-				registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+				registry = "https://mirrors.ustc.edu.cn/crates.io-index"
 				EOF
 }
 
-Cargo_Packages() {
+Typst() {
     printf "${YELLOW}%s"
     read -r -p "Do you want to install typst? [y/N]" -e answer
     printf "${RESET}%s"
@@ -705,7 +707,6 @@ main() {
     # Paru_packages
     # Pacman_packages
     # GithubHosts
-    CargoMirror
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo
@@ -714,6 +715,8 @@ main() {
     # Python
     # Fcitx5
     # Zsh
+    # CargoMirror
+    Typst
 }
 
 main
