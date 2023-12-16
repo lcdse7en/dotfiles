@@ -264,6 +264,16 @@ GithubHosts() {
 				EOF
 }
 
+CargoMirror() {
+    sudo tee $HOME/.cargo/config<<-EOF
+				[source.crates-io]
+				replace-with = 'mirror'
+
+				[source.mirror]
+				registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+				EOF
+}
+
 Git_config() {
     printf "$YELLOW%s"
     printf "%s" "git config --global ... to set ..."
@@ -656,7 +666,8 @@ main() {
     # Yay_packages
     # Paru_packages
     # Pacman_packages
-    GithubHosts
+    # GithubHosts
+    CargoMirror
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo
