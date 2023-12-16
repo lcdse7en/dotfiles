@@ -274,6 +274,44 @@ CargoMirror() {
 				EOF
 }
 
+Cargo_Packages() {
+    printf "${YELLOW}%s"
+    read -r -p "Do you want to install typstfmt? [y/N]" -e answer
+    printf "${RESET}%s"
+
+    if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+        printf "Skipping install typstfmt."
+    else
+        cargo install --git https://github.com/astrale-sharp/typstfmt.git
+    fi
+
+
+    printf "${YELLOW}%s"
+    read -r -p "Do you want to install typst? [y/N]" -e answer
+    printf "${RESET}%s"
+
+    if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+        printf "Skipping install typst."
+    else
+        cargo install --git https://github.com/typst/typst typst-cli
+    fi
+
+    printf "${YELLOW}%s"
+    read -r -p "Do you want to install typst-lsp? [y/N]" -e answer
+    printf "${RESET}%s"
+
+    if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+        printf "Skipping install typst-lsp."
+    else
+        cd "$HOME/Downloads"
+        git clone git@github.com:lcdse7en/typst-lsp.git
+        cd "typst-lsp"
+        cargo build --release
+    fi
+
+    typstfmt --make-default-config
+}
+
 Git_config() {
     printf "$YELLOW%s"
     printf "%s" "git config --global ... to set ..."
