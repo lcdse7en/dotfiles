@@ -21,14 +21,6 @@ clonepath="$HOME/github_upload"
 stowpath="$HOME/dotfiles"
 
 
-GithubHosts() {
-    sudo tee /etc/hosts<<-EOF
-				140.82.114.3    github.com
-				185.199.108.153 github.io
-				EOF
-}
-
-
 Yay_packages() {
     array=(
         waybar-hyprland-git
@@ -263,6 +255,13 @@ Pacman_packages() {
             printf "$RED${element}$RESET%s\n" ": has been installed on your machine"
         fi
     done
+}
+
+GithubHosts() {
+    sudo tee /etc/hosts<<-EOF
+				140.82.114.3    github.com
+				185.199.108.153 github.io
+				EOF
 }
 
 Git_config() {
@@ -654,10 +653,10 @@ Zsh() {
 
 
 main() {
-		GithubHosts
     # Yay_packages
     # Paru_packages
     # Pacman_packages
+    GithubHosts
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo

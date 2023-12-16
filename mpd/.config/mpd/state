@@ -1,7 +1,9 @@
 sw_volume: 100
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
-state: stop
+state: play
+current: 0
+time: 28.902000
 random: 0
 repeat: 1
 single: 1
@@ -10,4 +12,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+0:korea/SHINee/03. Lucifer.flac
 playlist_end
