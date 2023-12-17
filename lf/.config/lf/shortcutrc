@@ -7,7 +7,7 @@ map gfd cd ~/dotfiles/
 map gfn cd ~/.config/nvim/
 map gfz cd ~/golang/
 map gfs cd ~/github_upload/myscripts/
-map gfe cd ~/dotfiles/emacs/.emacs.d/
+map gfe cd ~/.emacs.d/
 map gfr cd ~/PyProject/se7en-rye/
 map gfp cd ~/dotfiles/Pictures/Pictures/
 map gft cd ~/dotfiles/tmux/
