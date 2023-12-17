@@ -129,6 +129,7 @@ Pacman_packages() {
         glow
         fzf
         zathura
+        zathura-pdf-poppler
         okular
         lf
         ueberzugpp
