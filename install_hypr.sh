@@ -312,6 +312,16 @@ Typst() {
 
         # typstfmt --make-default-config
     fi
+
+    printf "${YELLOW}%s"
+    read -r -p "Do you want to install typst-live? [y/N]" -e answer
+    printf "${RESET}%s"
+
+    if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+        printf "Skipping install typst-live."
+    else
+        cargo install typst-live
+    fi
 }
 
 
