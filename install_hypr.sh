@@ -322,6 +322,16 @@ Typst() {
     else
         cargo install typst-live
     fi
+
+    printf "${YELLOW}%s"
+    read -r -p "Do you want to install just for CetZ? [y/N]" -e answer
+    printf "${RESET}%s"
+
+    if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+        printf "Skipping install just."
+    else
+        cargo install just
+    fi
 }
 
 
