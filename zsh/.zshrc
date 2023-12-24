@@ -396,3 +396,5 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 #Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
+
+setopt no_nomatch
