@@ -260,8 +260,28 @@ Pacman_packages() {
 
 GithubHosts() {
     sudo tee /etc/hosts<<-EOF
-				140.82.114.3    github.com
-				185.199.108.153 github.io
+				#Github Hosts Start
+				#Update Time: 2023-12-25
+				#Project Address: https://githubfast.com/maxiaof/github-hosts
+				#Update URL: https://usercontent.githubfast.com/raw/maxiaof/github-hosts/master/hosts
+				140.82.113.4                 central.github.com
+				140.82.113.4                 assets-cdn.github.com
+				151.101.1.6                  github.map.fastly.net
+				151.101.1.6                  github.global.ssl.fastly.net
+				140.82.113.4                 gist.github.com
+				185.199.108.153              github.io
+				140.82.113.4                 github.com
+				140.82.113.4                 api.github.com
+				140.82.113.4                 codeload.github.com
+				72.21.206.80                 github-cloud.s3.amazonaws.com
+				72.21.206.80                 github-com.s3.amazonaws.com
+				72.21.206.80                 github-production-release-asset-2e65be.s3.amazonaws.com
+				72.21.206.80                 github-production-user-asset-6210df.s3.amazonaws.com
+				72.21.206.80                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+				185.199.108.153              githubstatus.com
+				140.82.114.18                github.community
+				140.82.113.4                 raw.github.com
+				#Github Hosts End
 				EOF
 }
 
@@ -737,7 +757,7 @@ main() {
     # Yay_packages
     # Paru_packages
     # Pacman_packages
-    # GithubHosts
+    GithubHosts
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo
@@ -747,7 +767,7 @@ main() {
     # Fcitx5
     # Zsh
     # CargoMirror
-    Typst
+    # Typst
 }
 
 main
