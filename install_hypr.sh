@@ -566,6 +566,7 @@ Python() {
         Scrapy
         aiohttp
         aiofiles
+        matplotlib
         rich
         bs4
         fake-useragent
@@ -757,13 +758,13 @@ main() {
     # Yay_packages
     # Paru_packages
     # Pacman_packages
-    GithubHosts
+    # GithubHosts
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo
     # Stow_Dir
     # Font
-    # Python
+    Python
     # Fcitx5
     # Zsh
     # CargoMirror

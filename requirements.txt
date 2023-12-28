@@ -61,6 +61,7 @@ jupyterlab_server==2.25.2
 keyutils==0.6
 lensfun==0.3.4
 libfdt==1.7.0
+libtorrent==2.0.9
 loguru==0.7.2
 lxml==4.9.3
 Mako==1.2.4

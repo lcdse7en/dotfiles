@@ -161,7 +161,6 @@ _fix_cursor() {
 }
 precmd_functions+=(_fix_cursor)
 
-
 # bindkey
 bindkey ',' autosuggest-accept
 
@@ -280,7 +279,6 @@ alias "dcrm"="docker rm -f"  #  NOTE: 删除容器: Container
 alias "dcrmi"="docker rmi"   #  NOTE: 删除镜像: Image
 alias "dcu"="sudo docker-compose -f ~/.config/docker-compose/docker-compose.yml -p se7en up -d"
 
-
 funciton tmuxopen() {
     tmux attach -t $1
 }
@@ -292,7 +290,6 @@ funciton tmuxkill() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 export FZF_DEFAULT_COMMAND='fd --hidden --follow -E ".git" -E "node_modules" . /home /etc'
 export FZF_COMPLETION_TRIGGER='\'
@@ -323,9 +320,7 @@ export PATH=$PATH:~/.local/share/bob/nvim-bin/
 
 export PATH=$PATH:~/.local/share/nvim/mason/bin
 
-
 export DISABLE_AUTO_TITLE='true'
-
 
 ####### golang ########
 export GOROOT=/usr/lib/go
@@ -392,7 +387,7 @@ export LS_COLORS="$(vivid generate snazzy)"
 export FLYCTL_INSTALL="/home/se7en/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
-
+export KITTY_DISABLE_WAYLAND=1
 
 #Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
