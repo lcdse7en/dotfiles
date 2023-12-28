@@ -20,7 +20,6 @@ RESET=$(printf '\033[m')
 clonepath="$HOME/github_upload"
 stowpath="$HOME/dotfiles"
 
-
 Yay_packages() {
     array=(
         waybar-hyprland-git
@@ -137,6 +136,7 @@ Pacman_packages() {
         odt2txt
         gnumeric
         joshuto
+        yazi
         stow
         nsxiv
         trash-cli
@@ -363,7 +363,6 @@ Typst() {
         cargo install just
     fi
 }
-
 
 Git_config() {
     printf "$YELLOW%s"
@@ -752,7 +751,6 @@ Zsh() {
         fi
     fi
 }
-
 
 main() {
     # Yay_packages
