@@ -46,7 +46,8 @@ keymap = [
 	{ on = [ "<Enter>" ],   exec = "open",                   desc = "Open the selected files" },
 	{ on = [ "<C-Enter>" ], exec = "open --interactive",     desc = "Open the selected files interactively" },  # It's cool if you're using a terminal that supports CSI u
 	{ on = [ "y","y" ],         exec = "yank",                   desc = "Copy the selected files" },
-	{ on = [ "d","d" ],         exec = "yank --cut",             desc = "Cut the selected files" },
+  { on = ["x"], exec = ["yank --cut", "escape --visual --select"], desc = "Cut the selected files" },
+	# { on = [ "d","d" ],         exec = "yank --cut",             desc = "Cut the selected files" },
 	{ on = [ "p" ],         exec = "paste",                  desc = "Paste the files" },
 	{ on = [ "P" ],         exec = "paste --force",          desc = "Paste the files (overwrite if the destination exists)" },
 	#{ on = [ "k" ],         exec = "paste --follow",         desc = "Paste the files (follow the symlinks)" },
@@ -126,6 +127,7 @@ keymap = [
 	{ on = [ "g", "f", "c" ],       exec = "cd ~/.config",     desc = "Go to the config directory" },
 	{ on = [ "g", "f", "d" ],       exec = "cd ~/dotfiles",     desc = "Go to the dotfiles directory" },
 	{ on = [ "g", "f", "h" ],       exec = "cd ~/.config/hypr",     desc = "Go to the hypr directory" },
+	{ on = [ "g", "f", "n" ],       exec = "cd ~/.config/nvim",     desc = "Go to the nvim directory" },
 	{ on = [ "g", "f", "p" ],       exec = "cd ~/Pictures/",     desc = "Go to the pictures directory" },
 	{ on = [ "g", "f", "r" ],       exec = "cd ~/PyProject/se7en-rye/",     desc = "Go to the se7en-rye directory" },
 	{ on = [ "g", "f", "y" ],       exec = "cd ~/.config/yazi",     desc = "Go to the yazi directory" },
