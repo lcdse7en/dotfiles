@@ -191,6 +191,7 @@ alias m="neomutt"
 alias "fd"='fd(){ cd $(find ~/ -type d | fzf);ra;};fd'
 alias "fe"='fe(){ nvim $(find ~/ -type f | fzf);};fe'
 alias "lf"='lfub'
+alias "yz"='yazi'
 alias "jo"='joshuto'
 alias "patch"="sudo patch -p1 <"
 alias "clean"="sudo make clean install"
@@ -390,6 +391,6 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 export KITTY_DISABLE_WAYLAND=1
 
 #Display Pokemon
-pokemon-colorscripts --no-title -r 1,3,6
+# pokemon-colorscripts --no-title -r 1,3,6
 
 setopt no_nomatch
