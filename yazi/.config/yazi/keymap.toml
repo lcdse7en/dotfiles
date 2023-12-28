@@ -24,12 +24,10 @@ keymap = [
 
 	{ on = [ "<Up>" ],    exec = "arrow -1", desc = "Move cursor up" },
 	{ on = [ "<Down>" ],  exec = "arrow 1",  desc = "Move cursor down" },
-
   { on = ["h"], exec = ["leave", "escape --visual --select"], desc = "Go back to the parent directory" },
   { on = ["l"], exec = ["enter", "escape --visual --select"], desc = "Enter the child directory" },
   { on = ["H"], exec = "back", desc = "Go back to the previous directory" },
   { on = ["L"], exec = "forward", desc = "Go forward to the next directory" },
-
   { on = ["S"], exec = '''shell "$SHELL" --block --confirm''', desc = "Open shell here" },
 
 	{ on = [ "g", "g" ], exec = "arrow -99999999", desc = "Move cursor to the top" },
