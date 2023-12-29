@@ -75,8 +75,8 @@ keymap = [
 	# Find
 	{ on = [ "/" ], exec = "find" },
 	{ on = [ "?" ], exec = "find --previous" },
-	{ on = [ "k" ], exec = "find_arrow" },
-	{ on = [ "K" ], exec = "find_arrow --previous" },
+	{ on = [ "-" ], exec = "find_arrow" },
+	{ on = [ "=" ], exec = "find_arrow --previous" },
 
 	# Sorting
 	{ on = [ "s", "a" ], exec = "sort alphabetical --dir_first",           desc = "Sort alphabetically, directories first" },
