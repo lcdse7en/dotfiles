@@ -120,6 +120,7 @@ keymap = [
   # ================================================================================
 	{ on = [ "g", "f", "c" ],       exec = "cd ~/.config",     desc = "Go to the config directory" },
 	{ on = [ "g", "f", "d" ],       exec = "cd ~/dotfiles",     desc = "Go to the dotfiles directory" },
+	{ on = [ "g", "f", "g" ],       exec = "cd ~/github_upload",     desc = "Go to the github_upload directory" },
 	{ on = [ "g", "f", "h" ],       exec = "cd ~/.config/hypr",     desc = "Go to the hypr directory" },
 	{ on = [ "g", "f", "n" ],       exec = "cd ~/.config/nvim",     desc = "Go to the nvim directory" },
 	{ on = [ "g", "f", "p" ],       exec = "cd ~/Pictures/",     desc = "Go to the pictures directory" },

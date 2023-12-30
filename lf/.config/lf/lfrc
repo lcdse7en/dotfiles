@@ -1,6 +1,5 @@
 # Luke's lf settings
 
-
 # Note on Image Previews
 # For those wanting image previews, like this system, there are four steps to
 # set it up. These are done automatically for LARBS users, but I will state
@@ -196,7 +195,6 @@ cmd setbg "$1"
 #     lf -remote "send $id unselect"
 # }}
 
-
 cmd bulkrename ${{
     tmpfile_old="$(mktemp)"
     tmpfile_new="$(mktemp)"
@@ -276,14 +274,12 @@ map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
 
-
 # map copy file or file name
 map yy copy
 map yd $dirname -- "$f" | head -c-1 | xclip -i -selection clipboard
 map yp $printf "%s" "$fx" | xclip -selection clipboard
 map yn $basename -a -- $fx | head -c-1 | xclip -i -selection clipboard
 map ye yank-basename-without-extension
-
 
 # show 1 pannel or 2 pannel
 map w %lf -remote "send $id set ratios 1:2"
