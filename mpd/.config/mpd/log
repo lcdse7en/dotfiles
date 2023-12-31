@@ -605,3 +605,4 @@ Dec 16 21:10 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Dec 16 21:10 : player: played "english/Brian McKnight/14 Still (Live).m4a"
 Dec 16 21:10 : exception: Not playing
 Dec 16 21:14 : player: played "korea/kard/03 Push & Pull.mp3"
+Dec 31 09:22 : output: Failed to play on "Pipewire Sound Server" (pipewire): no target node available
