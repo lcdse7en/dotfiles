@@ -794,12 +794,12 @@ main() {
     # clone_se7en_repo
     # Stow_Dir
     # Font
+    Rustup
     # Python
     # Fcitx5
     # Zsh
     # CargoMirror
     # Typst
-    Rustup
 }
 
 main
