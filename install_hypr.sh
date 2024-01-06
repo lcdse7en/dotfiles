@@ -82,7 +82,7 @@ Pacman_packages() {
         slurp
         dolphin
         konsole
-        rust
+        # rust
         qt5-wayland
         qt6-wayland
         qt5-quickcontrols
@@ -190,7 +190,7 @@ Pacman_packages() {
         xdotool
         jq
         stylua
-        typst
+        # typst
         python
         go
         deno
@@ -752,6 +752,17 @@ Zsh() {
     fi
 }
 
+Rustup() {
+		printf "${YELLOW}%s"
+		read -r -p "Have you already installed rustup? [y/N]" -e answer
+		printf "${RESET}%s"
+
+		if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+				printf "${SKYBLUE}%s${RESET}\n" "Installing rustup ..."
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+		fi
+}
+
 main() {
     # Yay_packages
     # Paru_packages
@@ -762,11 +773,12 @@ main() {
     # clone_se7en_repo
     # Stow_Dir
     # Font
-    Python
+    # Python
     # Fcitx5
     # Zsh
     # CargoMirror
     # Typst
+    Rustup
 }
 
 main
