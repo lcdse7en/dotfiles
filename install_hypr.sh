@@ -756,10 +756,31 @@ Rustup() {
 		printf "${YELLOW}%s"
 		read -r -p "Have you already installed rustup? [y/N]" -e answer
 		printf "${RESET}%s"
-
 		if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
 				printf "${SKYBLUE}%s${RESET}\n" "Installing rustup ..."
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+        rustc --version
+		fi
+
+		printf "${YELLOW}%s"
+		read -r -p "Do you want to update rust? [y/N]" -e answer
+		printf "${RESET}%s"
+		if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+				printf "${SKYBLUE}%s${RESET}\n" "rust has been not update!"
+		else
+				printf "${SKYBLUE}%s${RESET}\n" "updating rust ... "
+				rustup update
+		fi
+
+		printf "${YELLOW}%s"
+		read -r -p "Have you want to uninstall rust? [y/N]" -e answer
+		printf "${RESET}%s"
+		if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+				printf "${SKYBLUE}%s${RESET}\n" "rust has been not uninstall!"
+		else
+				printf "${SKYBLUE}%s${RESET}\n" "uninstalling rust ... "
+		    rustup self uninstall
 		fi
 }
 
