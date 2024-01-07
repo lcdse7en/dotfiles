@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+#********************************************
+# Author      : lcdse7en                    *
+# E-mail      : 2353442022@qq.com           *
+# Create_Time : 2024-01-07 08:32:35         *
+# Description :                             *
+#********************************************
+
+# source /etc/profile.d/import_shell_libs.sh
+
+RED=$(printf '\033[31m')
+GREEN=$(printf '\033[32m')
+YELLOW=$(printf '\033[33m')
+BLUE=$(printf '\033[34m')
+SKYBLUE=$(printf '\033[36m')
+BOLD=$(printf '\033[1m')
+RESET=$(printf '\033[m')
+
+Rsync() {
+    LOCAL_REPO_PATH=./
+    REMOTE_NODE=se7en@192.168.1.1
+    REMOTE_PATH=$HOME/PyProject
+    EXCLUDE_FILE=${LOCAL_REPO_PATH}/.gitignore
+    EXCLUDE_PATTERM=(".git")
+    FILE_SIZE_LIMIT=1000m
+
+    SYNC_CMD="rsync -avhz --delete --force --max-size=$FILE_SIZE_LIMIT ${LOCAL_REPO_PATH}"
+
+    if [ ! -z "$EXCLUDE_FILE" ] && [ -f $LOCAL_REPO_PATH/$EXCLUDE_FILE ]; then
+        SYNC_CMD="${SYNC_CMD} --exclude-from=${EXCLUDE_FILE}"
+    fi
+
+    SYNC_CMD="$SYNC_CMD $REMOTE_NODE:$REMOTE_PATH"
+    echo $SYNC_CMD
+    eval $SYNC_CMD
+
+    while true; do
+        fswatch -1 ${LOCAL_REPO_PATH} >/dev/null
+        eval $SYNC_CMD
+        sleep 1
+    done
+}
+
+main() {
+    Rsync
+}
+
+main
