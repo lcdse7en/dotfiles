@@ -237,7 +237,7 @@ alias "lag"="logo-ls -AD"
 alias "llg"="logo-ls -alD"
 # ------------ logo-ls End --------------------
 
-alias "rcf"="rsync -r -v -u"
+alias "rcf"="rsync -r -v -u --delete --force"
 # alias "rcf"='rcf(){ rsync \-r \-v \-u;};rcf'
 alias "rcx"="rsync --bwlimit=30000 --progress --append-verify"
 alias "rcb"="rsync -r -v --archive"
