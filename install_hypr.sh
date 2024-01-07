@@ -40,6 +40,7 @@ Yay_packages() {
         eww-wayland
         pokemon-colorscripts-git
         fontpreview
+        fswatch
         ctpv
         ttf-times-new-roman
         google-chrome
