@@ -31,6 +31,10 @@ Rsync() {
         SYNC_CMD="${SYNC_CMD} --exclude-from=${EXCLUDE_FILE}"
     fi
 
+    for pattern in "${EXCLUDE_PATTERM[@]}"; do
+        SYNC_CMD="${SYNC_CMD}" --exclude=$pattern
+    done
+
     SYNC_CMD="$SYNC_CMD $REMOTE_NODE:$REMOTE_PATH"
     echo $SYNC_CMD
     eval $SYNC_CMD
