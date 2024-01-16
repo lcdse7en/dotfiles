@@ -150,5 +150,5 @@ image_bound = [0, 0]
 enabled = false
 
 [plugins]
-preload = ["~/.config/yazi/ui.lua", "~/.config/yazi/symlink.lua"]
+# preload = ["~/.config/yazi/ui.lua", "~/.config/yazi/symlink.lua"]
 # preload = ["~/.config/yazi/hide_statusbar.lua"]
