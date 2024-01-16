@@ -138,6 +138,7 @@ Pacman_packages() {
         gnumeric
         joshuto
         yazi
+        unarchiver
         stow
         nsxiv
         trash-cli

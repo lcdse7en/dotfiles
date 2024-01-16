@@ -118,13 +118,16 @@ keymap = [
   # ================================================================================
   # se7en config
   # ================================================================================
+	{ on = [ "g", "a" ],       exec = "cd ~/TypstProject/Accounting",     desc = "Go to the Accounting directory" },
 	{ on = [ "g", "f", "c" ],       exec = "cd ~/.config",     desc = "Go to the config directory" },
 	{ on = [ "g", "f", "d" ],       exec = "cd ~/dotfiles",     desc = "Go to the dotfiles directory" },
 	{ on = [ "g", "f", "g" ],       exec = "cd ~/github_upload",     desc = "Go to the github_upload directory" },
 	{ on = [ "g", "f", "h" ],       exec = "cd ~/.config/hypr",     desc = "Go to the hypr directory" },
+	{ on = [ "g", "f", "l" ],       exec = "cd ~/.config/lf",     desc = "Go to the lf directory" },
 	{ on = [ "g", "f", "n" ],       exec = "cd ~/.config/nvim",     desc = "Go to the nvim directory" },
 	{ on = [ "g", "f", "p" ],       exec = "cd ~/Pictures/",     desc = "Go to the pictures directory" },
 	{ on = [ "g", "f", "r" ],       exec = "cd ~/PyProject/se7en-rye/",     desc = "Go to the se7en-rye directory" },
+	{ on = [ "g", "f", "u" ],       exec = "cd /run/media/se7en/Thinkplus/",     desc = "Go to the Thinkplus directory" },
 	{ on = [ "g", "f", "y" ],       exec = "cd ~/.config/yazi",     desc = "Go to the yazi directory" },
 
 	# Help
