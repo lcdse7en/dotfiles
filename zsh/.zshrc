@@ -356,6 +356,7 @@ export RYE_NO_AUTO_INSTALL=1
 
 export NODE_PATH="/usr/lib/node_modules/"
 export NODE_OPTIONS="--no-deprecation"
+# export RUST_BACKTRACE=full
 
 #  NOTE: LF color
 

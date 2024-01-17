@@ -265,24 +265,40 @@ GithubHosts() {
 				#Github Hosts Start
 				#Update Time: 2023-12-25
 				#Project Address: https://githubfast.com/maxiaof/github-hosts
-				#Update URL: https://usercontent.githubfast.com/raw/maxiaof/github-hosts/master/hosts
-				140.82.113.4                 central.github.com
-				140.82.113.4                 assets-cdn.github.com
-				151.101.1.6                  github.map.fastly.net
-				151.101.1.6                  github.global.ssl.fastly.net
-				140.82.113.4                 gist.github.com
-				185.199.108.153              github.io
-				140.82.113.4                 github.com
-				140.82.113.4                 api.github.com
-				140.82.113.4                 codeload.github.com
-				72.21.206.80                 github-cloud.s3.amazonaws.com
-				72.21.206.80                 github-com.s3.amazonaws.com
-				72.21.206.80                 github-production-release-asset-2e65be.s3.amazonaws.com
-				72.21.206.80                 github-production-user-asset-6210df.s3.amazonaws.com
-				72.21.206.80                 github-production-repository-file-5c1aeb.s3.amazonaws.com
-				185.199.108.153              githubstatus.com
+				#Update URL: https://gitlab.com/ineo6/hosts/-/raw/master/next-hosts
+				185.199.110.154              github.githubassets.com
+				140.82.113.22                central.github.com
+				185.199.109.133              desktop.githubusercontent.com
+				185.199.110.153              assets-cdn.github.com
+				185.199.111.133              camo.githubusercontent.com
+				185.199.110.133              github.map.fastly.net
+				151.101.193.194              github.global.ssl.fastly.net
+				140.82.113.3                 gist.github.com
+				185.199.111.153              github.io
+				140.82.114.4                 github.com
+				140.82.114.6                 api.github.com
+				185.199.111.133              raw.githubusercontent.com
+				185.199.111.133              user-images.githubusercontent.com
+				185.199.110.133              favicons.githubusercontent.com
+				185.199.110.133              avatars5.githubusercontent.com
+				185.199.109.133              avatars4.githubusercontent.com
+				185.199.109.133              avatars3.githubusercontent.com
+				185.199.108.133              avatars2.githubusercontent.com
+				185.199.111.133              avatars1.githubusercontent.com
+				185.199.111.133              avatars0.githubusercontent.com
+				185.199.109.133              avatars.githubusercontent.com
+				140.82.114.10                codeload.github.com
+				52.217.65.212                github-cloud.s3.amazonaws.com
+				54.231.164.121               github-com.s3.amazonaws.com
+				52.217.133.161               github-production-release-asset-2e65be.s3.amazonaws.com
+				54.231.137.249               github-production-user-asset-6210df.s3.amazonaws.com
+				52.216.170.59                github-production-repository-file-5c1aeb.s3.amazonaws.com
+				185.199.110.153              githubstatus.com
 				140.82.114.18                github.community
-				140.82.113.4                 raw.github.com
+				185.199.109.133              media.githubusercontent.com
+				185.199.109.133              objects.githubusercontent.com
+				185.199.110.133              raw.github.com
+				20.221.80.166                copilot-proxy.githubusercontent.com
 				#Github Hosts End
 				EOF
 }
@@ -790,13 +806,13 @@ main() {
     # Yay_packages
     # Paru_packages
     # Pacman_packages
-    # GithubHosts
+    GithubHosts
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo
     # Stow_Dir
     # Font
-    Rustup
+    # Rustup
     # Python
     # Fcitx5
     # Zsh
