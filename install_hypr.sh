@@ -220,8 +220,8 @@ Pacman_packages() {
         ghostscript
         gsfonts
         gutenprint
-        # hpoj
-        # hplip
+        hpoj
+        hplip
         python-pyqt5
         python-reportlab
         python-notify2
