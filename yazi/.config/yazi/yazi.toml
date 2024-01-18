@@ -83,6 +83,7 @@ extract = [
 pdf = [{ exec = 'zathura "$1"', desc = "Open" }]
 # pdf = [{ exec = 'okular "$1"', desc = "Open" }]
 docx = [{ exec = 'xdg-open "$1"', desc = "Open" }]
+xlsx = [{ exec = 'libreoffice "$1"', desc = "Open" }]
 text = [
   # { exec = 'pypr hide yazi & kitty --detach $EDITOR "$@"', block = true, desc = "Open" },
   { exec = '$EDITOR "$@"', block = true, desc = "Open" },
@@ -119,6 +120,7 @@ rules = [
   { mime = "*/javascript", use = "text" },
 
   { mime = "application/pdf", use = "pdf" },
+  { mime = "text/xlsx", use = "xlsx" },
 
   # { mime = "application/zip", use = "archive" },
   # { mime = "application/gzip", use = "archive" },

@@ -129,6 +129,8 @@ keymap = [
 	{ on = [ "g", "f", "r" ],       exec = "cd ~/PyProject/se7en-rye/",     desc = "Go to the se7en-rye directory" },
 	{ on = [ "g", "f", "u" ],       exec = "cd /run/media/se7en/Thinkplus/",     desc = "Go to the Thinkplus directory" },
 	{ on = [ "g", "f", "y" ],       exec = "cd ~/.config/yazi",     desc = "Go to the yazi directory" },
+	{ on = [ "g", "f", "m" ],       exec = "cd ~/github_upload/Music/",     desc = "Go to the Music directory" },
+	{ on = [ "g", "/" ],       exec = "cd /",     desc = "Go to the /" },
 
 	# Help
 	{ on = [ "~" ], exec = "help", desc = "Open help" },
