@@ -192,7 +192,6 @@ Pacman_packages() {
         xdotool
         jq
         stylua
-        # typst
         python
         go
         deno
@@ -802,11 +801,43 @@ Rustup() {
 		fi
 }
 
+Texlive() {
+		printf "${YELLOW}%s"
+		read -r -p "Have you already download texlive ISO? [y/N]" -e answer
+		printf "${RESET}%s"
+
+		if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+				cd "$HOME/Downloads"
+				wget https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive.iso
+		else
+				printf "${SKYBLUE}%s${RESET}\n" "not download texlive ISO... "
+		fi
+
+		printf "${YELLOW}%s"
+		read -r -p "Do you want to install texlive? [y/N]" -e answer
+		printf "${RESET}%s"
+
+		if [[ "$answer" != y ]] && [[ "$answer" != Y ]]; then
+				printf "${SKYBLUE}%s${RESET}\n" "uninstall texlive."
+		else
+				sudo rm -rf /usr/local/texlive
+
+				cd "$HOME/Downloads"
+				sudo mount -o loop texlive.iso /mnt
+				cd /mnt || exit
+				sudo ./install-tl
+				sudo umount /mnt
+		fi
+
+		sudo tlmgr update --self
+		sudo tlmgr install exam-zh
+}
+
 main() {
     # Yay_packages
     # Paru_packages
     # Pacman_packages
-    GithubHosts
+    # GithubHosts
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo
@@ -818,6 +849,7 @@ main() {
     # Zsh
     # CargoMirror
     # Typst
+    Texlive
 }
 
 main
