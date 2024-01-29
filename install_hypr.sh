@@ -833,6 +833,13 @@ Texlive() {
 		sudo tlmgr install exam-zh
 }
 
+Typst_Local_Packages() {
+		Local_Packages_Dir=$HOME/.local/share/typst/packages/local
+		cd $Local_Packages_Dir
+
+		git clone https://github.com/polazarus/typst-svg-emoji
+}
+
 main() {
     # Yay_packages
     # Paru_packages
@@ -849,7 +856,8 @@ main() {
     # Zsh
     # CargoMirror
     # Typst
-    Texlive
+    Typst_Local_Packages
+    # Texlive
 }
 
 main

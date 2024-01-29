@@ -5,19 +5,18 @@
 # Description:                             *
 #*******************************************
 
-session: accounting
+session: example
 
-root: /home/se7en/TypstProject/Accounting/
+root: /home/se7en/TypstProject/Accounting/example/
 
 windows:
-  - name: accounting
+  - name: example
     # root: accounting
     # manual: true # you can start this window only manually, using the -w arg
     # layout: tiled
     commands:
       - clear
-      - rm -rf output.pdf
-      - typst-live main.typ
+      - latexmk -pvc main.tex
     panes:
       # - type: vertical
       #   commands:
@@ -27,7 +26,5 @@ windows:
       - type: horizontal
         commands:
           - clear
-          - sudo killall firefox
-          - zop
+          - yy
           # - cd example
-          # - latexmk -pvc main.tex

@@ -223,6 +223,8 @@ alias "at"="tmux at"
 alias "sss"="smug start server" #  NOTE: smug session tool
 alias "ssr"="smug start rye" #  NOTE: smug session tool
 alias "ssa"="smug start accounting" #  NOTE: smug session tool
+alias "ssf"="smug start financial" #  NOTE: smug session tool
+alias "ssae"="smug start example" #  NOTE: smug session tool
 # ------------ Tmux End--------------------
 
 #  NOTE: scrapy crawl

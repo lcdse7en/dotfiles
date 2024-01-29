@@ -118,7 +118,8 @@ keymap = [
   # ================================================================================
   # se7en config
   # ================================================================================
-	{ on = [ "g", "a" ],       exec = "cd ~/TypstProject/Accounting",     desc = "Go to the Accounting directory" },
+	{ on = [ "g", "a", "a" ],       exec = "cd ~/TypstProject/Accounting",     desc = "Go to the Accounting directory" },
+	{ on = [ "g", "a", "f" ],       exec = "cd ~/TypstProject/Financial_Cost_Management",     desc = "Go to the Financial Cost Management directory" },
 	{ on = [ "g", "f", "c" ],       exec = "cd ~/.config",     desc = "Go to the config directory" },
 	{ on = [ "g", "f", "d" ],       exec = "cd ~/dotfiles",     desc = "Go to the dotfiles directory" },
 	{ on = [ "g", "f", "g" ],       exec = "cd ~/github_upload",     desc = "Go to the github_upload directory" },

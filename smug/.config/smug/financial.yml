@@ -5,12 +5,12 @@
 # Description:                             *
 #*******************************************
 
-session: accounting
+session: financial
 
-root: /home/se7en/TypstProject/Accounting/
+root: /home/se7en/TypstProject/Financial_Cost_Management/
 
 windows:
-  - name: accounting
+  - name: financial
     # root: accounting
     # manual: true # you can start this window only manually, using the -w arg
     # layout: tiled
