@@ -16,6 +16,7 @@ map gft cd ~/dotfiles/tmux/
 map gfg cd ~/github_upload/
 map gfi cd ~/github_upload/account/
 map gfl cd ~/dotfiles/lf/.config/lf/
+map gfy cd ~/dotfiles/yazi/.config/yazi/
 map gfS cd ~/.config/smug/
 map gfj cd ~/dotfiles/joshuto/.config/joshuto/
 map gfz cd ~/.local/share/nvim/lazy/
