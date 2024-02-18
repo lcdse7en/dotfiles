@@ -479,6 +479,7 @@ clone_se7en_repo() {
         # dotfiles
         # se7en-nvim
         chrome_extensions
+        contact
     )
 
     for element in "${array[@]}"; do
