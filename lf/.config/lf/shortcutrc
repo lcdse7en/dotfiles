@@ -30,3 +30,4 @@ map gle cd ~/.emacs.d
 map gld cd ~/.local/src/dwm
 map glb cd ~/.local/src/dwmblocks
 map gnp cd ~/.local/share/nvim/site/pack/packer/
+map gfp cd ~/TypstProject/
