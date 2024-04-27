@@ -1,7 +1,9 @@
 [manager]
 
 prepend_keymap = [
+  { on = [ "<Esc>" ], exec = "close", desc = "Cancel input" },
   { on = [ "l" ], exec = "plugin --sync smart-enter", desc = "Enter the child directory, or open the file" },
+  { on = [ "<Enter>" ], exec = "plugin --sync smart-enter", desc = "Enter the child directory, or open the file" },
   { on = [ "<Right>" ], exec = "plugin --sync smart-enter", desc = "Enter the child directory, or open the file" },
   { on = [ "a" ], exec = "plugin keyjump --sync --args=keep", desc = "Keyjump (Keep mode)" },
 ]
@@ -26,6 +28,7 @@ keymap = [
 	{ on = [ "<Down>" ],  exec = "arrow 1",  desc = "Move cursor down" },
   { on = ["h"], exec = ["leave", "escape --visual --select"], desc = "Go back to the parent directory" },
   { on = ["l"], exec = ["enter", "escape --visual --select"], desc = "Enter the child directory" },
+  # { on = [ "l" ], exec = "enter", desc = "Enter the child directory" },
   { on = ["H"], exec = "back", desc = "Go back to the previous directory" },
   { on = ["L"], exec = "forward", desc = "Go forward to the next directory" },
   { on = ["S"], exec = '''shell "$SHELL" --block --confirm''', desc = "Open shell here" },
@@ -134,6 +137,7 @@ keymap = [
 	{ on = [ "g", "f", "h" ],       exec = "cd ~/.config/hypr",     desc = "Go to the hypr directory" },
 	{ on = [ "g", "f", "l" ],       exec = "cd ~/.config/lf",     desc = "Go to the lf directory" },
 	{ on = [ "g", "f", "n" ],       exec = "cd ~/.config/nvim",     desc = "Go to the nvim directory" },
+	{ on = [ "g", "f", "w" ],       exec = "cd ~/.config/wezterm",     desc = "Go to the wezterm directory" },
 	{ on = [ "g", "f", "p" ],       exec = "cd ~/Pictures/",     desc = "Go to the pictures directory" },
 	{ on = [ "g", "f", "r" ],       exec = "cd ~/PyProject/se7en-rye/",     desc = "Go to the se7en-rye directory" },
 	{ on = [ "g", "f", "u" ],       exec = "cd /run/media/se7en/Thinkplus/",     desc = "Go to the Thinkplus directory" },

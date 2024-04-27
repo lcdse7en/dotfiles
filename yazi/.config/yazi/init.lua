@@ -166,14 +166,23 @@ function Status:owner()
 	})
 end
 
-function Status:render(area)
-	self.area = area
+-- function Status:render(area)
+-- 	self.area = area
+--
+-- 	local left = ui.Line({ self:mode(), self:size(), self:name() })
+-- 	local right = ui.Line({ self:owner(), self:permissions(), self:percentage(), self:position() })
+-- 	return {
+-- 		ui.Paragraph(area, { left }),
+-- 		ui.Paragraph(area, { right }):align(ui.Paragraph.RIGHT),
+-- 		table.unpack(Progress:render(area, right:width())),
+-- 	}
+-- end
 
-	local left = ui.Line({ self:mode(), self:size(), self:name() })
-	local right = ui.Line({ self:owner(), self:permissions(), self:percentage(), self:position() })
-	return {
-		ui.Paragraph(area, { left }),
-		ui.Paragraph(area, { right }):align(ui.Paragraph.RIGHT),
-		table.unpack(Progress:render(area, right:width())),
-	}
+function Status:render()
+	return {}
+end
+
+local old_manager_render = Manager.render
+function Manager:render(area)
+	return old_manager_render(self, ui.Rect({ x = area.x, y = area.y, w = area.w, h = area.h + 1 }))
 end
