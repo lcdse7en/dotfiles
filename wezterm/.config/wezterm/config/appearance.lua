@@ -16,15 +16,15 @@ return {
 	background = {
 		{
 			source = { File = wezterm.GLOBAL.background },
+			-- source = { File = { path = "../backdrops/5-cm.jpg", speed = 0.05 } },
 		},
 		{
 			source = { Color = colors.background },
 			height = "100%",
 			width = "100%",
-			opacity = 0.96,
+			opacity = 0.9,
 		},
 	},
-
 	-- scrollbar
 	enable_scroll_bar = false,
 
@@ -39,10 +39,10 @@ return {
 	-- window
 	window_padding = {
 		left = 5,
-		right = 1,
+		right = 0,
 		-- top = 12,
 		-- bottom = 7,
-		top = 8,
+		top = 2,
 		bottom = 0,
 	},
 	window_close_confirmation = "NeverPrompt",

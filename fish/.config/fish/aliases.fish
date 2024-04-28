@@ -20,8 +20,28 @@ end
 
 alias e="exit"
 alias yy="yazi"
+alias lf="yazi"
 alias c="clear"
 alias s="fastfetch"
+alias ez="nvim ~/.zshrc"
+alias efa="nvim ~/.config/fish/aliases.fish"
+
+# ------------ Tmux Start-------------------
+alias "tmux"="tmux -u"
+alias "tls"="tmux ls" #  NOTE: 列出会话
+alias "tcs"="tmux new -s" #  NOTE: 新建会话
+alias "td"="tmux detach" #  NOTE: 分离会话
+alias "tsc"="tmux switch -t" #  NOTE: 切换会话
+alias "tka"="tmux ls | cut -d: -f 1 | xargs -n1 tmux kill-session -t" #  NOTE: 杀死全部会话
+alias "ts"="tmux source ~/.tmux.conf"
+alias "at"="tmux at"
+alias "sss"="smug start server" #  NOTE: smug session tool
+alias "ssr"="smug start rye" #  NOTE: smug session tool
+alias "ssa"="smug start accounting" #  NOTE: smug session tool
+alias "ssae"="smug start example_accounting" #  NOTE: smug session tool
+alias "ssf"="smug start financial" #  NOTE: smug session tool
+alias "ssfe"="smug start example_financial" #  NOTE: smug session tool
+# ------------ Tmux End--------------------
 
 # mv, rm, cp
 alias mv 'command mv --interactive --verbose'

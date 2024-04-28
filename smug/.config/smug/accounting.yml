@@ -10,24 +10,21 @@ session: accounting
 root: /home/se7en/TypstProject/Accounting/
 
 windows:
-  - name: accounting
-    # root: accounting
-    # manual: true # you can start this window only manually, using the -w arg
-    # layout: tiled
+  - name: edit-accounting
+    layout: main-horizontal
     commands:
+      - fish
+      - clear
+      - yy
+
+  - name: run
+    layout: main-horizontal
+    commands:
+      - fish
       - clear
       - rm -rf output.pdf
-      - typst-live main.typ
-    panes:
-      # - type: vertical
-      #   commands:
-      #     - clear
-      #     - cd ~/github_upload/accounting/
-      #     - clear
-      - type: horizontal
-        commands:
-          - clear
-          - sudo killall firefox
-          - zop
-          # - cd example
-          # - latexmk -pvc main.tex
+      - typst-live main.typ &
+      - sleep 3
+      - pkill -f firefox
+      - sleep 5
+      - zathura output.pdf &

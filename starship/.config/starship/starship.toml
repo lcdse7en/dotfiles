@@ -202,7 +202,6 @@ symbol = " "
 [spack]
 symbol = "🅢 "
 
-
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
 flamingo = "#f0c6c6"
@@ -230,6 +229,5 @@ surface0 = "#363a4f"
 base = "#24273a"
 mantle = "#1e2030"
 crust = "#181926"
-
 
 palette = "catppuccin_macchiato"
