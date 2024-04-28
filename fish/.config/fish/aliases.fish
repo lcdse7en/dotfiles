@@ -43,6 +43,9 @@ alias "ssf"="smug start financial" #  NOTE: smug session tool
 alias "ssfe"="smug start example_financial" #  NOTE: smug session tool
 # ------------ Tmux End--------------------
 
+alias "hs"="sudo shutdown -h now"
+alias "rs"="sudo shutdown -r now"
+
 # mv, rm, cp
 alias mv 'command mv --interactive --verbose'
 alias rm 'command rm --interactive --verbose'
