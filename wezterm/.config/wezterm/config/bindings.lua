@@ -13,6 +13,55 @@ elseif platform.is_win or platform.is_linux then
 	mod.SUPER_REV = "ALT|CTRL"
 end
 
+local w = require("wezterm")
+-- if you are *NOT* lazy-loading smart-splits.nvim (recommended)
+local function is_vim(pane)
+	-- this is set by the plugin, and unset on ExitPre in Neovim
+	return pane:get_user_vars().IS_NVIM == "true"
+end
+
+-- if you *ARE* lazy-loading smart-splits.nvim (not recommended)
+-- you have to use this instead, but note that this will not work
+-- in all cases (e.g. over an SSH connection). Also note that
+-- `pane:get_foreground_process_name()` can have high and highly variable
+-- latency, so the other implementation of `is_vim()` will be more
+-- performant as well.
+local function is_vim(pane)
+	-- This gsub is equivalent to POSIX basename(3)
+	-- Given "/foo/bar" returns "bar"
+	-- Given "c:\\foo\\bar" returns "bar"
+	local process_name = string.gsub(pane:get_foreground_process_name(), "(.*[/\\])(.*)", "%2")
+	return process_name == "nvim" or process_name == "vim"
+end
+
+local direction_keys = {
+	h = "Left",
+	j = "Down",
+	k = "Up",
+	l = "Right",
+}
+
+local function split_nav(resize_or_move, key)
+	return {
+		key = key,
+		mods = resize_or_move == "resize" and "META" or "CTRL",
+		action = w.action_callback(function(win, pane)
+			if is_vim(pane) then
+				-- pass the keys through to vim/nvim
+				win:perform_action({
+					SendKey = { key = key, mods = resize_or_move == "resize" and "META" or "CTRL" },
+				}, pane)
+			else
+				if resize_or_move == "resize" then
+					win:perform_action({ AdjustPaneSize = { direction_keys[key], 3 } }, pane)
+				else
+					win:perform_action({ ActivatePaneDirection = direction_keys[key] }, pane)
+				end
+			end
+		end),
+	}
+end
+
 -- stylua: ignore
 local keys = {
    -- misc/useful --
@@ -105,30 +154,41 @@ local keys = {
    -- panes --
    -- panes: split panes
    {
-      key = [[\]],
+      key = [[-]],
       mods = mod.SUPER,
       action = act.SplitVertical({ domain = 'CurrentPaneDomain' }),
    },
    {
-      key = [[\]],
+      key = [[-]],
       mods = mod.SUPER_REV,
       action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
-   },
-
+  },
    -- panes: zoom+close pane
-   { key = 'Enter', mods = mod.SUPER,     action = act.TogglePaneZoomState },
+   { key = 'z', mods = mod.SUPER_REV,     action = act.TogglePaneZoomState },
    { key = 'w',     mods = mod.SUPER,     action = act.CloseCurrentPane({ confirm = false }) },
 
    -- panes: navigation
-   { key = 'k',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Up') },
-   { key = 'j',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Down') },
-   { key = 'h',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Left') },
-   { key = 'l',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Right') },
+   { key = 'K',     mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection('Up') },
+   { key = 'J',     mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection('Down') },
+   { key = 'H',     mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection('Left') },
+   { key = 'L',     mods = 'CTRL|SHIFT', action = act.ActivatePaneDirection('Right') },
    {
       key = 'p',
       mods = mod.SUPER_REV,
       action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }),
    },
+
+   -- panes: resize
+   { key = 'UpArrow', mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Up', 1 }) },
+   { key = 'DownArrow', mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Down', 1 }) },
+   { key = 'LeftArrow', mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Left', 1 }) },
+   { key = 'RightArrow', mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Right', 1 }) },
+
+   -- fonts --
+   -- fonts: resize
+   { key = 'UpArrow', mods = mod.SUPER, action = act.IncreaseFontSize },
+   { key = 'DownArrow', mods = mod.SUPER, action = act.DecreaseFontSize },
+   { key = 'r', mods = mod.SUPER, action = act.ResetFontSize },
 
    -- key-tables --
    -- resizes fonts
@@ -149,6 +209,22 @@ local keys = {
          name = 'resize_pane',
          one_shot = false,
          timemout_miliseconds = 1000,
+      }),
+   },
+   -- rename tab bar
+   {
+      key = 'R',
+      mods = 'CTRL|SHIFT',
+      action = act.PromptInputLine ({
+         description = 'Enter new name for tab',
+         action = wezterm.action_callback(function(window, pane, line)
+            -- line will be `nil` if they hit escape without entering anything
+            -- An empty string if they just hit enter
+            -- Or the actual line of text they wrote
+            if line then
+               window:active_tab():set_title(line)
+            end
+         end),
       }),
    },
 }

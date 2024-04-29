@@ -91,3 +91,4 @@ end
 
 starship init fish | source
 set PATH ~/.local/share/bob/nvim-bin $PATH
+set PATH ~/.cargo/bin/ $PATH

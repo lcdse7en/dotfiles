@@ -22,14 +22,14 @@ return {
 			source = { Color = colors.background },
 			height = "100%",
 			width = "100%",
-			opacity = 0.9,
+			opacity = 0.92,
 		},
 	},
 	-- scrollbar
 	enable_scroll_bar = false,
 
 	-- tab bar
-	enable_tab_bar = false,
+	enable_tab_bar = true,
 	hide_tab_bar_if_only_one_tab = false,
 	use_fancy_tab_bar = false,
 	tab_max_width = 25,
