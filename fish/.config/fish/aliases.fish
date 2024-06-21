@@ -19,12 +19,14 @@ function grep
 end
 
 alias e="exit"
+alias hx="helix"
 alias yy="yazi"
 alias lf="yazi"
 alias c="clear"
 alias s="fastfetch"
-alias ez="nvim ~/.zshrc"
-alias efa="nvim ~/.config/fish/aliases.fish"
+alias zshrc="nvim ~/.zshrc"
+alias fisha="nvim ~/.config/fish/aliases.fish"
+alias "ms"="sudo mysql -u root -p"
 
 # ------------ Tmux Start-------------------
 alias "tmux"="tmux -u"
@@ -38,6 +40,8 @@ alias "at"="tmux at"
 alias "sss"="smug start server" #  NOTE: smug session tool
 alias "ssr"="smug start rye" #  NOTE: smug session tool
 alias "ssa"="smug start accounting" #  NOTE: smug session tool
+alias "sst"="smug start tax" #  NOTE: smug session tool
+alias "ssp"="smug start python" #  NOTE: smug session tool
 alias "ssae"="smug start example_accounting" #  NOTE: smug session tool
 alias "ssf"="smug start financial" #  NOTE: smug session tool
 alias "ssfe"="smug start example_financial" #  NOTE: smug session tool
@@ -45,6 +49,7 @@ alias "ssfe"="smug start example_financial" #  NOTE: smug session tool
 
 alias "hs"="sudo shutdown -h now"
 alias "rs"="sudo shutdown -r now"
+alias "hl"="hyprland"
 
 # mv, rm, cp
 alias mv 'command mv --interactive --verbose'

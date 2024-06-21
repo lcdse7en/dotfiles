@@ -1,14 +1,24 @@
-theme = "edge_neon"
+
+theme = "catppuccin_mocha"
+# theme = "edge_neon"
 # theme = "rose_pine"
 
 [editor]
+line-number = "relative"
+undercurl = true
+auto-completion = true
+auto-info = true
 true-color = true
 cursorline = true
-line-number = "relative"
 completion-replace = true
 color-modes = true
 bufferline = "multiple"
 text-width = 80
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
 
 [keys.insert]
 j = { j = "normal_mode" }
@@ -32,13 +42,9 @@ mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
-
 [editor.lsp]
 display-messages = true
 display-inlay-hints = true
-
-[editor.cursor-shape]
-insert = "bar"
 
 [editor.file-picker]
 hidden = false
@@ -56,7 +62,6 @@ render = "all"
 render = true
 character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
-
 
 # line-up
 C-e = ["keep_primary_selection","extend_line","yank","move_line_up","open_above","normal_mode","replace_with_yanked", "move_line_down", "move_line_down", "extend_line", "delete_selection", "move_line_up", "move_line_up"]

@@ -92,3 +92,12 @@ end
 starship init fish | source
 set PATH ~/.local/share/bob/nvim-bin $PATH
 set PATH ~/.cargo/bin/ $PATH
+set PATH /usr/local/mysql/bin $PATH
+set PATH ~/.rye/shims/ $PATH
+set RYE_NO_AUTO_INSTALL 1
+set PATH /usr/local/texlive/2023/bin/x86_64-linux $PATH
+set HELIX_RUNTIME ~/.config/helix/runtime/
+
+# NOTE: rust mirror
+set RUSTUP_DIST_SERVER https://mirrors.ustc.edu.cn/rust-static
+set RUSTUP_UPDATE_ROOT https://mirrors.ustc.edu.cn/rust-static/rustup

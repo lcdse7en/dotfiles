@@ -1,0 +1,32 @@
+#*******************************************
+# Author:      se7enlcd                    *
+# E-mail:      2353442022@qq.com           *
+# Create_Time: 2023-06-07                  *
+# Description:                             *
+#*******************************************
+
+session: python
+
+root: /home/se7en/github_upload/pdf-source-file/init-files/
+
+windows:
+  - name: edit-python
+    layout: main-horizontal
+    commands:
+      - fish
+      - clear
+      - yy
+
+  - name: run
+    layout: main-horizontal
+    commands:
+      - fish
+      - clear
+      - sh run.sh
+  - name: open pdf
+    layout: main-horizontal
+    commands:
+      - fish
+      - clear
+      - cd pdfs
+      - zathura python.pdf

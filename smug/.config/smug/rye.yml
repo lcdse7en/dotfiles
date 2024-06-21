@@ -1,27 +1,25 @@
-session: rye-shell
+#*******************************************
+# Author:      se7enlcd                    *
+# E-mail:      2353442022@qq.com           *
+# Create_Time: 2023-06-07                  *
+# Description:                             *
+#*******************************************
 
-root: /home/se7en/PyProject/se7en-rye
+session: rye
 
-# before_start:
-#   - docker-compose -f my-microservices/docker-compose.yml up -d # my-microservices/docker-compose.yml is a relative to `root`
-
-# env:
-#   FOO: BAR
-
-# stop:
-#   - docker stop $(docker ps -q)
+root: /home/se7en/ryeproject
 
 windows:
-  - name: env
-    # layout: tiled  #  NOTE: layout: tiled, main-vertical, main-horizontal
+  - name: edit-python
+    layout: main-horizontal
     commands:
+      - fish
       - clear
-      - rye shell
-      - lf
-    # panes:
-    #   - type: horizontal #  NOTE: horizontal
-    #     commands:
-    #       - clear
-    #       - rye shell
-    #       - cd ./movies
-    #       - clear
+      - yy
+
+  - name: run
+    layout: main-horizontal
+    commands:
+      - fish
+      - clear
+      - cd koreandrama

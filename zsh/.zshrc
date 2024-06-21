@@ -224,6 +224,7 @@ alias "at"="tmux at"
 alias "sss"="smug start server" #  NOTE: smug session tool
 alias "ssr"="smug start rye" #  NOTE: smug session tool
 alias "ssa"="smug start accounting" #  NOTE: smug session tool
+alias "sst"="smug start tax" #  NOTE: smug session tool
 alias "ssae"="smug start example_accounting" #  NOTE: smug session tool
 alias "ssf"="smug start financial" #  NOTE: smug session tool
 alias "ssfe"="smug start example_financial" #  NOTE: smug session tool
@@ -395,6 +396,8 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 export KITTY_DISABLE_WAYLAND=1
 
+set -x HELIX_RUNTIME ~/.config/helix/runtime
+
 #Display Pokemon
 # pokemon-colorscripts --no-title -r 1,3,6
 
@@ -408,3 +411,5 @@ function ya() {
 	fi
 	rm -f -- "$tmp"
 }
+
+. "$HOME/.cargo/env"
