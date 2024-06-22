@@ -125,6 +125,7 @@ Pacman_packages() {
         openssh
         plocate
         cronie
+        dbeaver
         bat
         glow
         fzf
@@ -137,7 +138,6 @@ Pacman_packages() {
         odt2txt
         gnumeric
         joshuto
-        yazi
         unarchiver
         stow
         nsxiv
@@ -841,11 +841,17 @@ Typst_Local_Packages() {
 		git clone https://github.com/polazarus/typst-svg-emoji
 }
 
+Install-yazi() {
+    git clone git@github.com/lcdse7en/yazi.git
+    cd yazi
+    cargo build --release
+}
+
 main() {
     # Yay_packages
     # Paru_packages
     # Pacman_packages
-    GithubHosts
+    # GithubHosts
     # Git_config
     # Ssh-keygen
     # clone_se7en_repo
@@ -859,6 +865,7 @@ main() {
     # Typst
     # Typst_Local_Packages
     # Texlive
+    Install-yazi
 }
 
 main

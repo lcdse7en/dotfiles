@@ -146,7 +146,7 @@ keymap = [
 	{ on = [ "g", "f", "n" ],       exec = "cd ~/.config/nvim",     desc = "Go to the nvim directory" },
 	{ on = [ "g", "f", "w" ],       exec = "cd ~/.config/wezterm",     desc = "Go to the wezterm directory" },
 	{ on = [ "g", "f", "p" ],       exec = "cd ~/Pictures/",     desc = "Go to the pictures directory" },
-	{ on = [ "g", "f", "r" ],       exec = "cd ~/PyProject/se7en-rye/",     desc = "Go to the se7en-rye directory" },
+	{ on = [ "g", "f", "r" ],       exec = "cd ~/ryeproject/",     desc = "Go to the ryeproject directory" },
 	{ on = [ "g", "f", "u" ],       exec = "cd /run/media/se7en/Thinkplus/",     desc = "Go to the Thinkplus directory" },
 	{ on = [ "g", "f", "y" ],       exec = "cd ~/.config/yazi",     desc = "Go to the yazi directory" },
 	{ on = [ "g", "f", "m" ],       exec = "cd ~/github_upload/Music/",     desc = "Go to the Music directory" },

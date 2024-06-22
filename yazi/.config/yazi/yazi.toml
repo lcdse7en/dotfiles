@@ -1,20 +1,179 @@
 [manager]
-layout = [1, 4, 3]
+layout         = [1, 4, 3]
 # sort_by = "natural"
-sort_by = "modified"
-sort_reverse = true
+# sort_by = "modified"
+sort_by = "alphabetical"
+sort_sensitive = false
+sort_reverse   = false
 sort_dir_first = true
-linemode = "size"
-show_hidden = false
-show_symlink = false
+linemode       = "size"
+show_hidden    = false
+show_symlink   = false
+scrolloff      = 5
 
 [preview]
 tab_size = 2
 max_width = 26000
 max_height = 29000
 cache_dir = ""
+image_filter    = "triangle"
 ueberzug_scale  = 1
 ueberzug_offset = [ 0, 0, 0, 0 ]
+
+[settings]
+# Enable ueberzug/chafa for image previews
+ueberzug = true
+chafa = true
+debug = true
+
+# Scale factor for image rendering
+ueberzug_scale = 0.5  # Adjust this value based on your display scaling
+# Offset for image rendering
+ueberzug_offset = [0.5, 0.5, -0.5, -0.5]  # Adjust these values based on testing
+# Max width and height for image previews
+max_width = 80  # Set according to your terminal size
+max_height = 24
+
+[opener] # sets of definitions of openers referenced in rules below
+edit = [
+    { run = '${EDITOR:=nvim} "$@"', desc = "Default Editor ($EDITOR)", block = true, for = "unix" },
+
+    { run = 'nvim "$@"', desc = "Neovim (Linux)", block = true, for = "unix" },
+    { run = 'vim "$@"', desc = "Vim (Linux)", block = true, for = "unix" },
+    { run = 'lvim "$@"', desc = "Lunarvim (Linux)", block = true, for = "unix" },
+    { run = 'hx "$@"', desc = "Helix (Linux)", block = true, for = "unix" },
+
+    { run = 'wsl.exe /mnt/c/Users/charl/AppData/Local/Programs/Microsoft\\ VS\\ Code/bin/code --wait "$@"', desc = "VSCode (WSL)", block = true, for = "unix" },
+    { run = 'code.exe "$@"', desc = "VSCode (Windows)", block = true, for = "windows" },
+    { run = 'code.exe --wait "$@"', desc = "VSCode (Block, Windows)", block = true, for = "windows" },
+]
+
+open = [
+    { run = 'xdg-open "$@"',                desc = "Open", for = "linux" },
+    { run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
+]
+
+reveal = [
+    { run = 'xdg-open "$(dirname "$0")"',            desc = "Reveal", for = "linux" },
+    { run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
+]
+
+extract = [
+    { run = 'unar "$1"', desc = "Extract here", for = "unix" },
+    { run = 'unar "%1"', desc = "Extract here", for = "windows" },
+]
+
+play = [
+    { run = 'mpv -force-window "$@"', orphan = true, for = "unix" },
+    { run = 'iina --no-stdin "$@"' },
+	  { run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info", for = "unix" },
+    { run = 'mpv "%1"', orphan = true, for = "windows" },
+]
+
+imgedit = [
+    { run = 'nsxiv "$@"', desc = "nsxiv", orphan = false },
+    { run = 'feh "$@"', desc = "feh", orphan = false },
+]
+
+pdfedit = [
+    { run = 'zathura "$@"', desc = "Zathura", orphan = false },
+    { run = 'okular "$@"', desc = "Okular", orphan = false },
+    { run = 'evince "$@"', desc = "Evince", orphan = false },
+    { run = 'pdfarranger "$@"', desc = "PDF Arranger", orphan = false },
+]
+
+mdedit = [
+    { run = 'nvim "$@"', desc = "nvim", block = true },
+    { run = 'typora "$@"', desc = "typora", block = true },
+    { run = 'geany "$@"', desc = "geany", block = true },
+    { run = 'gvim "$@"', desc = "gvim", block = true },
+    { run = 'vim "$@"', desc = "vim", block = true },
+    { run = 'meld "$@"', desc = "meld", block = true },
+]
+
+[open] #rules for which opener(s) for which filetypes
+rules = [
+    { name = "*/", use = "folder" },
+    { name = ".mp4", use = [ "mp4edit", "reveal" ] },
+    { name = ".m4a", use = [ "mp4edit", "reveal" ] },
+    { name = ".conf", use = [ "edit", "reveal" ] },
+    { name = ".md", use = [ "mdedit", "reveal" ] },
+    { name = "*.aup3", use = [ "aup3edit", "reveal" ] },
+
+    { mime = "text/*",  use =          [ "edit", "reveal" ] },
+    { mime = "text/docx", use = "docx" },
+    { mime = "image/*", use = ["imgedit", "reveal"] },
+    { mime = "video/*", use = "video" },
+    { mime = "audio/*", use = "audio" },
+    { mime = "inode/x-empty", use = "text" },
+
+    { mime = "text/xlsx", use = "xlsx" },
+    { mime = "application/pdf",             use = [ "pdfedit" ] },
+
+    { mime = "*/javascript",     use = [ "edit", "reveal" ] },
+    { mime = "application/json", use = [ "edit", "reveal" ] },
+
+    { mime = "application/zip",             use = [ "extract" ] },
+    { mime = "application/gzip",            use = [ "extract" ] },
+    { mime = "application/x-tar",           use = [ "extract" ] },
+    { mime = "application/x-bzip",          use = [ "extract" ] },
+    { mime = "application/x-bzip2",         use = [ "extract" ] },
+    { mime = "application/x-7z-compressed", use = [ "extract" ] },
+    { mime = "application/x-rar",           use = [ "extract" ] },
+    { mime = "application/xz",              use = [ "extract" ] },
+
+    { mime = "*", use = [ "open", "reveal" ] },
+]
+
+[tasks]
+micro_workers = 10
+macro_workers = 25
+bizarre_retry = 5
+image_alloc = 536870912 # 512MB
+image_bound = [0, 0]
+suppress_preload = false
+
+[plugin]
+
+preloaders = [
+    { name = "*", cond = "!mime", run = "mime", multi = true, prio = "high" },
+    # Image
+    { mime = "image/*", run = "image" },
+    # Video
+    { mime = "video/*", run = "video" },
+    # PDF
+    { mime = "application/pdf", run = "pdf" },
+]
+
+prepend_previewers = [
+    { name = ".md", run = "glow" },
+    { mime = "audio/*", run = "exifaudio" },
+    { name = ".svg", run = "magick" },
+    { name = ".mp4", run = "ffmpegthumbnailer" },
+    { name = ".xlsx", run = "xlsx" },
+    { name = ".xls", run = "xls" },
+]
+
+previewers = [
+    { name = "*/", run = "folder", sync = true },
+    # Code
+    { mime = "text/*", run = "code" },
+    { mime = "*/{xml,javascript,x-wine-extension-ini}", run = "code" },
+    # JSON
+    { mime = "application/json", run = "json" },
+    # Image
+    { mime = "image/vnd.djvu", run = "noop" },
+    { mime = "image/*",        run = "image" },
+    # Video
+    { mime = "video/*", run = "video" },
+    # PDF
+    { mime = "application/pdf", run = "pdf" },
+    # Archive
+    { mime = "application/*zip", run = "archive" },
+    { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", run = "archive" },
+    # Fallback
+    { name = "*", run = "file" },
+]
 
 [input]
 # cd
@@ -42,15 +201,20 @@ delete_title = "Delete {n} selected file{s} permanently? (y/N)"
 delete_origin = "top-center"
 delete_offset = [0, 2, 50, 3]
 
+# filter
+filter_title  = "Filter:"
+filter_origin = "top-center"
+filter_offset = [ 0, 2, 50, 3 ]
+
 # find
 find_title = ["Find next:", "Find previous:"]
 find_origin = "top-center"
 find_offset = [0, 2, 50, 3]
 
 # search
-search_title = "Search:"
+search_title  = "Search via {n}:"
 search_origin = "top-center"
-search_offset = [0, 2, 50, 3]
+search_offset = [ 0, 2, 50, 3 ]
 
 # shell
 shell_title = ["Shell:", "Shell (block):"]
@@ -72,136 +236,15 @@ open_title = "Open with:"
 open_origin = "hovered"
 open_offset = [0, 1, 50, 7]
 
-[opener] # sets of definitions of openers referenced in rules below
-edit = [
-{ run = 'nvim "$@"', desc = "nvim", block = true },
-{ run = 'vim "$@"', desc = "vim", block = true },
-{ run = 'nsxiv "$@"', desc = "nsxiv", block = true },
-{ run = 'gvim "$@"', desc = "Gvim", block = true },
-{ run = 'hyprctl "$@"', desc = "Hyprctl", block = true },
-{ run = 'geany "$@"', desc = "Geany", block = true },
-{ run = 'meld "$@"', desc = "meld", block = true },
-{ run = 'libreoffice "$@"', desc = "LibreOffice", block = true },
-{ run = 'zathura "$@"', desc = "Zathura", block = true },
-]
-
-open = [
-{ run = 'xdg-open "$@"', desc = "Open" },
-]
-
-reveal = [
-{ run = 'xdg-open "$(dirname "$0")"', desc = "Open dir in nemo" },
-{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF" },
-]
-
-extract = [
-{ run = 'unar "$1"', desc = "Extract to new folder" },
-{ run = 'file-roller "$1"', desc = "Archive Manager" },
-{ run = 'peazip "$1"', desc = "Peazip" },
-]
-
-play = [
-{ run = 'celluloid "$@"', desc = "Celluloid", orphan = false },
-{ run = 'audacity "$@"', desc = "Audacity", orphan = false },
-{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info" },
-]
-
-mp4edit = [
-{ run = 'audacity "$@"', desc = 'Audacity', orphan = false },
-{ run = 'celluloid "$@"', desc = 'Celluloid', orphan = false },
-{ run = 'mpv "$@"', desc = 'Mpv', orphan = false },
-]
-
-aup3edit = [
-{ run = 'audacity "$@"', desc = "Audacity", orphan = false },
-]
-
-imgedit = [
-{ run = 'nsxiv "$@"', desc = "nsxiv", orphan = false },
-{ run = 'feh "$@"', desc = "feh", orphan = false },
-]
-
-pdfedit = [
-{ run = 'zathura "$@"', desc = "Zathura", orphan = false },
-{ run = 'okular "$@"', desc = "Okular", orphan = false },
-{ run = 'evince "$@"', desc = "Evince", orphan = false },
-{ run = 'pdfarranger "$@"', desc = "PDF Arranger", orphan = false },
-]
-
-mdedit = [
-{ run = 'nvim "$@"', desc = "nvim", block = true },
-{ run = 'typora "$@"', desc = "typora", block = true },
-{ run = 'geany "$@"', desc = "geany", block = true },
-{ run = 'gvim "$@"', desc = "gvim", block = true },
-{ run = 'vim "$@"', desc = "vim", block = true },
-{ run = 'meld "$@"', desc = "meld", block = true },
-]
-
-[open] #rules for which opener(s) for which filetypes
-rules = [
-  { name = "*/", use = "folder" },
-  { name = ".mp4", use = [ "mp4edit", "reveal" ] },
-  { name = ".m4a", use = [ "mp4edit", "reveal" ] },
-  { name = ".conf", use = [ "edit", "reveal" ] },
-  { name = ".pdf", use = [ "pdfedit", "reveal" ] },
-  { name = ".md", use = [ "mdedit", "reveal" ] },
-  { name = "*.aup3", use = [ "aup3edit", "reveal" ] },
-
-  { mime = "text/*",  use =          [ "edit", "reveal" ] },
-  { mime = "text/docx", use = "docx" },
-  { mime = "image/*", use = ["imgedit", "reveal"] },
-  { mime = "video/*", use = "video" },
-  { mime = "audio/*", use = "audio" },
-  { mime = "inode/x-empty", use = "text" },
-
-  { mime = "text/xlsx", use = "xlsx" },
-  { mime = "application/pdf",             use = [ "pdfedit" ] },
-
-  { mime = "*/javascript",     use = [ "edit", "reveal" ] },
-  { mime = "application/json", use = [ "edit", "reveal" ] },
-
-  { mime = "application/zip",             use = [ "extract" ] },
-  { mime = "application/gzip",            use = [ "extract" ] },
-  { mime = "application/x-tar",           use = [ "extract" ] },
-  { mime = "application/x-bzip",          use = [ "extract" ] },
-  { mime = "application/x-bzip2",         use = [ "extract" ] },
-  { mime = "application/x-7z-compressed", use = [ "extract" ] },
-  { mime = "application/x-rar",           use = [ "extract" ] },
-  { mime = "application/xz",              use = [ "extract" ] },
-
-  { mime = "*", use = [ "open", "reveal" ] },
-]
-
-[tasks]
-micro_workers = 10
-macro_workers = 25
-bizarre_retry = 5
-image_alloc = 536870912 # 512MB
-image_bound = [0, 0]
-suppress_preload = false
-
-[plugin]
-prepend_previewers = [
-{ name = "txt", run = "code" },
-{ name = ".md", run = "glow" },
-{ name = ".od", run = "odt" },
-{ name = ".wps", run = "odt" },
-{ name = ".xlsx", run = "xlsx" },
-{ name = ".xls", run = "xls" },
-{ name = ".docx", run = "docx" },
-{ name = ".doc", run = "doc" },
-{ mime = "text/csv", run = "csv"},
-{ mime = "audio/", run = "exifaudio" },
-{ mime = "application/*zip", run = "ouch" },
-{ mime = "application/x-tar", run = "ouch" },
-{ mime = "application/x-bzip2", run = "ouch" },
-{ mime = "application/x-7z-compressed", run = "ouch" },
-{ mime = "application/x-rar", run = "ouch" },
-{ mime = "application/xz", run = "ouch" },
-]
+[which]
+sort_by        = "none"
+sort_sensitive = false
+sort_reverse   = false
 
 [log]
 enabled = false
+
+[headsup]
 
 [plugins]
 preload = ["~/.config/yazi/ui.lua", "~/.config/yazi/symlink.lua"]
