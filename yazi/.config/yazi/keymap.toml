@@ -127,7 +127,7 @@ keymap = [
 	{ on = [ "g", "h" ],       exec = "cd ~",             desc = "Go to the home directory" },
 	{ on = [ "g", "j" ],       exec = "cd /Users/szz/javacode",             desc = "Go to the javacode directory" },
 	{ on = [ "g", "o" ],       exec = "cd /Users/szz/go/src",             desc = "Go to the golang src directory" },
-	{ on = [ "g", "p" ],       exec = "cd /Users/szz/python",             desc = "Go to the python src directory" },
+	{ on = [ "g", "p" ],       exec = "cd ~/github_upload/pdf-source-file/init-files",             desc = "Go to the pdf-souorce-file directory" },
 
 	{ on = [ "g", "d" ],       exec = "cd ~/Downloads",   desc = "Go to the downloads directory" },
 	{ on = [ "g", "t" ],       exec = "cd /tmp",          desc = "Go to the temporary directory" },

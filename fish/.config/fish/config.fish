@@ -103,3 +103,5 @@ set RUSTUP_DIST_SERVER https://mirrors.ustc.edu.cn/rust-static
 set RUSTUP_UPDATE_ROOT https://mirrors.ustc.edu.cn/rust-static/rustup
 
 set LD_LIBRARY_PATH ~/.rye/py/cpython@3.11.9/lib
+
+source "$HOME/.cargo/env.fish"

@@ -842,7 +842,8 @@ Typst_Local_Packages() {
 }
 
 Install-yazi() {
-    git clone git@github.com/lcdse7en/yazi.git
+    # git clone git@github.com/lcdse7en/yazi.git
+    git clone https://github.com/sxyazi/yazi.git
     cd yazi
     cargo build --release
 }
