@@ -21,7 +21,7 @@ end
 alias e="exit"
 alias hx="helix"
 alias yy="yazi"
-alias lf="yazi"
+# alias lf="yazi"
 alias c="clear"
 alias s="fastfetch"
 alias zshrc="nvim ~/.zshrc"
